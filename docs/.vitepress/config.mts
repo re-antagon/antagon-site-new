@@ -200,6 +200,13 @@ export default defineConfig({
             { text: 'Хаос', link: '/gods/12_chaos' }
           ]
         }
+      ], 
+      promo: [
+        {
+          text: 'Промо',
+          items: [
+          ]
+        }
       ]
     },
 
