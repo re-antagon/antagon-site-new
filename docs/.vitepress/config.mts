@@ -107,7 +107,8 @@ export default defineConfig({
       { text: 'Главная', link: '/' },
       { text: 'Правила', link: '/rules' },
       { text: 'Вики', link: '/guide/start/' },
-      { text: 'Боги', link: '/gods/' }
+      { text: 'Боги', link: '/gods/' },
+      { text: 'Промоматериалы', link: '/promo/' }
     ],
     
     footer: {
@@ -200,11 +201,12 @@ export default defineConfig({
             { text: 'Хаос', link: '/gods/12_chaos' }
           ]
         }
-      ], 
+      ],
       promo: [
         {
-          text: 'Промо',
           items: [
+            { text: 'Промо материалы', link: '/promo/' },
+            { text: 'Реферральная система', link: '/promo/referral' }
           ]
         }
       ]
