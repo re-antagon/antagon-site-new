@@ -28,6 +28,8 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Re:Antagon Team' }],
     ['meta', { name: 'keywords', content: 'minecraft, server, antagon, wiki, гайд, предметы, мобы, 1.21' }],
     ['link', { rel: 'canonical', href: 'https://wiki.antagon.su/' }],
+    // Yandex Meta
+    ['meta', { name: 'yandex-verification', content: '4364860f960a5a06' }],
     // JSON-LD structured data
     ['script', { type: 'application/ld+json' }, `{
       "@context": "https://schema.org",
