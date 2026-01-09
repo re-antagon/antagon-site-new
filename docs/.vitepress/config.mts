@@ -87,7 +87,7 @@ export default defineConfig({
       'noscript',
       {},
       '<div><img src="https://mc.yandex.ru/watch/103960154" style="position:absolute; left:-9999px;" alt="" /></div>'
-    ]
+    ],
     // Google Fonts
     [ 'link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     [ 'link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
