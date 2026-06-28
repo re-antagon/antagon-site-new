@@ -41,17 +41,44 @@ const moderators = [
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/509357062271270933/9a2e000fc04b709087e132b43eb4ef3d.webp?size=1024',
-    name: 'aquobus',
-    title: 'Модератор, Тех. поддержка',
+    avatar: 'https://cdn.discordapp.com/avatars/390564839950647297/151afcbd23a7cb50cdefeb2bdd2995ea.webp?size=1024',
+    name: 'fenyanik',
+    title: 'Хостер, Чат-менеджер',
     links: [
-      { icon: 'discord', link: 'https://discord.com/users/509357062271270933' }
+      { icon: 'discord', link: 'https://discord.com/users/390564839950647297' }
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/741388029154820208/34e7559f047bebba98b7568a2e941d4f.webp?size=1024',
+    avatar: 'https://cdn.discordapp.com/avatars/1221055867634319444/4043c7bd49b9afa1c6b5208292156c4f.webp?size=1024',
+    name: 'samikoppersi',
+    title: 'Ивент-мейкер, Чат-менеджер',
+    links: [
+      { icon: 'discord', link: 'https://discord.com/users/1221055867634319444' }
+    ]
+  }
+]
+
+const builders = [
+  {
+    avatar: 'https://cdn.discordapp.com/avatars/953699199248130088/f0757f132f6939f5d8e15cec0f5def6e.webp?size=1024',
+    name: 'horoshay_agama',
+    title: 'Билдер',
+    links: [
+      { icon: 'discord', link: 'https://discord.com/users/953699199248130088' }
+    ]
+  },
+  {
+    avatar: 'https://cdn.discordapp.com/avatars/778132305297539092/dee6553c1990089330fe6ad355c4b6fd.webp?size=1024',
+    name: 'gaus3099',
+    title: 'Билдер',
+    links: [
+      { icon: 'discord', link: 'https://discord.com/users/778132305297539092' }
+    ]
+  },
+  {
+    avatar: 'https://cdn.discordapp.com/avatars/741388029154820208/5c386c315337799ee68c66659f33a475.webp?size=1024',
     name: 'qwillwood',
-    title: 'Модератор',
+    title: 'Билдер',
     links: [
       { icon: 'discord', link: 'https://discord.com/users/741388029154820208' }
     ]
@@ -68,11 +95,11 @@ const artifactor = [
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/464065483898093580/8695911df75ecbc5f8cc0b8c9dc856cb.webp?size=1024',
-    name: 'yarick5002',
-    title: 'Идейный вдохновитель',
+    avatar: 'https://cdn.discordapp.com/avatars/677215838343921686/4a8695ee3448740b9cefa2e1a052c5dc.webp?size=1024',
+    name: 'limonuk',
+    title: 'Артефактор',
     links: [
-      { icon: 'discord', link: 'https://discord.com/users/464065483898093580' }
+      { icon: 'discord', link: 'https://discord.com/users/677215838343921686' }
     ]
   },
   {
@@ -87,13 +114,13 @@ const artifactor = [
 
 const other = [
   {
-    avatar: 'https://cdn.discordapp.com/avatars/348091015103643648/c32e212010009fc51d7b9621115ca3f5.webp?size=1024',
+    avatar: 'https://cdn.discordapp.com/avatars/348091015103643648/f1e2af49478a5d9f5d83499b7a9df46c.webp?size=1024',
     name: 'BloodySupport',
-    title: 'Это я',
+    title: 'Это я(Разносторонняя личность)',
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/782549536701677568/cdbaa7dd245a5c0efaa13f9b68aa1476.webp?size=1024',
-    name: 'nonxedy',
+    avatar: 'https://cdn.discordapp.com/avatars/782549536701677568/909d54587036f2b641888c43ed71b5aa.webp?size=1024',
+    name: 'utophii',
     title: 'Технический администратор',
     links: [
       { icon: 'discord', link: 'https://discord.com/users/782549536701677568' }
@@ -132,6 +159,14 @@ const other = [
     <template #lead>Наши модераторы помогают поддерживать порядок и делают сервер безопасным и приятным местом для всех.</template>
     <template #members>
       <VPTeamMembers size="small" :members="moderators" />
+    </template>
+  </VPTeamPageSection>
+
+  <VPTeamPageSection>
+    <template #title>Билдеры</template>
+    <template #lead>С помощью билдеров появляются замечательный мир, подземелья и биомы.</template>
+    <template #members>
+      <VPTeamMembers size="small" :members="builders" />
     </template>
   </VPTeamPageSection>
 
