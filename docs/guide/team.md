@@ -17,6 +17,15 @@ style.textContent = `
 .VPTeamPageTitle[data-v-baf690b4] {
     padding: 48px 64px 48px;
 }
+.VPTeamMembers .avatar {
+    overflow: hidden;
+}
+.VPTeamMembers .avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
 `
 document.head.appendChild(style)
 
