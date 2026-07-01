@@ -145,8 +145,7 @@ export default defineConfig({
           text: 'Часто задаваемые вопросы',
           items: [
             { text: 'Общие вопросы', link: '/guide/faq/' },
-            { text: 'Фишки сервера', link: '/guide/faq/features' },
-            { text: 'Экономика', link: '/guide/faq/economy' }
+            { text: 'Фишки сервера', link: '/guide/faq/features' }
           ]
         },
         {
