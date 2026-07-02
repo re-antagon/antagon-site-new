@@ -112,7 +112,7 @@ export default defineConfig({
     
     footer: {
       message: 'Antagon вики распространяется в формате "как есть" и не обязана содержать актуальную информацию.',
-      copyright: 'Copyright © 2021-2025 Re:Antagon'
+      copyright: 'Copyright © 2021-2026 Re:Antagon'
     },
 
     docFooter: {

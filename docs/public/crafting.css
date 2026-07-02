@@ -612,7 +612,13 @@ body.wgl-theme-dark ul.tabbernav {
     --infobox-title-background-color: #6ea21e;
     --infobox-title-top-border-color: #a8c778;
     --infobox-title-border-inline-color: #618f1a;
-    --infobox-title-bottom-border-color: #537a17
+    --infobox-title-bottom-border-color: #537a17;
+    /* Override VitePress theme colors */
+    --vp-c-indigo-1: #fff2e0;
+    --vp-c-indigo-2: #ffc26e;
+    --vp-c-indigo-3: #ffab40;
+    --vp-c-indigo-4: #ff9800;
+    --vp-c-indigo-soft: rgba(255, 194, 110, 0.14);
 }
 
 body.wgl-theme-dark {
