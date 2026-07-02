@@ -8,7 +8,7 @@
 
 ```bash
 # Установка репозитория
-git clone https://github.com/PurpleGale/antagon-site-new.git
+git clone https://github.com/re-antagon/antagon-site-new.git
 # или
 gh repo clone PurpleGale/antagon-site-new
 
