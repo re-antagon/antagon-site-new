@@ -100,7 +100,7 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: './assets/logo.png',
+    logo: '/logo.png',
 
     nav: [
       { text: 'Главная', link: '/' },
