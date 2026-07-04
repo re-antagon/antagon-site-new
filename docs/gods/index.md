@@ -2,6 +2,16 @@
 description: "Система богов на сервере Re:Antagon. Узнайте о различных богах, их подношениях, благословениях и проклятиях, влияющих на геймплей."
 ---
 
+<style>
+img {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 24px !important;
+  height: auto !important;
+  margin: 0 0px 0 0 !important;
+}
+</style>
+
 # Система богов
 
 На сервере Re:Antagon присутствует уникальная система **8 Старших Богов**, каждое из которых представляет определенную концепцию и оказывает влияние на игроков через благословения и проклятия.
