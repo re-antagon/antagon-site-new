@@ -20,7 +20,7 @@ img {
 
 | Русское имя | Иконка |
 |:-----------|:------|
-| Постижение | ![Постижение](/assets/items/enchanted_book.png) |
+| [Постижение](/gods/1_infinitum) | ![Постижение](/assets/items/enchanted_book.png) |
 | Естество | ![Естество](/assets/items/golden_apple.png) |
 | Расширение | ![Расширение](/assets/items/brown_mushroom.png) |
 | Окончание | ![Окончание](/assets/items/chain.png) |
