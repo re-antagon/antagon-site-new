@@ -18,16 +18,16 @@ img {
 
 ## Старшие Боги
 
-| Латинское название | Русское имя | Домен | Иконка |
-|:-------------------|:-----------|:------|:------:|
-| Infinitum Conscientia | Постижение | Знания + Механизмы + ??? | ![Постижение](/assets/items/enchanted_book.png) |
-| Prima Natura | Естество | Жизнь + ??? | ![Естество](/assets/items/golden_apple.png) |
-| Expansio infestantibus | Расширение | Развитие + ??? | ![Расширение](/assets/items/brown_mushroom.png) |
-| Ultimum Tectumque | Окончание | Чистилище + Пустота + ??? | ![Окончание](/assets/items/chain.png) |
-| Ignis Bellum | Война | Война + ??? | ![Война](/assets/items/iron_sword.png) |
-| Cielo infinito | Космос | Звезды + ??? | ![Космос](/assets/items/nether_star.png) |
-| Innaturalmente distorto | Искажение | Кровь + Смерть + ??? | ![Искажение](/assets/items/bone.png) |
-| Ignotum Chaos | Хаос | Хаос + ??? | ![Хаос](/assets/items/sponge.png) |
+| Русское имя | Иконка |
+|:-----------|:------|
+| Постижение | ![Постижение](/assets/items/enchanted_book.png) |
+| Естество | ![Естество](/assets/items/golden_apple.png) |
+| Расширение | ![Расширение](/assets/items/brown_mushroom.png) |
+| Окончание | ![Окончание](/assets/items/chain.png) |
+| Война | ![Война](/assets/items/iron_sword.png) |
+| Космос | ![Космос](/assets/items/nether_star.png) |
+| Искажение | ![Искажение](/assets/items/bone.png) |
+| Хаос | ![Хаос](/assets/items/sponge.png) |
 
 ::: info Важная информация
 Введение системы Богов означает, что у игроков со старта **40 максимального здоровья** вместо 20, а также имеется [прана](/gods/prana.md).
