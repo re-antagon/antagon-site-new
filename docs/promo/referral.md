@@ -17,7 +17,6 @@ Re:Antagon рад предложить реферальную программу
 ### Контакты:
 - Discord: `@dmitriysm`
 - Discord: `@marki_original`
-- Discord: `@aquaspirit_`
 
 ## Дополнительно
 
