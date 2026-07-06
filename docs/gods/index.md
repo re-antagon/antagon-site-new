@@ -21,7 +21,7 @@ img {
 | Русское имя | Иконка |
 |:-----------|:------|
 | [Постижение](/gods/1_infinitum) | ![Постижение](/assets/items/enchanted_book.png) |
-| Естество | ![Естество](/assets/items/golden_apple.png) |
+| [Естество](/gods/2_mater) | ![Естество](/assets/items/golden_apple.png) |
 | Расширение | ![Расширение](/assets/items/brown_mushroom.png) |
 | Окончание | ![Окончание](/assets/items/chain.png) |
 | Война | ![Война](/assets/items/iron_sword.png) |
