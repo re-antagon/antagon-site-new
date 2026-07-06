@@ -23,7 +23,7 @@ img {
 | [Постижение](/gods/1_infinitum) | ![Постижение](/assets/items/enchanted_book.png) |
 | [Естество](/gods/2_mater) | ![Естество](/assets/items/golden_apple.png) |
 | [Расширение](/gods/3_fungus) | ![Расширение](/assets/items/brown_mushroom.png) |
-| Окончание | ![Окончание](/assets/items/chain.png) |
+| [Окончание](/gods/4_finis) | ![Окончание](/assets/items/chain.png) |
 | Война | ![Война](/assets/items/iron_sword.png) |
 | Космос | ![Космос](/assets/items/nether_star.png) |
 | Искажение | ![Искажение](/assets/items/bone.png) |
