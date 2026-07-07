@@ -137,7 +137,7 @@ export default defineConfig({
         {
           text: 'Начало игры',
           items: [
-            { text: 'Начало игры', link: '/guide/start' },
+            { text: 'Старт', link: '/guide/start' },
             { text: 'Наша команда', link: '/guide/team' }
           ]
         },
