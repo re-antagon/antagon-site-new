@@ -25,7 +25,7 @@ img {
 | [Расширение](/gods/3_fungus) | ![Расширение](/assets/items/brown_mushroom.png) |
 | [Окончание](/gods/4_finis) | ![Окончание](/assets/items/chain.png) |
 | [Война](/gods/5_bellum) | ![Война](/assets/items/iron_sword.png) |
-| Космос | ![Космос](/assets/items/nether_star.png) |
+| [Космос](/gods/6_cosm) | ![Космос](/assets/items/nether_star.png) |
 | Искажение | ![Искажение](/assets/items/bone.png) |
 | Хаос | ![Хаос](/assets/items/sponge.png) |
 
