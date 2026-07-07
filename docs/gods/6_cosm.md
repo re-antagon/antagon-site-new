@@ -10,6 +10,11 @@ img {
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
+.mcui-Crafting_Table img {
+  width: 28px !important;
+  height: 28px !important;
+}
 </style>
 
 # Бог Космоса
@@ -122,6 +127,31 @@ img {
 - **КД**: 5 секунд (совмещенный с обычными эндерперлами)
 - **Тип**: Расходник
 
+<div class="mcui mcui-Crafting_Table">
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
+      <span class="invslot"></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+</div>
+
 #### Ключ измерений
 
 - **Крафт**: 6 обсидиана + 3 жемчуга космоса (в любом порядке)
@@ -136,6 +166,31 @@ img {
   - Возможно телепортация в блоки при неаккуратном применении
 - **КД**: 30 секунд
 - **Тип**: Расходник
+
+<div class="mcui mcui-Crafting_Table">
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+</div>
 
 ::: tip Совет
 Жемчуг космоса идеален для быстрого перемещения в пределах 50 блоков, особенно для обхода препятствий. Ключ измерений удобен для быстрого перемещения между основными измерениями.
