@@ -10,6 +10,11 @@ img {
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
+.mcui-Crafting_Table img {
+  width: 28px !important;
+  height: 28px !important;
+}
 </style>
 
 # Бог Окончания
@@ -102,6 +107,31 @@ img {
 #### Удаление блоков
 
 На 6 уровне становится доступен крафт **Стирателя** (2 угля), который может удалять блоки.
+
+<div class="mcui mcui-Crafting_Table">
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/coal" class="image"><img src="/assets/items/coal.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/coal" class="image"><img src="/assets/items/coal.png" width="64" height="64"></a></span></span>
+      <span class="invslot"></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+</div>
 
 ---
 
