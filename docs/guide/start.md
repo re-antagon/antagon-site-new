@@ -43,7 +43,7 @@ description: "Гайд по началу игры на сервере Re:Antagon
 ## Полезные ссылки
 
 - [Discord сервер](https://discord.gg/antagon) — общение, новости, события
-- [Правила сервера](https://wiki.antagon.su/guide/start) — важно знать и соблюдать
+- [Правила сервера](https://wiki.antagon.su/rules) — важно знать и соблюдать
 - [Карта сервера](https://map.antagon.ru) — динамическая карта мира
 
 ## Часто задаваемые вопросы
