@@ -10,6 +10,11 @@ img {
   height: auto !important;
   margin: 0 0px 0 0 !important;
 }
+
+.mcui-Crafting_Table img {
+  width: 28px !important;
+  height: 28px !important;
+}
 </style>
 
 # Система богов
@@ -26,7 +31,7 @@ img {
 | [Окончание](/gods/4_finis) | ![Окончание](/assets/items/chain.png) |
 | [Война](/gods/5_bellum) | ![Война](/assets/items/iron_sword.png) |
 | [Космос](/gods/6_cosm) | ![Космос](/assets/items/nether_star.png) |
-| Искажение | ![Искажение](/assets/items/bone.png) |
+| [Искажение](/gods/7_distorta) | ![Искажение](/assets/items/bone.png) |
 | Хаос | ![Хаос](/assets/items/sponge.png) |
 
 ::: info Важная информация
@@ -105,11 +110,61 @@ img {
 - **Эффект**: Сбрасывает 100% всей положительной накопленной у Бога репутации и снижает ее на 200
 - **Последствие**: Ушедший игрок получает проклятие **-3 уровня** (либо ниже, если уже был на отрицательной репутации)
 
+<div class="mcui mcui-Crafting_Table">
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/netherite_ingot" class="image"><img src="/assets/items/netherite_ingot.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+</div>
+
 #### Перевыбор тела
 
 Существует предмет, который при использовании **вызывает меню выбора тела вновь** (если у текущего Бога >1 тела):
 
 - **Крафт**: 4 алмаза + 4 изумруда + 1 золотое яблоко (в любом порядке) на верстаке
+
+<div class="mcui mcui-Crafting_Table">
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/golden_apple" class="image"><img src="/assets/items/golden_apple.png" width="64" height="64"></a></span></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+</div>
 
 ### Ослабление эффектов
 
