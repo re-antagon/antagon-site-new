@@ -10,6 +10,11 @@ img {
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
+
+.mcui-Crafting_Table img {
+  width: 28px !important;
+  height: 28px !important;
+}
 </style>
 
 ::: info Что такое прана?
@@ -93,6 +98,32 @@ img {
 
 1. При помощи заклинания Сцеживание праны от Бога Искажения 
 2. При помощи артефакта **Капельница** (крафтится из нитки, железного самородка и бутылки в любом порядке)
+
+<div class="mcui mcui-Crafting_Table">
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/string" class="image"><img src="/assets/items/string.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/iron_nugget" class="image"><img src="/assets/items/iron_nugget.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/glass_bottle" class="image"><img src="/assets/items/glass_bottle.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/nether_wart" class="image"><img src="/assets/items/nether_wart.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+</div>
+
 
 ::: warning Ограничения
 - Капельница не работает на игроках-нежити
