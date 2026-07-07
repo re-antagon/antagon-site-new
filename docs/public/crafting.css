@@ -1683,3 +1683,37 @@ blockquote.mcwiki-quote {
 body.wgl-theme-dark .sound-title::after {
     filter: invert(1)
 }
+
+.invslot.enchanted,
+.invslot-item.enchanted {
+    position: relative;
+    overflow: hidden;
+}
+
+.invslot.enchanted::after,
+.invslot-item.enchanted::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent 20%,
+        rgba(180, 100, 255, 0.45) 40%,
+        rgba(200, 140, 255, 0.65) 50%,
+        rgba(180, 100, 255, 0.45) 60%,
+        transparent 80%
+    );
+    background-size: 50% 100%;
+    animation: enchanted-glint 2.5s linear infinite;
+    pointer-events: none;
+    z-index: 3;
+    mix-blend-mode: screen;
+}
+
+@keyframes enchanted-glint {
+    0%   { transform: translateX(-100%) rotate(25deg); }
+    100% { transform: translateX(200%) rotate(25deg); }
+}

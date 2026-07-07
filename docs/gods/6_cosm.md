@@ -146,9 +146,15 @@ img {
     </div>
   </div>
   <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
+    <span class="mcui-output">
+        <span class="invslot enchanted">
+            <span class="invslot-item">
+                <a href="/items/ender_pearl" class="image">
+                    <img src="/assets/items/ender_pearl.png" width="64" height="64">
+                </a>
+            </span>
+        </span>
+    </span>
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
@@ -180,15 +186,21 @@ img {
       <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
     </div>
     <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+      <span class="invslot enchanted"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
+      <span class="invslot enchanted"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
+      <span class="invslot enchanted"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
     </div>
   </div>
   <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
+    <span class="mcui-output">
+        <span class="invslot enchanted">
+            <span class="invslot-item">
+                <a href="/items/lapis_lazuli" class="image">
+                    <img src="/assets/items/lapis_lazuli.png" width="64" height="64">
+                </a>
+            </span>
+        </span>
+    </span>
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
