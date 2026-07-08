@@ -132,7 +132,7 @@ img {
   <span class="mcui-output">
     <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
   </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
 </div>
 
 #### Перевыбор тела
