@@ -211,7 +211,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'discord', link: 'https://discord.gg/4tGwATJt' }
+      { icon: 'discord', link: 'https://discord.gg/j37NxzDYgG' }
     ],
 
     search: {
