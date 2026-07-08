@@ -32,7 +32,7 @@ img {
 | [Война](/gods/5_bellum) | ![Война](/assets/items/iron_sword.png) |
 | [Космос](/gods/6_cosm) | ![Космос](/assets/items/nether_star.png) |
 | [Искажение](/gods/7_distorta) | ![Искажение](/assets/items/bone.png) |
-| Хаос | ![Хаос](/assets/items/sponge.png) |
+| [Хаос](/gods/8_ignos) | ![Хаос](/assets/items/sponge.png) |
 
 ::: info Важная информация
 Введение системы Богов означает, что у игроков со старта **40 максимального здоровья** вместо 20, а также имеется [прана](/gods/prana.md).
