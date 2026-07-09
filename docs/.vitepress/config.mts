@@ -170,7 +170,7 @@ export default defineConfig({
           text: 'Механики',
           items: [
             { text: 'Обзор механик', link: '/guide/mechanics/' },
-            { text: 'Система приватов', link: '/guide/mechanics/protect' }
+            { text: 'Система богов', link: '/gods/index' }
           ]
         },
         {
