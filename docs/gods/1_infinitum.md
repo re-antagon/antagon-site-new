@@ -64,7 +64,7 @@ img {
 
 **Характеристики:**
 - **Вместимость заряда**: 7200 ЕЗ (при выборе тела восполняется до 3600 ЕЗ)
-- **Пассивные эффекты при заряде**: ![Спешка](/assets/items/haste.png) Спешка I, ![Стойкость](/assets/items/resistance.png) Стойкость I
+- **Пассивные эффекты при заряде**: ![Спешка](/assets/items/haste.png) Спешка I, ![Стойкость](/assets/items/persistance.png) Стойкость I
 - **Пассивные эффекты без заряда**: ![Слепота](/assets/items/blindness.png) Слепота, ![Голод](/assets/items/hunger.png) Голод, ![Утомление](/assets/items/mining_fatigue.png) Утомление
 
 **Особенности:**
