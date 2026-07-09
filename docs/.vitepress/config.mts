@@ -151,6 +151,7 @@ export default defineConfig({
           text: 'Предметы',
           items: [
             { text: 'Обзор предметов', link: '/guide/items/' },
+            { text: 'Уникальные артефакты', link: '/guide/items/unique_items' },
             { text: 'Общее', link: '/guide/items/index_0' },
             { text: 'Война', link: '/guide/items/index_1' },
             { text: 'Механизмы', link: '/guide/items/index_2' },
