@@ -104,14 +104,6 @@ const artifactor = [
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/677215838343921686/4a8695ee3448740b9cefa2e1a052c5dc.webp?size=1024',
-    name: 'limonuk',
-    title: 'Артефактор',
-    links: [
-      { icon: 'discord', link: 'https://discord.com/users/677215838343921686' }
-    ]
-  },
-  {
     avatar: 'https://cdn.discordapp.com/avatars/993544184659181661/0adb4bca1ed5a4dfd419682ddc0e023b.webp?size=1024',
     name: 'Tarteen228',
     title: 'Артефактор',
