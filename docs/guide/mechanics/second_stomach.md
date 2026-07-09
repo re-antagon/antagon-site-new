@@ -83,7 +83,7 @@ img {
 | 6 | ![Слабость](/assets/items/weakness.png) Слабость |
 | 7 | ![Отравление](/assets/items/poison.png) Отравление |
 | 8 | ![Утомление](/assets/items/mining_fatigue.png) Утомление |
-| 9 | ![Уязвимость](/assets/items/vulnerability.png) Уязвимость (см. Особые эффекты) |
+| 9 | ![Уязвимость](/assets/items/vulnerability.png) Уязвимость (см. - [Особые эффекты](/guide/mechanics/unique_effects)) |
 | 10 | ![Замедленное падение](/assets/items/slow_falling.png) Замедленное падение |
 | 11 | ![Грация дельфина](/assets/items/dolphins_grace.png) Грация дельфина |
 | 12 | ![Сила](/assets/items/strength.png) Сила |
@@ -98,7 +98,7 @@ img {
 | 21 | ![Сопротивление](/assets/items/resistance.png) Сопротивление |
 | 22 | ![Скорость](/assets/items/speed.png) Скорость |
 | 23 | ![Подводное дыхание](/assets/items/water_breathing.png) Подводное дыхание |
-| 24 | ![Стойкость](/assets/items/persistance.png) Стойкость (см. Особые эффекты) |
+| 24 | ![Стойкость](/assets/items/persistance.png) Стойкость (см. - [Особые эффекты](/guide/mechanics/unique_effects)) |
 
 ::: warning Важно
 Эффекты с низким приоритетом (например, Скорость, Сопротивление) не будут убывать, пока не переварятся все эффекты с более высоким приоритетом (например, Сила, Слепота).
@@ -202,4 +202,4 @@ img {
 
 - [Бог Расширения](/gods/3_fungus.md) - общая информация о боге
 - [Система богов](/gods/index.md) - общая информация о системе богов
-- Особые эффекты - детальное описание уникальных эффектов (Уязвимость, Стойкость)
+- [Особые эффекты](/guide/mechanics/unique_effects) - детальное описание уникальных эффектов (Уязвимость, Стойкость)
