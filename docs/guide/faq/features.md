@@ -10,6 +10,38 @@ img {
   width: 1.5rem !important;
   height: auto !important;
 }
+
+.banner-cycle {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0 0 0 0 !important;
+  background-image: url("/assets/items/white_banner.png");
+  background-size: 24px 24px !important;
+  background-repeat: no-repeat !important;
+  animation: banner-cycle 16s infinite steps(1);
+}
+
+@keyframes banner-cycle {
+  0%     { background-image: url("/assets/items/white_banner.png"); }
+  6.25%  { background-image: url("/assets/items/orange_banner.png"); }
+  12.5%  { background-image: url("/assets/items/magenta_banner.png"); }
+  18.75% { background-image: url("/assets/items/light_blue_banner.png"); }
+  25%    { background-image: url("/assets/items/yellow_banner.png"); }
+  31.25% { background-image: url("/assets/items/lime_banner.png"); }
+  37.5%  { background-image: url("/assets/items/pink_banner.png"); }
+  43.75% { background-image: url("/assets/items/gray_banner.png"); }
+  50%    { background-image: url("/assets/items/light_gray_banner.png"); }
+  56.25% { background-image: url("/assets/items/cyan_banner.png"); }
+  62.5%  { background-image: url("/assets/items/purple_banner.png"); }
+  68.75% { background-image: url("/assets/items/blue_banner.png"); }
+  75%    { background-image: url("/assets/items/brown_banner.png"); }
+  81.25% { background-image: url("/assets/items/green_banner.png"); }
+  87.5%  { background-image: url("/assets/items/red_banner.png"); }
+  93.75% { background-image: url("/assets/items/black_banner.png"); }
+  100%   { background-image: url("/assets/items/white_banner.png"); }
+}
 </style>
 
 # Различные фишки сервера
@@ -73,3 +105,6 @@ img {
 
 ### ПВП
 - Если игрок убивает игрока, то с него выпадает ![Голова](/assets/items/player_head.png)Голова
+
+### Баннер
+- У игроков есть возможность через инвентарь надеть на голову любой <span class="banner-cycle"></span>баннер.
