@@ -54,7 +54,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
     <div class="mcui-row">
       <span class="invslot"><span class="invslot-item"><a href="/items/water_bottle" class="image"><img src="/assets/items/water_bottle.png" width="64" height="64"></a></span></span>
       <span class="invslot"><span class="invslot-item"><a href="/items/glow_ink_sac" class="image"><img src="/assets/items/glow_ink_sac.png" width="64" height="64"></a></span></span>
-<span class="invslot"></span>
+      <span class="invslot"></span>
     </div>
     <div class="mcui-row">
       <span class="invslot"></span>
@@ -89,7 +89,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
     <div class="mcui-row">
       <span class="invslot"><span class="invslot-item"><a href="/items/basis_big" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
       <span class="invslot"><span class="invslot-item"><a href="/items/gunpowder" class="image"><img src="/assets/items/gunpowder.png" width="64" height="64"></a></span></span>
-<span class="invslot"></span>
+      <span class="invslot"></span>
     </div>
     <div class="mcui-row">
       <span class="invslot"></span>
@@ -124,7 +124,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
     <div class="mcui-row">
       <span class="invslot"><span class="invslot-item"><a href="/items/basis_big" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
       <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
-<span class="invslot"></span>
+      <span class="invslot"></span>
     </div>
     <div class="mcui-row">
       <span class="invslot"></span>
@@ -194,7 +194,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
     <div class="mcui-row">
       <span class="invslot"><span class="invslot-item"><a href="/items/basis_big" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
       <span class="invslot"><span class="invslot-item"><a href="/items/grass_block" class="image"><img src="/assets/items/grass_block.png" width="64" height="64"></a></span></span>
-<span class="invslot"></span>
+      <span class="invslot"></span>
     </div>
     <div class="mcui-row">
       <span class="invslot"></span>
@@ -264,7 +264,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
     <div class="mcui-row">
       <span class="invslot"><span class="invslot-item"><a href="/items/basis_big" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
       <span class="invslot"><span class="invslot-item"><a href="/items/pink_petals" class="image"><img src="/assets/items/pink_petals.png" width="64" height="64"></a></span></span>
-<span class="invslot"></span>
+      <span class="invslot"></span>
     </div>
     <div class="mcui-row">
       <span class="invslot"></span>
@@ -334,7 +334,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
     <div class="mcui-row">
       <span class="invslot"><span class="invslot-item"><a href="/items/basis_big" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
       <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-<span class="invslot"></span>
+      <span class="invslot"></span>
     </div>
     <div class="mcui-row">
       <span class="invslot"></span>
