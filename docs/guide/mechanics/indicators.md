@@ -3,9 +3,10 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 ---
 
 <style>
-.item-preview img {
+img[alt*="зелье"], img[alt*="индикатор"] {
   width: 128px !important;
   height: 128px !important;
+  image-rendering: pixelated;
 }
 
 .mcui-Crafting_Table img {
@@ -43,7 +44,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Подозрительное светящееся зелье
 
-<img src="/assets/items/basis_big.png" width="128" height="128" alt="Подозрительное светящееся зелье" class="item-preview">
+![Подозрительное светящееся зелье](/assets/items/basis_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Это зелье само по себе бесполезно, но если добавить к нему порох, может получиться что-то годное.
 
@@ -78,7 +79,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Взрывное подозрительное светящееся зелье
 
-<img src="/assets/items/basis_splash_big.png" width="128" height="128" alt="Взрывное подозрительное светящееся зелье" class="item-preview">
+![Взрывное подозрительное светящееся зелье](/assets/items/basis_splash_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Это зелье само по себе бесполезно, но если добавить к нему один из 4 элементов на выбор, может получиться что-то годное.
 
@@ -113,7 +114,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Подозрительный синий индикатор
 
-<img src="/assets/items/blue_indicator_big.png" width="128" height="128" alt="Подозрительный синий индикатор" class="item-preview">
+![Подозрительный синий индикатор](/assets/items/blue_indicator_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Это зелье само по себе бесполезно, но если добавить к нему порох, может получиться что-то годное.
 
@@ -148,7 +149,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Взрывной подозрительный синий индикатор
 
-<img src="/assets/items/blue_indicator_splash_big.png" width="128" height="128" alt="Взрывной подозрительный синий индикатор" class="item-preview">
+![Взрывной подозрительный синий индикатор](/assets/items/blue_indicator_splash_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Подсвечивает имена всех игроков, которые **ставили блоки** в радиусе взрыва зелья не позднее чем 12 часов назад.
 
@@ -183,7 +184,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Подозрительный зеленый индикатор
 
-<img src="/assets/items/green_indicator_big.png" width="128" height="128" alt="Подозрительный зеленый индикатор" class="item-preview">
+![Подозрительный зеленый индикатор](/assets/items/green_indicator_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Это зелье само по себе бесполезно, но если добавить к нему порох, может получиться что-то годное.
 
@@ -218,7 +219,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Взрывной подозрительный зеленый индикатор
 
-<img src="/assets/items/green_indicator_splash_big.png" width="128" height="128" alt="Взрывной подозрительный зеленый индикатор" class="item-preview">
+![Взрывной подозрительный зеленый индикатор](/assets/items/green_indicator_splash_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Подсвечивает имена всех игроков, которые **ломали блоки** в радиусе взрыва зелья не позднее чем 12 часов назад.
 
@@ -253,7 +254,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Подозрительный розовый индикатор
 
-<img src="/assets/items/pink_indicator_big.png" width="128" height="128" alt="Подозрительный розовый индикатор" class="item-preview">
+![Подозрительный розовый индикатор](/assets/items/pink_indicator_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Это зелье само по себе бесполезно, но если добавить к нему порох, может получиться что-то годное.
 
@@ -288,7 +289,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Взрывной подозрительный розовый индикатор
 
-<img src="/assets/items/pink_indicator_splash_big.png" width="128" height="128" alt="Взрывной подозрительный розовый индикатор" class="item-preview">
+![Взрывной подозрительный розовый индикатор](/assets/items/pink_indicator_splash_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Подсвечивает имена всех игроков, которые **совершали действия с интерактивными блоками** в радиусе взрыва зелья не позднее чем 12 часов назад.
 
@@ -323,7 +324,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Подозрительный красный индикатор
 
-<img src="/assets/items/red_indicator_big.png" width="128" height="128" alt="Подозрительный красный индикатор" class="item-preview">
+![Подозрительный красный индикатор](/assets/items/red_indicator_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Это зелье само по себе бесполезно, но если добавить к нему порох, может получиться что-то годное.
 
@@ -358,7 +359,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Взрывной подозрительный красный индикатор
 
-<img src="/assets/items/red_indicator_splash_big.png" width="128" height="128" alt="Взрывной подозрительный красный индикатор" class="item-preview">
+![Взрывной подозрительный красный индикатор](/assets/items/red_indicator_splash_big.png){width=128 height=128 style="image-rendering: pixelated;"}
 
 **Описание:** Подсвечивает имена всех игроков, которые **убивали сущностей** в радиусе взрыва зелья не позднее чем 12 часов назад.
 
