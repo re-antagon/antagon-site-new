@@ -55,7 +55,7 @@ img {
 | ![Вощеный Потемневший резной медный блок](/assets/items/waxed_exposed_cut_copper.png) Вощеный Потемневший резной медный блок | 1.65 |
 | ![Состаренная медь](/assets/items/weathered_copper.png) Состаренная медь | 1.5 |
 | ![Состаренный резной медный блок](/assets/items/weathered_cut_copper.png) Состаренный резной медный блок | 1.5 |
-| ![Вощеная Состаренная медь](/assets/items/waxed_weathered_copper.png) Вощеная погодная медь | 1.4 |
+| ![Вощеная Состаренная медь](/assets/items/waxed_weathered_copper.png) Вощеная состаренная медь | 1.4 |
 | ![Вощеный Состаренный резной медный блок](/assets/items/waxed_weathered_cut_copper.png) Вощеный Состаренный резной медный блок | 1.4 |
 | ![Окисленная медь](/assets/items/oxidized_copper.png) Окисленная медь | 1.25 |
 | ![Окисленный резной медный блок](/assets/items/oxidized_cut_copper.png) Окисленный резной медный блок | 1.25 |
