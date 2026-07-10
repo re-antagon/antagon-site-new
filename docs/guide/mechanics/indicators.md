@@ -3,6 +3,14 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 ---
 
 <style>
+img {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 128px !important;
+  height: auto !important;
+  margin: 0 0 0 0 !important;
+}
+
 .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
