@@ -78,7 +78,7 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 ## Взрывное подозрительное светящееся зелье
 
-<img src="/assets/items/basis_splash_big.png" width="128" height="128" alt="Взрывное подозрительное светящееся зелье"class="item-preview">
+<img src="/assets/items/basis_splash_big.png" width="128" height="128" alt="Взрывное подозрительное светящееся зелье" class="item-preview">
 
 **Описание:** Это зелье само по себе бесполезно, но если добавить к нему один из 4 элементов на выбор, может получиться что-то годное.
 
