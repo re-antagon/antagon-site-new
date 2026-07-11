@@ -152,19 +152,7 @@ export default defineConfig({
           items: [
             { text: 'Обзор предметов', link: '/guide/items/' },
             { text: 'Уникальные артефакты', link: '/guide/items/unique_items' },
-            { text: 'Общее', link: '/guide/items/index_0' },
-            { text: 'Война', link: '/guide/items/index_1' },
-            { text: 'Механизмы', link: '/guide/items/index_2' },
-            { text: 'Звёзды', link: '/guide/items/index_3' },
-            { text: 'Знания', link: '/guide/items/index_4' },
-            { text: 'Жизнь', link: '/guide/items/index_5' },
-            { text: 'Развитие', link: '/guide/items/index_6' },
-            { text: 'Чистилище', link: '/guide/items/index_7' },
-            { text: 'Океан', link: '/guide/items/index_8' },
-            { text: 'Пустота', link: '/guide/items/index_9' },
-            { text: 'Кровь', link: '/guide/items/index_10' },
-            { text: 'Смерть', link: '/guide/items/index_11' },
-            { text: 'Хаос', link: '/guide/items/index_12' },
+            { text: 'Постижение', link: '/guide/items/1%20Infinitum/index' }
           ]
         },
         {
