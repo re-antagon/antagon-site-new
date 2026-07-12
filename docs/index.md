@@ -17,7 +17,7 @@ hero:
       link: /rules
     - theme: alt
       text: Discord
-      link: https://discord.gg/antagon
+      link: https://discord.antagon.su/
 
 features:
   - icon: 🏰

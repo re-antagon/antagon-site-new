@@ -195,7 +195,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'discord', link: 'https://discord.gg/j37NxzDYgG' }
+      { icon: 'discord', link: 'https://discord.antagon.su/' }
     ],
 
     search: {
