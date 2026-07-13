@@ -77,6 +77,7 @@ description: "Уникальные механики сервера Re:Antagon. �
 | [Проклятые золотые мечи](/guide/mechanics/cursed_golden_swords) | Свойства проклятых мечей |
 | [Второй желудок](/guide/mechanics/second_stomach) | Дополнительный слот питания |
 | [Звездная броня](/guide/mechanics/star_armor) | Особенности звездной брони |
+| [Кастомные пластинки](/guide/mechanics/custom_discs) | Добавление своих музыкальных пластинок через команды `/cd` |
 
 ---
 
