@@ -237,6 +237,10 @@ img[alt*="Бог Естества"] {
     <img src="/assets/items/blue_potion.png" alt="Эфирное масло">
     <span class="meta"><span class="name">Эфирное масло</span><span class="type">Компонент · физика покинула чат</span></span>
   </a>
+  <a class="item-card" href="/guide/items/2%20Mater/Сушёные%20ягоды">
+    <img src="/assets/items/custom/big/dried_berries.png" alt="Сушёные ягоды">
+    <span class="meta"><span class="name">Сушёные ягоды</span><span class="type">Компонент · у каждой девушки свой изюм</span></span>
+  </a>
 </div>
 
 ## Кулинария
@@ -253,10 +257,6 @@ img[alt*="Бог Естества"] {
   <a class="item-card" href="/guide/items/2%20Mater/Соль">
     <img src="/assets/items/custom/big/salt.png" alt="Соль">
     <span class="meta"><span class="name">Соль</span><span class="type">Кулинария · рассыпая кличи беду</span></span>
-  </a>
-  <a class="item-card" href="/guide/items/2%20Mater/Сушёные%20ягоды">
-    <img src="/assets/items/custom/big/dried_berries.png" alt="Сушёные ягоды">
-    <span class="meta"><span class="name">Сушёные ягоды</span><span class="type">Кулинария · у каждой девушки свой изюм</span></span>
   </a>
 </div>
 
