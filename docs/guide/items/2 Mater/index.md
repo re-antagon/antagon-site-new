@@ -82,7 +82,7 @@ img[alt*="Бог Естества"] {
     <span class="meta"><span class="name">Венец Цветения</span><span class="type">Одежда · удобрение растений</span></span>
   </a>
   <a class="item-card" href="/guide/items/2%20Mater/Древесная%20броня">
-    <img src="/assets/items/custom/big/treebeard_bark.png" alt="Древесная броня">
+    <img src="/assets/items/custom/big/wood_helmet.png" alt="Древесная броня">
     <span class="meta"><span class="name">Древесная броня</span><span class="type">Одежда · полный сет</span></span>
   </a>
   <a class="item-card" href="/guide/items/2%20Mater/Плащ%20Листьев">
