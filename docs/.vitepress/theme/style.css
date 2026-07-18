@@ -43,6 +43,31 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
+/**
+ * Brand palette (orange), theme-aware.
+ *
+ * Links and other brand-colored elements get their color from
+ * --vp-c-brand-* which points to --vp-c-indigo-*. We override the palette
+ * per theme: dark, readable colors on the light theme and light colors
+ * on the dark theme (VitePress toggles the `.dark` class on <html>).
+ */
+
+:root {
+  /* Light theme -> dark links (contrast vs white bg >= 4.5:1) */
+  --vp-c-indigo-1: #a34d00;
+  --vp-c-indigo-2: #8f4a0b;
+  --vp-c-indigo-3: #a85700;
+  --vp-c-indigo-soft: rgba(255, 194, 110, 0.14);
+}
+
+.dark {
+  /* Dark theme -> light links */
+  --vp-c-indigo-1: #ffc26e;
+  --vp-c-indigo-2: #bf6300;
+  --vp-c-indigo-3: #b35c00;
+  --vp-c-indigo-soft: rgba(255, 194, 110, 0.16);
+}
+
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);

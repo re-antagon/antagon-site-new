@@ -1,10 +1,11 @@
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import BrewingRecipe from './BrewingRecipe.vue'
 import CraftingRecipe from './CraftingRecipe.vue'
 import FurnaceRecipe from './FurnaceRecipe.vue'
-import BrewingRecipe from './BrewingRecipe.vue'
-import StonecuttingRecipe from './StonecuttingRecipe.vue'
 import SmeltingRecipe from './SmeltingRecipe.vue'
+import StonecuttingRecipe from './StonecuttingRecipe.vue'
+import './style.css'
 
 export default {
   extends: DefaultTheme,
