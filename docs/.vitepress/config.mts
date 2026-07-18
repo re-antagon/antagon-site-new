@@ -153,7 +153,8 @@ export default defineConfig({
             { text: 'Обзор предметов', link: '/guide/items/' },
             { text: 'Уникальные артефакты', link: '/guide/items/unique_items' },
             { text: 'Постижение', link: '/guide/items/1%20Infinitum/index' },
-            { text: 'Естество', link: '/guide/items/2%20Mater/index' }
+            { text: 'Естество', link: '/guide/items/2%20Mater/index' },
+            { text: 'Расширение', link: '/guide/items/3%20Fungus/index' }
           ]
         },
         {
