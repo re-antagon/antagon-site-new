@@ -169,7 +169,7 @@ img {
 <div class="mcui mcui-Crafting_Table">
   <div class="mcui-input">
     <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/slime_ball" class="image"><img src="/assets/items/slime_ball.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/resin_clump" class="image"><img src="/assets/items/resin_clump.png" width="64" height="64"></a></span></span>
       <span class="invslot"><span class="invslot-item"><a href="/items/bone_meal" class="image"><img src="/assets/items/bone_meal.png" width="64" height="64"></a></span></span>
       <span class="invslot"><span class="invslot-item"><a href="/items/fire_charge" class="image"><img src="/assets/items/fire_charge.png" width="64" height="64"></a></span></span>
     </div>
@@ -186,7 +186,7 @@ img {
   </div>
   <span class="mcui-arrow"></span>
   <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
+    <span class="invslot"><span class="invslot-item"><a href="/items/popped_chorus_fruit" class="image"><img src="/assets/items/popped_chorus_fruit.png" width="64" height="64"></a></span></span>
   </span>
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
