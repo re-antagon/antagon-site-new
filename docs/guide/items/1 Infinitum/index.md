@@ -105,7 +105,7 @@ img[alt*="Бог Постижения"] {
     <img src="/assets/items/custom/big/powerd_crystal.png" alt="Заряженный кристалл памяти">
     <span class="meta"><span class="name">Заряженный кристалл памяти</span><span class="type">Расходник · обмен опыта</span></span>
   </a>
-  <a class="item-card" href="/guide/items/1%20Infinitum/Дефектный кристалл памяти.">
+  <a class="item-card" href="/guide/items/1%20Infinitum/Дефектный кристалл памяти">
     <img src="/assets/items/custom/big/defected_memory_crystal.png" alt="Дефектный кристалл памяти">
     <span class="meta"><span class="name">Дефектный кристалл памяти</span><span class="type">Расходник · компонент</span></span>
   </a>
