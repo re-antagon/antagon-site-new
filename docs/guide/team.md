@@ -120,7 +120,7 @@ const other = [
     title: 'Это я(Разносторонняя личность)',
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/782549536701677568/909d54587036f2b641888c43ed71b5aa.webp?size=1024',
+    avatar: 'https://cdn.discordapp.com/avatars/782549536701677568/6136f3ae2c2a56d6d1ae8fedfb5d72e2.webp?size=1024',
     name: 'utophii',
     title: 'Технический администратор',
     links: [
