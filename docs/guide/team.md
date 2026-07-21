@@ -99,6 +99,9 @@ const other = [
     avatar: 'https://cdn.discordapp.com/avatars/348091015103643648/f1e2af49478a5d9f5d83499b7a9df46c.webp?size=1024',
     name: 'BloodySupport',
     title: 'Это я(Разносторонняя личность)',
+    links: [
+      { icon: 'discord', link: 'https://discord.com/users/348091015103643648' }
+    ]
   },
   {
     avatar: 'https://cdn.discordapp.com/avatars/782549536701677568/6136f3ae2c2a56d6d1ae8fedfb5d72e2.webp?size=1024',
