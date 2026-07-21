@@ -177,6 +177,17 @@ onMounted(() => {
   50% { transform: scale(1.05); }
 }
 
+.birthday-message {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff6b6b, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Конфетти на карточке */
 .birthday-confetti {
   position: absolute;
