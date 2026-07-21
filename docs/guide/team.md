@@ -8,26 +8,7 @@ import {
   VPTeamMembers,
   VPTeamPageSection
 } from 'vitepress/theme'
-
-const style = document.createElement('style')
-style.textContent = `
-.VPTeamPage[data-v-5f7da39d] {
-    margin: 0px 0;
-}
-.VPTeamPageTitle[data-v-baf690b4] {
-    padding: 48px 64px 48px;
-}
-.VPTeamMembers .avatar {
-    overflow: hidden;
-}
-.VPTeamMembers .avatar img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-}
-`
-document.head.appendChild(style)
+import { onMounted } from 'vue'
 
 const coreMembers = [
   {
@@ -127,7 +108,6 @@ const other = [
       { icon: 'discord', link: 'https://discord.com/users/782549536701677568' }
     ]
   },
-
   {
     avatar: 'https://cdn.discordapp.com/avatars/810918366045798451/2e0fd5a14b0407cf6eed3039dc562953.webp?size=1024',
     name: 'MessageScheduler',
@@ -138,7 +118,165 @@ const other = [
   }
 ]
 
+onMounted(() => {
+  const style = document.createElement('style')
+  style.textContent = `
+.VPTeamPage[data-v-5f7da39d] {
+    margin: 0px 0;
+}
+.VPTeamPageTitle[data-v-baf690b4] {
+    padding: 48px 64px 48px;
+}
+.VPTeamMembers .avatar {
+    overflow: hidden;
+}
+.VPTeamMembers .avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.VPTeamMembersItem.birthday-utophii {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 107, 107, 0.12), rgba(77, 150, 255, 0.12));
+  border: 2px solid #FFD700 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  overflow: visible !important;
+}
+
+.VPTeamMembersItem.birthday-utophii:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.VPTeamMembersItem.birthday-utophii .avatar {
+  position: relative;
+  overflow: visible !important;
+  border: 3px solid #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.VPTeamMembersItem.birthday-utophii .profile {
+  overflow: visible;
+}
+
+@keyframes birthday-gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes birthday-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Конфетти на карточке */
+.birthday-confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -10px;
+  animation: confetti-fall linear infinite;
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10px) rotate(0deg) translateX(0); opacity: 1; }
+  100% { transform: translateY(250px) rotate(720deg) translateX(20px); opacity: 0; }
+}
+
+/* Тортик в титуле */
+.birthday-title {
+  position: relative;
+}
+`
+  document.head.appendChild(style)
+
+  const BIRTHDAY_MONTH = 6 // Июль (0 = Январь)
+  const BIRTHDAY_DAY = 22
+  const alwaysShow = false // <- поставь false чтобы показывать только в день рождения
+
+  const today = new Date()
+  const isBirthdayToday = today.getMonth() === BIRTHDAY_MONTH && today.getDate() === BIRTHDAY_DAY
+  const shouldShow = alwaysShow || isBirthdayToday
+
+  if (!shouldShow) return
+
+  const applyBirthday = () => {
+    let found = false
+    document.querySelectorAll('.VPTeamMembersItem').forEach((item) => {
+      const nameEl = item.querySelector('.name')
+      if (!nameEl) return
+      const name = nameEl.textContent.trim()
+      if (name === 'utophii') {
+        found = true
+        if (item.classList.contains('birthday-utophii')) return
+
+        item.classList.add('birthday-utophii')
+
+        // Меняем тайтл
+        const titleEl = item.querySelector('.title')
+        if (titleEl && !titleEl.dataset.birthday) {
+          titleEl.dataset.birthday = 'true'
+          titleEl.innerHTML = '🎂 Технический администратор'
+          // Сообщение под титулом
+          const msg = document.createElement('span')
+          msg.className = 'birthday-message'
+          msg.textContent = 'Сегодня День Рождения! Поздравляем!'
+          titleEl.appendChild(document.createElement('br'))
+          titleEl.appendChild(msg)
+        }
+
+        // Конфетти
+        if (!item.querySelector('.birthday-confetti')) {
+          const confettiContainer = document.createElement('div')
+          confettiContainer.className = 'birthday-confetti'
+          const colors = ['#FF6B6B', '#FFD93D', '#6BCB77', '#4D96FF', '#9F7AEA', '#FF8E8E']
+          for (let i = 0; i < 12; i++) {
+            const piece = document.createElement('div')
+            piece.className = 'confetti-piece'
+            piece.style.left = Math.random() * 100 + '%'
+            piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+            piece.style.animationDelay = (Math.random() * 3) + 's'
+            piece.style.animationDuration = (2 + Math.random() * 3) + 's'
+            piece.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)'
+            if (Math.random() > 0.5) piece.style.borderRadius = '50%'
+            confettiContainer.appendChild(piece)
+          }
+          item.appendChild(confettiContainer)
+        }
+      }
+    })
+    return found
+  }
+
+  // Пробуем несколько раз, т.к. VitePress рендерит асинхронно
+  let attempts = 0
+  const interval = setInterval(() => {
+    const found = applyBirthday()
+    attempts++
+    if (found || attempts > 20) clearInterval(interval)
+  }, 300)
+
+  // Наблюдатель на изменения DOM
+  const observer = new MutationObserver(() => applyBirthday())
+  observer.observe(document.body, { childList: true, subtree: true })
+  setTimeout(() => observer.disconnect(), 15000)
+})
 </script>
+
 <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>Наша Команда</template>
