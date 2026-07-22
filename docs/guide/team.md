@@ -10,6 +10,9 @@ import {
 } from 'vitepress/theme'
 import { onMounted } from 'vue'
 
+// ==========================================
+// КОМАНДА ПРОЕКТА
+// ==========================================
 const coreMembers = [
   {
     avatar: 'https://cdn.discordapp.com/avatars/590069040215490579/782808560f96b637734bebe373f9389a.webp?size=1024',
@@ -121,6 +124,26 @@ const other = [
   }
 ]
 
+const BIRTHDAYS = {
+  'utophii': { month: 6, day: 22 },
+  'DmitriySM': { month: 1, day: 15 },
+  'Mr_Marki': { month: 12, day: 6 },
+  'fenyanik': { month: 8, day: 29 },
+  'samikoppersi': { month: 3, day: 10 },
+  'horoshay_agama': { month: 12, day: 10 },
+  'gaus3099': { month: 11, day: 6 },
+  'qwillwood': { month: 10, day: 23 },
+  'Tarteen228': { month: 6, day: 23 },
+  'BloodySupport': { month: 1, day: 13 },
+  'MessageScheduler': { month: 2, day: 15 },
+}
+
+const BIRTHDAY_SETTINGS = {
+  alwaysShow: false,        // true = показать у всех для теста (как будто у всех сегодня ДР)
+  enableConfetti: true,     // конфетти
+  previewParam: true,       // поддержка ?birthday=utophii или ?birthday=all для теста
+}
+
 onMounted(() => {
   const style = document.createElement('style')
   style.textContent = `
@@ -140,31 +163,38 @@ onMounted(() => {
     object-position: center !important;
 }
 
-.VPTeamMembersItem.birthday-utophii {
+.VPTeamMembersItem.birthday-today {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 107, 107, 0.12), rgba(77, 150, 255, 0.12));
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.14), rgba(255, 107, 107, 0.14), rgba(77, 150, 255, 0.14));
   border: 2px solid #FFD700 !important;
   border-radius: 16px !important;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 4px 12px rgba(0,0,0,0.1);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 22px rgba(255, 215, 0, 0.35), 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+  transition: all 0.35s ease;
   overflow: visible !important;
+  order: -1;
 }
-
-.VPTeamMembersItem.birthday-utophii:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), 0 8px 20px rgba(0,0,0,0.15);
+.VPTeamMembersItem.birthday-today:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 32px rgba(255, 215, 0, 0.55), 0 10px 24px rgba(0,0,0,0.18);
 }
-
-.VPTeamMembersItem.birthday-utophii .avatar {
+.VPTeamMembersItem.birthday-today .avatar {
   position: relative;
   overflow: visible !important;
   border: 3px solid #FFD700;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.5);
 }
+.VPTeamMembersItem.birthday-today .profile { overflow: visible; }
 
-.VPTeamMembersItem.birthday-utophii .profile {
-  overflow: visible;
+.VPTeamMembersItem.birthday-soon {
+  position: relative;
+  border: 1.5px dashed #FFB347 !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, rgba(255, 179, 71, 0.08), rgba(255, 215, 0, 0.06));
+  overflow: visible !important;
+}
+.VPTeamMembersItem.birthday-soon .avatar {
+  overflow: visible !important;
 }
 
 @keyframes birthday-gradient {
@@ -180,15 +210,16 @@ onMounted(() => {
 .birthday-message {
   display: block;
   margin-top: 6px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12.5px;
+  font-weight: 700;
   background: linear-gradient(90deg, #ff6b6b, #f59e0b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.3;
 }
 
-/* Конфетти на карточке */
+/* Конфетти */
 .birthday-confetti {
   position: absolute;
   inset: 0;
@@ -197,7 +228,6 @@ onMounted(() => {
   border-radius: 16px;
   z-index: 1;
 }
-
 .confetti-piece {
   position: absolute;
   width: 8px;
@@ -205,47 +235,82 @@ onMounted(() => {
   top: -10px;
   animation: confetti-fall linear infinite;
 }
-
 @keyframes confetti-fall {
   0% { transform: translateY(-10px) rotate(0deg) translateX(0); opacity: 1; }
-  100% { transform: translateY(250px) rotate(720deg) translateX(20px); opacity: 0; }
-}
-
-/* Тортик в титуле */
-.birthday-title {
-  position: relative;
+  100% { transform: translateY(260px) rotate(720deg) translateX(25px); opacity: 0; }
 }
 `
   document.head.appendChild(style)
 
-  const BIRTHDAY_MONTH = 6 // Июль (0 = Январь)
-  const BIRTHDAY_DAY = 22
-  const alwaysShow = false // <- поставь false чтобы показывать только в день рождения
-
+  const urlParams = new URLSearchParams(window.location.search)
+  const previewName = urlParams.get('birthday') // ?birthday=utophii или ?birthday=all
   const today = new Date()
-  const isBirthdayToday = today.getMonth() === BIRTHDAY_MONTH && today.getDate() === BIRTHDAY_DAY
-  const shouldShow = alwaysShow || isBirthdayToday
+  today.setHours(0,0,0,0)
 
-  if (!shouldShow) return
+  function daysUntilBirthday(month, day) {
+    const thisYear = new Date(today.getFullYear(), month, day)
+    thisYear.setHours(0,0,0,0)
+    let diff = Math.ceil((thisYear - today) / (1000*60*60*24))
+    if (diff < 0) {
+      const nextYear = new Date(today.getFullYear()+1, month, day)
+      nextYear.setHours(0,0,0,0)
+      diff = Math.ceil((nextYear - today) / (1000*60*60*24))
+    }
+    return diff
+  }
 
-  const applyBirthday = () => {
-    let found = false
+  function isToday(month, day) {
+    return month === today.getMonth() && day === today.getDate()
+  }
+
+  function shouldCelebrate(name, cfg) {
+    if (BIRTHDAY_SETTINGS.alwaysShow) return { today: true, days: 0 }
+    if (BIRTHDAY_SETTINGS.previewParam && previewName) {
+      if (previewName === 'all' || previewName.toLowerCase() === name.toLowerCase()) {
+        return { today: true, days: 0 }
+      }
+    }
+    if (!cfg) return null
+    const days = daysUntilBirthday(cfg.month, cfg.day)
+    if (days === 0) return { today: true, days: 0 }
+    if (BIRTHDAY_SETTINGS.showCountdown && days <= BIRTHDAY_SETTINGS.countdownDays && days > 0) {
+      return { today: false, days }
+    }
+    return null
+  }
+
+  const celebrations = []
+
+  const applyBirthdays = () => {
+    let foundAny = false
+    const todays = []
+    const soons = []
+
     document.querySelectorAll('.VPTeamMembersItem').forEach((item) => {
       const nameEl = item.querySelector('.name')
       if (!nameEl) return
       const name = nameEl.textContent.trim()
-      if (name === 'utophii') {
-        found = true
-        if (item.classList.contains('birthday-utophii')) return
+      const cfg = BIRTHDAYS[name]
+      const result = shouldCelebrate(name, cfg)
+      if (!result) return
 
-        item.classList.add('birthday-utophii')
+      foundAny = true
 
-        // Меняем тайтл
+      if (result.today) {
+        // Уже применено?
+        if (item.classList.contains('birthday-today')) {
+          if (!todays.includes(name)) todays.push(name)
+          return
+        }
+        item.classList.add('birthday-today')
+        todays.push(name)
+
         const titleEl = item.querySelector('.title')
-        if (titleEl && !titleEl.dataset.birthday) {
-          titleEl.dataset.birthday = 'true'
-          titleEl.innerHTML = '🎂 Технический администратор'
-          // Сообщение под титулом
+        if (titleEl && !titleEl.dataset.birthdayToday) {
+          titleEl.dataset.birthdayToday = 'true'
+          const originalTitle = titleEl.textContent.trim()
+          if (!item.dataset.originalTitle) item.dataset.originalTitle = originalTitle
+          titleEl.innerHTML = `🎂 ${originalTitle}`
           const msg = document.createElement('span')
           msg.className = 'birthday-message'
           msg.textContent = 'Сегодня День Рождения! Поздравляем!'
@@ -253,12 +318,11 @@ onMounted(() => {
           titleEl.appendChild(msg)
         }
 
-        // Конфетти
-        if (!item.querySelector('.birthday-confetti')) {
+        if (BIRTHDAY_SETTINGS.enableConfetti && !item.querySelector('.birthday-confetti')) {
           const confettiContainer = document.createElement('div')
           confettiContainer.className = 'birthday-confetti'
           const colors = ['#FF6B6B', '#FFD93D', '#6BCB77', '#4D96FF', '#9F7AEA', '#FF8E8E']
-          for (let i = 0; i < 12; i++) {
+          for (let i = 0; i < 14; i++) {
             const piece = document.createElement('div')
             piece.className = 'confetti-piece'
             piece.style.left = Math.random() * 100 + '%'
@@ -273,21 +337,19 @@ onMounted(() => {
         }
       }
     })
-    return found
+    return foundAny
   }
 
-  // Пробуем несколько раз, т.к. VitePress рендерит асинхронно
   let attempts = 0
   const interval = setInterval(() => {
-    const found = applyBirthday()
+    applyBirthdays()
     attempts++
-    if (found || attempts > 20) clearInterval(interval)
+    if (attempts > 25) clearInterval(interval)
   }, 300)
 
-  // Наблюдатель на изменения DOM
-  const observer = new MutationObserver(() => applyBirthday())
+  const observer = new MutationObserver(() => applyBirthdays())
   observer.observe(document.body, { childList: true, subtree: true })
-  setTimeout(() => observer.disconnect(), 15000)
+  setTimeout(() => observer.disconnect(), 20000)
 })
 </script>
 
