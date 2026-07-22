@@ -25,8 +25,7 @@ export default defineConfig({
     // Additional SEO
     ['meta', { name: 'robots', content: 'index, follow' }],
     ['meta', { name: 'author', content: 'Re:Antagon Team' }],
-    ['meta', { name: 'keywords', content: 'minecraft, server, antagon, wiki, гайд, предметы, мобы, 1.21' }],
-    ['link', { rel: 'canonical', href: 'https://wiki.antagon.su/' }],
+    ['meta', { name: 'keywords', content: 'minecraft, server, antagon, re:antagon, antagon:re, antagon reborn, антагон, антагон реборн, реантагон, антагон вики, вики, wiki, предметы, боги, фишки, гайд, 1.21' }],
     // Yandex Meta
     ['meta', { name: 'yandex-verification', content: '4364860f960a5a06' }],
     // JSON-LD structured data
@@ -34,6 +33,7 @@ export default defineConfig({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Re:Antagon",
+      "alternateName": ["Antagon Reborn", "Антагон Реборн", "РеАнтагон", "antagon:re", "re:antagon", "Antagon Wiki", "Антагон Вики", "Antagon Server"],
       "description": "Антагон - это ванильный майнкрафт сервер для 1.21 версий майнкрафта. На сервере добавлены кастомные предметы, мобы.",
       "url": "https://wiki.antagon.su/",
       "publisher": {
@@ -96,6 +96,14 @@ export default defineConfig({
   ],
   cleanUrls: true,
   lastUpdated: true,
+  transformHead: ({ pageData }) => {
+    const rawPath = pageData.relativePath.replace(/\.md$/, '').replace(/(^|\/)index$/, '');
+    const canonicalUrl = `https://wiki.antagon.su/${rawPath ? rawPath : ''}`;
+    return [
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { property: 'og:url', content: canonicalUrl }]
+    ];
+  },
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -144,7 +152,8 @@ export default defineConfig({
           text: 'Часто задаваемые вопросы',
           items: [
             { text: 'Общие вопросы', link: '/guide/faq/' },
-            { text: 'Фишки сервера', link: '/guide/faq/features' }
+            { text: 'Фишки сервера', link: '/guide/faq/features' },
+            { text: 'О названии и синонимы', link: '/guide/faq/terminology' }
           ]
         },
         {
