@@ -9,9 +9,9 @@
     "vitepress": "^2.0.0-alpha.15"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs && npm run generate:sitemap",
-    "docs:preview": "vitepress preview docs",
+    "docs:dev": "npx vitepress dev docs",
+    "docs:build": "npx vitepress build docs && npm run generate:sitemap",
+    "docs:preview": "npx vitepress preview docs",
     "generate:sitemap": "node -e \"require('./docs/.vitepress/generate-sitemap.js').generateSiteMap().catch(console.error)\""
   },
   "dependencies": {
