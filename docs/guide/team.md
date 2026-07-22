@@ -135,7 +135,7 @@ const BIRTHDAYS = {
   'qwillwood': { month: 10, day: 23 },
   'Tarteen228': { month: 6, day: 23 },
   'BloodySupport': { month: 1, day: 13 },
-  'MessageScheduler': { month: 2, day: 15 },
+  'MessageScheduler': { month: 2, day: 15 }
 }
 
 const BIRTHDAY_SETTINGS = {
@@ -248,19 +248,19 @@ onMounted(() => {
   today.setHours(0,0,0,0)
 
   function daysUntilBirthday(month, day) {
-    const thisYear = new Date(today.getFullYear(), month, day)
-    thisYear.setHours(0,0,0,0)
-    let diff = Math.ceil((thisYear - today) / (1000*60*60*24))
+    const thisYear = new Date(today.getFullYear(), month - 1, day)
+    thisYear.setHours(0, 0, 0, 0)
+    let diff = Math.ceil((thisYear - today) / (1000 * 60 * 60 * 24))
     if (diff < 0) {
-      const nextYear = new Date(today.getFullYear()+1, month, day)
-      nextYear.setHours(0,0,0,0)
-      diff = Math.ceil((nextYear - today) / (1000*60*60*24))
+      const nextYear = new Date(today.getFullYear() + 1, month - 1, day)
+      nextYear.setHours(0, 0, 0, 0)
+      diff = Math.ceil((nextYear - today) / (1000 * 60 * 60 * 24))
     }
     return diff
   }
 
   function isToday(month, day) {
-    return month === today.getMonth() && day === today.getDate()
+    return (month - 1) === today.getMonth() && day === today.getDate()
   }
 
   function shouldCelebrate(name, cfg) {
