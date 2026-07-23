@@ -5,8 +5,8 @@
       class="invslot-item invslot-item-image" 
       :data-minetip-title="getItemTitle(currentItem)"
       :href="getItemWikiUrl(currentItem)"
-      target="_blank"
-      rel="noopener noreferrer"
+      :target="getItemWikiUrl(currentItem).startsWith('/') ? undefined : '_blank'"
+      :rel="getItemWikiUrl(currentItem).startsWith('/') ? undefined : 'noopener noreferrer'"
     >
       <span typeof="mw:File">
         <img 
