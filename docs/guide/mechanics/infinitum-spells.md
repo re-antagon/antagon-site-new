@@ -2,49 +2,22 @@
 description: "Заклинания Бога Постижения на сервере Re:Antagon. Узнайте о всех 12 заклинаниях, их стоимости, перезарядках и усиленных вариантах."
 ---
 
-<style>
-img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-
-.mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-</style>
-
 # Заклинания Постижения
 
 Все заклинания Бога Постижения применяются через **Гримуар** - предмет, крафтящийся на верстаке из ![Книга](/assets/items/book.png) книги в центре, ![Алмаз](/assets/items/diamond.png) алмаза над ней и 7 ![Пузырек опыта](/assets/items/experience_bottle.png) пузырьков опыта.
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/experience_bottle" class="image"><img src="/assets/items/experience_bottle.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/experience_bottle" class="image"><img src="/assets/items/experience_bottle.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/experience_bottle" class="image"><img src="/assets/items/experience_bottle.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/book" class="image"><img src="/assets/items/book.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/experience_bottle" class="image"><img src="/assets/items/experience_bottle.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/experience_bottle" class="image"><img src="/assets/items/experience_bottle.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/experience_bottle" class="image"><img src="/assets/items/experience_bottle.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/experience_bottle" class="image"><img src="/assets/items/experience_bottle.png" width="64" height="64"></a></span></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/enchanted_book" class="image"><img src="/assets/items/enchanted_book.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
-</div>
+<CraftingRecipe
+  input1="experience_bottle"
+  input2="diamond"
+  input3="experience_bottle"
+  input4="experience_bottle"
+  input5="book"
+  input6="experience_bottle"
+  input7="experience_bottle"
+  input8="experience_bottle"
+  input9="experience_bottle"
+  output="enchanted_book"
+/>
 
 ## Общие правила
 

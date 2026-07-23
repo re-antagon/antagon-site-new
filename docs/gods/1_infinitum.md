@@ -2,16 +2,6 @@
 description: "Бог Постижения (Infinitum Conscientia) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, заклинаниях и особенностях тела."
 ---
 
-<style>
-img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-</style>
-
 # Бог Постижения
 
 **Infinitum** - Бог Постижения, покровитель знаний, механизмов и магии. Его последователи изучают древние артефакты, создают автоматические устройства и владеют мощными заклинаниями.

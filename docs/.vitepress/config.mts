@@ -89,10 +89,7 @@ export default defineConfig({
       '<div><img src="https://mc.yandex.ru/watch/103960154" style="position:absolute; left:-9999px;" alt="" /></div>'
     ],
 
-    // Google Fonts
-    [ 'link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
-    [ 'link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    [ 'link', { href: 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap', rel: 'stylesheet' }]
+    // Fonts
   ],
   cleanUrls: true,
   lastUpdated: true,
@@ -153,6 +150,7 @@ export default defineConfig({
           items: [
             { text: 'Общие вопросы', link: '/guide/faq/' },
             { text: 'Фишки сервера', link: '/guide/faq/features' },
+            { text: 'Кастомные крафты', link: '/guide/faq/custom_crafts' },
             { text: 'О названии и синонимы', link: '/guide/faq/terminology' }
           ]
         },

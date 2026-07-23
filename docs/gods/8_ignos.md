@@ -2,21 +2,6 @@
 description: "Бог Хаоса (Ignos - Chaos) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, игральной кости D20 и нестабильном теле."
 ---
 
-<style>
-img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-
-.mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-</style>
-
 # Бог Хаоса
 
 **Ignos** - Бог Хаоса, покровитель удачи, азарта и непредсказуемости. Его последователи живут по законам случайности, рискуя всем ради шанса на невероятную удачу. Хаос дарит мощные благословения, но делает жизнь своих последователей постоянной рулеткой.
@@ -166,30 +151,16 @@ img {
 
 ### Крафт
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/resin_clump" class="image"><img src="/assets/items/resin_clump.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/bone_meal" class="image"><img src="/assets/items/bone_meal.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/fire_charge" class="image"><img src="/assets/items/fire_charge.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/magma_cream" class="image"><img src="/assets/items/magma_cream.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/apple" class="image"><img src="/assets/items/apple.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/popped_chorus_fruit" class="image"><img src="/assets/items/popped_chorus_fruit.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="resin_clump"
+  input2="bone_meal"
+  input3="fire_charge"
+  input4="magma_cream"
+  input5="apple"
+  input6="diamond"
+  output="popped_chorus_fruit"
+  shapeless="true"
+/>
 
 ::: tip Примечание
 Ингредиенты можно размещать в любом порядке на верстаке.

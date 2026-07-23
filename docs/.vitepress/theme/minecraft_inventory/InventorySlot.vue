@@ -1,14 +1,17 @@
 <template>
   <span class="invslot">
-    <span 
-      v-if="item" 
+    <a 
+      v-if="currentItem" 
       class="invslot-item invslot-item-image" 
-      :data-minetip-title="getItemTitle(item)"
+      :data-minetip-title="getItemTitle(currentItem)"
+      :href="getItemWikiUrl(currentItem)"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <span typeof="mw:File">
         <img 
-          :alt="getItemAlt(item)" 
-          :src="getItemSrc(item)" 
+          :alt="getItemAlt(currentItem)" 
+          :src="getItemSrc(currentItem)" 
           decoding="async" 
           loading="lazy" 
           width="32" 
@@ -19,12 +22,13 @@
         >
       </span>
       <span v-if="count && count > 1" class="invslot-stacksize">{{ count }}</span>
-    </span>
+    </a>
   </span>
 </template>
 
 <script setup lang="ts">
-import { getItemTitle, getItemAlt, getItemSrc } from './itemUtils'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { getItemTitle, getItemAlt, getItemSrc, getItemWikiUrl } from './itemUtils'
 
 interface Props {
   item?: string
@@ -34,5 +38,27 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   item: '',
   count: 1
+})
+
+const frameIndex = ref(0)
+let timer: ReturnType<typeof setInterval> | null = null
+
+onMounted(() => {
+  if (props.item && props.item.includes(';')) {
+    timer = setInterval(() => {
+      frameIndex.value++
+    }, 2000)
+  }
+})
+
+onUnmounted(() => {
+  if (timer) clearInterval(timer)
+})
+
+const currentItem = computed(() => {
+  if (!props.item) return ''
+  const frames = props.item.split(';').map(s => s.trim()).filter(Boolean)
+  if (frames.length <= 1) return frames[0] ?? ''
+  return frames[frameIndex.value % frames.length]
 })
 </script>

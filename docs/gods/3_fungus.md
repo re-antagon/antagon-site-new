@@ -2,16 +2,6 @@
 description: "Бог Расширения (Fungus) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, механике заражения и особенностях тела."
 ---
 
-<style>
-img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-</style>
-
 # Бог Расширения
 
 **Fungus** - Бог Расширения, покровитель болезней, чумы и заразы. Его последователи распространяют споры, используют второй желудок для переваривания любых веществ и могут принимать форму грибного существа.

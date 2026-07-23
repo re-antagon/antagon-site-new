@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/minecraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .invslot {
     position: relative;
-    display: inline-block;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     background: #8B8B8B no-repeat center center / 32px 32px;
     border: 2px solid;
     border-color: #373737 #FFF #FFF #373737;
@@ -9,7 +19,8 @@
     font-size: 16px;
     line-height: 1;
     text-align: left;
-    vertical-align: bottom
+    vertical-align: bottom;
+    box-sizing: content-box;
 }
 
 .invslot::before,.invslot::after {
@@ -33,16 +44,100 @@
 
 .invslot-large {
     box-sizing: content-box;
-    padding: 8px
+    padding: 8px;
+    width: 32px;
+    height: 32px;
 }
 
 .invslot-item,.invslot-item a:first-child {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.invslot-item > span[typeof="mw:File"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.invslot-item img {
+    display: block !important;
+    width: 32px !important;
+    height: 32px !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
+    image-rendering: pixelated !important;
+    image-rendering: crisp-edges !important;
+}
+
+#minetip-tooltip {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #100010;
+    background-color: rgba(16,0,16,0.94);
+    padding: 0.375em;
+    font-family: Minecraft, sans-serif;
+    font-size: 16px;
+    word-spacing: 4px;
+    white-space: nowrap;
+    line-height: 1.25em;
+    margin: 0.125em 0.25em;
+    pointer-events: none;
+    z-index: 9999;
+    color: #FBFBFB;
+    text-shadow: 0.125em 0.125em 0 #3E3E3E;
+    box-sizing: border-box;
+}
+
+#minetip-tooltip::before {
+    content: "";
+    position: absolute;
+    top: 0.125em;
+    right: -0.125em;
+    bottom: 0.125em;
+    left: -0.125em;
+    border: 0.15em solid #100010;
+    border-style: none solid;
+    border-color: rgba(16,0,16,0.94);
+}
+
+#minetip-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 0.125em;
+    right: 0;
+    bottom: 0.125em;
+    left: 0;
+    border: 0.125em solid #2D0A63;
+    border-image: -webkit-linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+    border-image: linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+}
+
+#minetip-tooltip > .description,#minetip-tooltip > .minetip-description {
     display: block;
-    margin: -2px;
-    padding: 2px;
-    width: 32px;
-    height: 32px
+    margin-top: 0.25em;
 }
 
 .invslot-item-image a.new:first-child {
@@ -57,7 +152,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    font-family: "Pixelify Sans",sans-serif !important;
+    font-family: Minecraft, sans-serif !important;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: normal !important;

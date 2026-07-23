@@ -2,16 +2,6 @@
 description: "Бог Искажения (Distorta - Malum) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, заклинаниях и особенностях тела."
 ---
 
-<style>
-img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-</style>
-
 # Бог Искажения
 
 **Distorta** - Бог Искажения, покровитель алчности, эгоизма, некромантии и вампиризма. Его последователи используют прану других существ, поднимают нежить и черпают силу из чужих страданий.

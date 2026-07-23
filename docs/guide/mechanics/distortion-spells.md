@@ -2,49 +2,22 @@
 description: "Заклинания Бога Искажения на сервере Re:Antagon. Узнайте о всех 16 заклинаниях, их стоимости, перезарядках и эффектах."
 ---
 
-<style>
-img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-
-.mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-</style>
-
 # Заклинания Искажения
 
 Все заклинания Бога Искажения применяются через **Искаженный свиток** - предмет, крафтящийся из пустой карты в центре, алмаза над ней и 7 редстоуна на верстаке **в полной темноте**.
 
-<div class="mcui mcui-Crafting_Table">redstone
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/map" class="image"><img src="/assets/items/map.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
-</div>
+<CraftingRecipe
+  input1="redstone"
+  input2="diamond"
+  input3="redstone"
+  input4="redstone"
+  input5="map"
+  input6="redstone"
+  input7="redstone"
+  input8="redstone"
+  input9="redstone"
+  output="nether_brick"
+/>
 
 ## Общие правила
 

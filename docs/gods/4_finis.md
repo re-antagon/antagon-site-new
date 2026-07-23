@@ -2,21 +2,6 @@
 description: "Бог Окончания (Finis - Ultimum Tectumque) на сервере Re:Antagon. Узнайте о благословениях, проклятиях и особенностях тела."
 ---
 
-<style>
-img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-
-.mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-</style>
-
 # Бог Окончания
 
 **Finis** - Бог Окончания, покровитель смерти, пустоты и загробного мира. Его последователи владеют силами пустоты, могут превращаться в статуи и получают защиту от опасностей Края и Чистилища.
@@ -112,30 +97,12 @@ img {
 
 На 6 уровне становится доступен крафт **Стирателя** (2 угля), который может удалять блоки.
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/coal" class="image"><img src="/assets/items/coal.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/coal" class="image"><img src="/assets/items/coal.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="coal"
+  input2="coal"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 

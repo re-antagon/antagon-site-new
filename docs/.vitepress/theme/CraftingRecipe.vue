@@ -4,11 +4,11 @@
       <span class="mcui-input">
         <span class="mcui-row">
           <span class="invslot">
-            <span v-if="input1" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input1)">
+            <a v-if="input1" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input1))" :href="getItemWikiUrl(getCurrent(input1))" target="_blank" rel="noopener noreferrer">
               <span typeof="mw:File">
                 <img 
-                  :alt="getItemAlt(input1)" 
-                  :src="getItemSrc(input1)" 
+                  :alt="getItemAlt(getCurrent(input1))" 
+                  :src="getItemSrc(getCurrent(input1))" 
                   decoding="async" 
                   loading="lazy" 
                   width="32" 
@@ -18,14 +18,14 @@
                   data-file-height="16"
                 >
               </span>
-            </span>
+            </a>
           </span>
           <span class="invslot">
-            <span v-if="input2" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input2)">
+            <a v-if="input2" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input2))" :href="getItemWikiUrl(getCurrent(input2))" target="_blank" rel="noopener noreferrer">
               <span typeof="mw:File">
                 <img 
-                  :alt="getItemAlt(input2)" 
-                  :src="getItemSrc(input2)" 
+                  :alt="getItemAlt(getCurrent(input2))" 
+                  :src="getItemSrc(getCurrent(input2))" 
                   decoding="async" 
                   loading="lazy" 
                   width="32" 
@@ -35,14 +35,14 @@
                   data-file-height="16"
                 >
               </span>
-            </span>
+            </a>
           </span>
           <span class="invslot">
-            <span v-if="input3" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input3)">
+            <a v-if="input3" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input3))" :href="getItemWikiUrl(getCurrent(input3))" target="_blank" rel="noopener noreferrer">
               <span typeof="mw:File">
                 <img 
-                  :alt="getItemAlt(input3)" 
-                  :src="getItemSrc(input3)" 
+                  :alt="getItemAlt(getCurrent(input3))" 
+                  :src="getItemSrc(getCurrent(input3))" 
                   decoding="async" 
                   loading="lazy" 
                   width="32" 
@@ -52,69 +52,16 @@
                   data-file-height="16"
                 >
               </span>
-            </span>
-          </span>
-        </span>
-        <span class="mcui-row">
-          <span class="invslot">
-            <span v-if="input4" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input4)">
-              <span typeof="mw:File">
-                <img 
-                  :alt="getItemAlt(input4)" 
-                  :src="getItemSrc(input4)" 
-                  decoding="async" 
-                  loading="lazy" 
-                  width="32" 
-                  height="32" 
-                  class="mw-file-element" 
-                  data-file-width="16" 
-                  data-file-height="16"
-                >
-              </span>
-            </span>
-          </span>
-          <span class="invslot">
-            <span v-if="input5" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input5)">
-              <span typeof="mw:File">
-                <img 
-                  :alt="getItemAlt(input5)" 
-                  :src="getItemSrc(input5)" 
-                  decoding="async" 
-                  loading="lazy" 
-                  width="32" 
-                  height="32" 
-                  class="mw-file-element" 
-                  data-file-width="16" 
-                  data-file-height="16"
-                >
-              </span>
-            </span>
-          </span>
-          <span class="invslot">
-            <span v-if="input6" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input6)">
-              <span typeof="mw:File">
-                <img 
-                  :alt="getItemAlt(input6)" 
-                  :src="getItemSrc(input6)" 
-                  decoding="async" 
-                  loading="lazy" 
-                  width="32" 
-                  height="32" 
-                  class="mw-file-element" 
-                  data-file-width="16" 
-                  data-file-height="16"
-                >
-              </span>
-            </span>
+            </a>
           </span>
         </span>
         <span class="mcui-row">
           <span class="invslot">
-            <span v-if="input7" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input7)">
+            <a v-if="input4" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input4))" :href="getItemWikiUrl(getCurrent(input4))" target="_blank" rel="noopener noreferrer">
               <span typeof="mw:File">
                 <img 
-                  :alt="getItemAlt(input7)" 
-                  :src="getItemSrc(input7)" 
+                  :alt="getItemAlt(getCurrent(input4))" 
+                  :src="getItemSrc(getCurrent(input4))" 
                   decoding="async" 
                   loading="lazy" 
                   width="32" 
@@ -124,14 +71,14 @@
                   data-file-height="16"
                 >
               </span>
-            </span>
+            </a>
           </span>
           <span class="invslot">
-            <span v-if="input8" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input8)">
+            <a v-if="input5" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input5))" :href="getItemWikiUrl(getCurrent(input5))" target="_blank" rel="noopener noreferrer">
               <span typeof="mw:File">
                 <img 
-                  :alt="getItemAlt(input8)" 
-                  :src="getItemSrc(input8)" 
+                  :alt="getItemAlt(getCurrent(input5))" 
+                  :src="getItemSrc(getCurrent(input5))" 
                   decoding="async" 
                   loading="lazy" 
                   width="32" 
@@ -141,14 +88,14 @@
                   data-file-height="16"
                 >
               </span>
-            </span>
+            </a>
           </span>
           <span class="invslot">
-            <span v-if="input9" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(input9)">
+            <a v-if="input6" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input6))" :href="getItemWikiUrl(getCurrent(input6))" target="_blank" rel="noopener noreferrer">
               <span typeof="mw:File">
                 <img 
-                  :alt="getItemAlt(input9)" 
-                  :src="getItemSrc(input9)" 
+                  :alt="getItemAlt(getCurrent(input6))" 
+                  :src="getItemSrc(getCurrent(input6))" 
                   decoding="async" 
                   loading="lazy" 
                   width="32" 
@@ -158,7 +105,60 @@
                   data-file-height="16"
                 >
               </span>
-            </span>
+            </a>
+          </span>
+        </span>
+        <span class="mcui-row">
+          <span class="invslot">
+            <a v-if="input7" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input7))" :href="getItemWikiUrl(getCurrent(input7))" target="_blank" rel="noopener noreferrer">
+              <span typeof="mw:File">
+                <img 
+                  :alt="getItemAlt(getCurrent(input7))" 
+                  :src="getItemSrc(getCurrent(input7))" 
+                  decoding="async" 
+                  loading="lazy" 
+                  width="32" 
+                  height="32" 
+                  class="mw-file-element" 
+                  data-file-width="16" 
+                  data-file-height="16"
+                >
+              </span>
+            </a>
+          </span>
+          <span class="invslot">
+            <a v-if="input8" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input8))" :href="getItemWikiUrl(getCurrent(input8))" target="_blank" rel="noopener noreferrer">
+              <span typeof="mw:File">
+                <img 
+                  :alt="getItemAlt(getCurrent(input8))" 
+                  :src="getItemSrc(getCurrent(input8))" 
+                  decoding="async" 
+                  loading="lazy" 
+                  width="32" 
+                  height="32" 
+                  class="mw-file-element" 
+                  data-file-width="16" 
+                  data-file-height="16"
+                >
+              </span>
+            </a>
+          </span>
+          <span class="invslot">
+            <a v-if="input9" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(input9))" :href="getItemWikiUrl(getCurrent(input9))" target="_blank" rel="noopener noreferrer">
+              <span typeof="mw:File">
+                <img 
+                  :alt="getItemAlt(getCurrent(input9))" 
+                  :src="getItemSrc(getCurrent(input9))" 
+                  decoding="async" 
+                  loading="lazy" 
+                  width="32" 
+                  height="32" 
+                  class="mw-file-element" 
+                  data-file-width="16" 
+                  data-file-height="16"
+                >
+              </span>
+            </a>
           </span>
         </span>
       </span>
@@ -167,11 +167,11 @@
       </span>
       <span class="mcui-output">
         <span class="invslot invslot-large">
-          <span v-if="output" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(output)">
+          <a v-if="output" class="invslot-item invslot-item-image" :data-minetip-title="getItemTitle(getCurrent(output))" :href="getItemWikiUrl(getCurrent(output))" target="_blank" rel="noopener noreferrer">
             <span typeof="mw:File">
               <img 
-                :alt="getItemAlt(output)" 
-                :src="getItemSrc(output)" 
+                :alt="getItemAlt(getCurrent(output))" 
+                :src="getItemSrc(getCurrent(output))" 
                 decoding="async" 
                 loading="lazy" 
                 width="32" 
@@ -182,7 +182,7 @@
               >
             </span>
             <span v-if="output_count && output_count > 1" class="invslot-stacksize">{{ output_count }}</span>
-          </span>
+          </a>
         </span>
       </span>
       <span v-if="shapeless || fixed" class="mcui-icons">
@@ -206,6 +206,9 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { getItemTitle, getItemAlt, getItemSrc, getItemWikiUrl } from './minecraft_inventory/itemUtils'
+
 const props = defineProps({
   input1: String,
   input2: String,
@@ -234,19 +237,38 @@ const props = defineProps({
   }
 })
 
-const getItemTitle = (itemName) => {
-  if (!itemName) return ''
-  return itemName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+// Global frame index — all animated slots cycle in sync
+const frameIndex = ref(0)
+let timer = null
+
+onMounted(() => {
+  timer = setInterval(() => {
+    frameIndex.value++
+  }, 2000)
+})
+
+onUnmounted(() => {
+  if (timer) clearInterval(timer)
+})
+
+/**
+ * Parse a slot value into an array of frames.
+ * "dirt;coarse_dirt;mud" → ["dirt", "coarse_dirt", "mud"]
+ * "coal"                  → ["coal"]
+ */
+const parseFrames = (value) => {
+  if (!value) return []
+  return value.split(';').map(s => s.trim()).filter(Boolean)
 }
 
-const getItemAlt = (itemName) => {
-  if (!itemName) return ''
-  const title = getItemTitle(itemName)
-  return `Иконка ${title}.png: Спрайт для инвентаря, как показано в игре.`
-}
-
-const getItemSrc = (itemName) => {
-  if (!itemName) return ''
-  return `/assets/items/${itemName}.png`
+/**
+ * Return the currently active frame for a given slot value.
+ * Non-animated slots (no semicolons) always return the single item.
+ */
+const getCurrent = (value) => {
+  if (!value) return ''
+  const frames = parseFrames(value)
+  if (frames.length <= 1) return frames[0] ?? ''
+  return frames[frameIndex.value % frames.length]
 }
 </script>

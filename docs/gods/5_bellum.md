@@ -2,16 +2,6 @@
 description: "Бог Войны (Bellum - Ignis Bellum) на сервере Re:Antagon. Узнайте о благословениях, проклятиях и особенностях тела."
 ---
 
-<style>
-img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-</style>
-
 # Бог Войны
 
 **Bellum** - Бог Войны, покровитель сражений, огня и ярости. Его последователи черпают силу из битв, управляют огнем и превращают гнев в мощное оружие.
