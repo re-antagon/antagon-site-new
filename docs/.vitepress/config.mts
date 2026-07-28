@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -194,46 +194,13 @@ export default defineConfig({
           text: 'Улучшения игры',
           collapsed: false,
           items: [
-            { text: 'Обзор механик', link: '/guide/mechanics/' },
-            {
-              text: 'Ванилла и Рецепты',
-              collapsed: true,
-              items: [
-                { text: 'Изменения ванильных рецептов', link: '/guide/items/van/index' },
-                { text: 'Декоративные предметы', link: '/guide/items/deco/index' }
-              ]
-            },
-            {
-              text: 'Измерения и Места',
-              collapsed: true,
-              items: [
-                { text: 'Измерение Чистилище', link: '/guide/mechanics/purgatory' },
-                { text: 'Места и локации', link: '/guide/places/' }
-              ]
-            },
-            {
-              text: 'Физика и Окружение',
-              collapsed: true,
-              items: [
-                { text: 'Разрушение блоков наковальней', link: '/guide/mechanics/anvil/crushes_block' },
-                { text: 'Физика поршней и наковальни', link: '/guide/mechanics/anvil/piston_physics' },
-                { text: 'Ускоренное окисление меди', link: '/guide/mechanics/copper_oxidation' },
-                { text: 'Скоростные вагонетки', link: '/guide/mechanics/minecarts_acceleration' },
-                { text: 'Пожары и древесный уголь', link: '/guide/mechanics/fire_adjustment' },
-                { text: 'Особенности паутины', link: '/guide/mechanics/web' }
-              ]
-            },
-            {
-              text: 'Утилиты, Боевка & QoL',
-              collapsed: true,
-              items: [
-                { text: 'Зелья-индикаторы', link: '/guide/mechanics/indicators' },
-                { text: 'Арбалет "Тройной выстрел"', link: '/guide/mechanics/multishot_crossbow' },
-                { text: 'Кастомные пластинки (/cd)', link: '/guide/mechanics/custom_discs' },
-                { text: 'Картинки в рамках (/imageframe)', link: '/guide/mechanics/image_frame' },
-                { text: 'Уникальные эффекты', link: '/guide/mechanics/unique_effects' }
-              ]
-            }
+            { text: 'Обзор предметов', link: '/guide/items/' },
+            { text: 'Уникальные артефакты', link: '/guide/items/unique_items' },
+            { text: 'Постижение', link: '/guide/items/1%20Infinitum/index' },
+            { text: 'Естество', link: '/guide/items/2%20Mater/index' },
+            { text: 'Расширение', link: '/guide/items/3%20Fungus/index' },
+            { text: 'Окончание', link: '/guide/items/4%20Finis/index' },
+            { text: 'Война', link: '/guide/items/5%20Bellum/index' }
           ]
         }
       ],
