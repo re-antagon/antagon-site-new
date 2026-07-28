@@ -165,7 +165,8 @@ export default defineConfig({
             { text: 'Естество', link: '/guide/items/2%20Mater/index' },
             { text: 'Расширение', link: '/guide/items/3%20Fungus/index' },
             { text: 'Окончание', link: '/guide/items/4%20Finis/index' },
-            { text: 'Война', link: '/guide/items/5%20Bellum/index' }
+            { text: 'Война', link: '/guide/items/5%20Bellum/index' },
+            { text: 'Космос', link: '/guide/items/6%20Cosm/index' }
           ]
         },
         {
