@@ -59,7 +59,7 @@ img {
   0%     { background-image: url("/assets/items/white_stained_glass_pane.png"); }
   6.25%  { background-image: url("/assets/items/orange_stained_glass_pane.png"); }
   12.5%  { background-image: url("/assets/items/magenta_stained_glass_pane.png"); }
-  18.75% { background-image: url("/assets/items/light_blue__stainedglass_pane.png"); }
+  18.75% { background-image: url("/assets/items/light_blue_stained_glass_pane.png"); }
   25%    { background-image: url("/assets/items/yellow_stained_glass_pane.png"); }
   31.25% { background-image: url("/assets/items/lime_stained_glass_pane.png"); }
   37.5%  { background-image: url("/assets/items/pink_stained_glass_pane.png"); }
