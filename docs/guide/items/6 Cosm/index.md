@@ -87,7 +87,7 @@ img[alt*="Бог Космоса"] {
 
 <div class="item-grid">
   <a class="item-card" href="/guide/items/6%20Cosm/Звёздный%20лук">
-    <img src="/assets/items/custom/big/star_bow_0.png" alt="Звёздный лук">
+    <img src="/assets/items/custom/big/звездный_лук.gif" alt="Звёздный лук">
     <span class="meta"><span class="name">Звёздный лук</span><span class="type">Оружие · лучи с эффектами</span></span>
   </a>
   <a class="item-card" href="/guide/items/6%20Cosm/Медный%20жезл">
