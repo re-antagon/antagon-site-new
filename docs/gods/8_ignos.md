@@ -1,20 +1,21 @@
 ---
+pageClass: pg-gods-8-ignos
 description: "Бог Хаоса (Ignos - Chaos) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, игральной кости D20 и нестабильном теле."
 ---
 
 <style>
-img {
+.pg-gods-8-ignos img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
-
-.mcui-Crafting_Table img {
+.pg-gods-8-ignos .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 # Бог Хаоса

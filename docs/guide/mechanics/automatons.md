@@ -1,20 +1,21 @@
 ---
+pageClass: pg-guide-mechanics-automatons
 description: "Автоматоны Бога Постижения на сервере Re:Antagon. Узнайте о создании, зарядке, починке и всех 8 типах механизмов."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-automatons img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
-
-.mcui-Crafting_Table img {
+.pg-guide-mechanics-automatons .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 # Автоматоны Постижения

@@ -1,30 +1,28 @@
 ---
+pageClass: pg-guide-items-3-fungus-index
 description: "Предметы Бога Расширения (Fungus) - кастомные предметы сервера Re:Antagon"
 ---
 
 <style>
-img {
+.pg-guide-items-3-fungus-index img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
-
-img[alt*="Бог Расширения"] {
+.pg-guide-items-3-fungus-index img[alt*="Бог Расширения"] {
   width: 128px !important;
   height: 128px !important;
   image-rendering: pixelated;
 }
-
-.item-grid {
+.pg-guide-items-3-fungus-index .item-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 12px;
   margin: 16px 0;
 }
-
-.item-card {
+.pg-guide-items-3-fungus-index .item-card {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -35,33 +33,29 @@ img[alt*="Бог Расширения"] {
   color: inherit;
   transition: border-color .2s, background-color .2s;
 }
-
-.item-card:hover {
+.pg-guide-items-3-fungus-index .item-card:hover {
   border-color: var(--vp-c-brand, #3454d1);
   background-color: var(--vp-c-bg-soft, #f6f6f7);
 }
-
-.item-card img {
+.pg-guide-items-3-fungus-index .item-card img {
   width: 32px !important;
   height: 32px !important;
   image-rendering: pixelated;
   flex-shrink: 0;
 }
-
-.item-card .meta {
+.pg-guide-items-3-fungus-index .item-card .meta {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
 }
-
-.item-card .name {
+.pg-guide-items-3-fungus-index .item-card .name {
   font-weight: 600;
 }
-
-.item-card .type {
+.pg-guide-items-3-fungus-index .item-card .type {
   font-size: 12px;
   opacity: .7;
 }
+
 </style>
 
 # Бог Расширения

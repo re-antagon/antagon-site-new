@@ -1,15 +1,17 @@
 ---
+pageClass: pg-guide-mechanics-turn-undead
 description: "Обращение в нежить Бога Искажения на сервере Re:Antagon. Узнайте о механике превращения в нежить, эффектах и особенностях существования в неживом состоянии."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-turn-undead img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
 </style>
 
 # Обращение в нежить

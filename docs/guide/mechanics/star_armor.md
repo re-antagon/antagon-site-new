@@ -1,15 +1,17 @@
 ---
+pageClass: pg-guide-mechanics-star-armor
 description: "Звездная броня Бога Космоса на сервере Re:Antagon. Узнайте о Звездном драконе, пилонах, 4 наборах брони и их сет-бонусах."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-star-armor img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
 </style>
 
 # Звездная броня

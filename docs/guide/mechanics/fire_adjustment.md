@@ -1,28 +1,27 @@
 ---
+pageClass: pg-guide-mechanics-fire-adjustment
 description: "Пожары и добыча древесного угля на сервере Re:Antagon. Узнайте, как сгорание деревянных блоков приносит пользу, и как работает защита от лесных пожаров."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-fire-adjustment img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
-
-img[alt*="древесный уголь"], img[alt*="палки"] {
+.pg-guide-mechanics-fire-adjustment img[alt*="древесный уголь"],
+.pg-guide-mechanics-fire-adjustment img[alt*="палки"] {
   width: 128px !important;
   height: 128px !important;
   image-rendering: pixelated;
 }
-
-.mcui-Crafting_Table img {
+.pg-guide-mechanics-fire-adjustment .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
-
-.wood-cycle {
+.pg-guide-mechanics-fire-adjustment .wood-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -33,7 +32,6 @@ img[alt*="древесный уголь"], img[alt*="палки"] {
   background-repeat: no-repeat !important;
   animation: wood-cycle 34s infinite steps(1);
 }
-
 @keyframes wood-cycle {
   0%        { background-image: url("/assets/items/oak_wood.png"); }
   2.85714%  { background-image: url("/assets/items/spruce_wood.png"); }
@@ -71,8 +69,7 @@ img[alt*="древесный уголь"], img[alt*="палки"] {
   97.14286% { background-image: url("/assets/items/oak_wood.png"); }
   100%      { background-image: url("/assets/items/oak_wood.png"); }
 }
-
-.planks-cycle {
+.pg-guide-mechanics-fire-adjustment .planks-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -83,7 +80,6 @@ img[alt*="древесный уголь"], img[alt*="палки"] {
   background-repeat: no-repeat !important;
   animation: planks-cycle 23s infinite steps(1);
 }
-
 @keyframes planks-cycle {
   0%        { background-image: url("/assets/items/oak_planks.png"); }
   4.54545%  { background-image: url("/assets/items/spruce_planks.png"); }
@@ -109,8 +105,7 @@ img[alt*="древесный уголь"], img[alt*="палки"] {
   95.45455% { background-image: url("/assets/items/warped_button.png"); }
   100%      { background-image: url("/assets/items/oak_planks.png"); }
 }
-
-.other-cycle {
+.pg-guide-mechanics-fire-adjustment .other-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -121,7 +116,6 @@ img[alt*="древесный уголь"], img[alt*="палки"] {
   background-repeat: no-repeat !important;
   animation: other-cycle 67s infinite steps(1);
 }
-
 @keyframes other-cycle {
   0%        { background-image: url("/assets/items/oak_door.png"); }
   1.51515%  { background-image: url("/assets/items/spruce_door.png"); }
@@ -191,8 +185,7 @@ img[alt*="древесный уголь"], img[alt*="палки"] {
   98.48485% { background-image: url("/assets/items/warped_trapdoor.png"); }
   100%      { background-image: url("/assets/items/oak_door.png"); }
 }
-
-.leaves-cycle {
+.pg-guide-mechanics-fire-adjustment .leaves-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -203,7 +196,6 @@ img[alt*="древесный уголь"], img[alt*="палки"] {
   background-repeat: no-repeat !important;
   animation: leaves-cycle 12s infinite steps(1);
 }
-
 @keyframes leaves-cycle {
   0%        { background-image: url("/assets/items/oak_leaves.png"); }
   9.09091%  { background-image: url("/assets/items/spruce_leaves.png"); }
@@ -218,6 +210,7 @@ img[alt*="древесный уголь"], img[alt*="палки"] {
   90.90909% { background-image: url("/assets/items/flowering_azalea_leaves.png"); }
   100%      { background-image: url("/assets/items/oak_leaves.png"); }
 }
+
 </style>
 
 # Пожары и добыча древесного угля

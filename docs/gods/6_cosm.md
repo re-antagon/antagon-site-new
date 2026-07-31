@@ -1,20 +1,21 @@
 ---
+pageClass: pg-gods-6-cosm
 description: "Бог Космоса (Cosm - Cielo infinito) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, звездных эффектах и особенностях тела."
 ---
 
 <style>
-img {
+.pg-gods-6-cosm img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
-
-.mcui-Crafting_Table img {
+.pg-gods-6-cosm .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 # Бог Космоса

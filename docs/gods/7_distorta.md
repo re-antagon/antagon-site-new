@@ -1,15 +1,17 @@
 ---
+pageClass: pg-gods-7-distorta
 description: "Бог Искажения (Distorta - Malum) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, заклинаниях и особенностях тела."
 ---
 
 <style>
-img {
+.pg-gods-7-distorta img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
 </style>
 
 # Бог Искажения

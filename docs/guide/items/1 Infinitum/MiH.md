@@ -1,26 +1,26 @@
 ---
+pageClass: pg-guide-items-1-infinitum-mih
 description: "MiH - предмет Бога Постижения, позволяющее перематывать время"
 ---
 
 <style>
-img {
+.pg-guide-items-1-infinitum-mih img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
-
-img[alt*="MiH"] {
+.pg-guide-items-1-infinitum-mih img[alt*="MiH"] {
   width: 128px !important;
   height: 128px !important;
   image-rendering: pixelated;
 }
-
-.mcui-Crafting_Table img {
+.pg-guide-items-1-infinitum-mih .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 ![MiH](/assets/items/custom/big/MiH.png){width=128 height=128 style="image-rendering: pixelated;"}

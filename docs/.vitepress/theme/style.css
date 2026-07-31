@@ -125,3 +125,9 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+.vp-doc img[src^="/assets/items/"] {
+  display: inline-block; vertical-align: middle;
+  width: 24px; height: auto; margin: 0 4px 0 0;
+  image-rendering: pixelated;
+}

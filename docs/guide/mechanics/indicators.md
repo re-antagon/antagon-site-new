@@ -1,18 +1,20 @@
 ---
+pageClass: pg-guide-mechanics-indicators
 description: "Зелья-индикаторы на сервере Re:Antagon. Узнайте о подозрительных светящихся зельях и взрывных индикаторах, которые подсвечивают имена игроков, взаимодействовавших с блоками."
 ---
 
 <style>
-img[alt*="зелье"], img[alt*="индикатор"] {
+.pg-guide-mechanics-indicators img[alt*="зелье"],
+.pg-guide-mechanics-indicators img[alt*="индикатор"] {
   width: 128px !important;
   height: 128px !important;
   image-rendering: pixelated;
 }
-
-.mcui-Crafting_Table img {
+.pg-guide-mechanics-indicators .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 # Зелья-индикаторы

@@ -1,15 +1,17 @@
 ---
+pageClass: pg-guide-mechanics-minecarts-acceleration
 description: "Ускорение вагонеток от блока под рельсами на сервере Re:Antagon. Узнайте формулу расчета ускорения и значения для разных блоков (медь, золото, земля и др.)."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-minecarts-acceleration img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
 </style>
 
 # Ускорение вагонеток от блока под рельсами

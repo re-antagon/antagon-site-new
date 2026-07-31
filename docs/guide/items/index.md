@@ -1,26 +1,25 @@
 ---
+pageClass: pg-guide-items-index
 title: "Предметы и Артефакты (Custom Items) | Re:Antagon"
 description: "Кастомные предметы и крафты сервера Антагон (Re:Antagon / Antagon Reborn). Инструменты, оружие, артефакты богов и рецепты крафта в Minecraft."
 keywords: "антагон предметы, антагон реборн предметы, фишки antagon, кастомные предметы майнкрафт, артефакты антагон, рецепты крафта antagon"
 ---
 
 <style>
-img {
+.pg-guide-items-index img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
-
-.faction-grid {
+.pg-guide-items-index .faction-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 12px;
   margin: 16px 0;
 }
-
-.faction-card {
+.pg-guide-items-index .faction-card {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -31,26 +30,23 @@ img {
   color: inherit;
   transition: border-color .2s, background-color .2s;
 }
-
-.faction-card:hover {
+.pg-guide-items-index .faction-card:hover {
   border-color: var(--vp-c-brand, #3454d1);
   background-color: var(--vp-c-bg-soft, #f6f6f7);
 }
-
-.faction-card .meta {
+.pg-guide-items-index .faction-card .meta {
   display: flex;
   flex-direction: column;
   line-height: 1.25;
 }
-
-.faction-card .name {
+.pg-guide-items-index .faction-card .name {
   font-weight: 600;
 }
-
-.faction-card .type {
+.pg-guide-items-index .faction-card .type {
   font-size: 12px;
   opacity: .7;
 }
+
 </style>
 
 # Предметы и Артефакты (Custom Items)

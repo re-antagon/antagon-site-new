@@ -1,20 +1,21 @@
 ---
+pageClass: pg-gods-prana
 description: "Информация о пране - ключевой механике богов."
 ---
 
 <style>
-img {
+.pg-gods-prana img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
-
-.mcui-Crafting_Table img {
+.pg-gods-prana .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 ::: info Что такое прана?

@@ -1,17 +1,17 @@
 ---
+pageClass: pg-guide-faq-features
 description: "Особые фишки на сервере Re:Antagon."
 ---
 
 
 <style>
-img {
+.pg-guide-faq-features img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 1.5rem !important;
   height: auto !important;
 }
-
-.banner-cycle {
+.pg-guide-faq-features .banner-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -22,7 +22,6 @@ img {
   background-repeat: no-repeat !important;
   animation: banner-cycle 16s infinite steps(1);
 }
-
 @keyframes banner-cycle {
   0%     { background-image: url("/assets/items/white_banner.png"); }
   6.25%  { background-image: url("/assets/items/orange_banner.png"); }
@@ -42,6 +41,7 @@ img {
   93.75% { background-image: url("/assets/items/black_banner.png"); }
   100%   { background-image: url("/assets/items/white_banner.png"); }
 }
+
 </style>
 
 # Различные фишки сервера

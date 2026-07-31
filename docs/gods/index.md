@@ -1,22 +1,23 @@
 ---
+pageClass: pg-gods-index
 title: "Система богов (Gods System) | Re:Antagon"
 description: "Как работают боги на сервере Антагон (Re:Antagon / Antagon Reborn). Узнайте о 8 Старших Богах, благословениях, проклятиях, алтарях и магии."
 keywords: "antagon как работают боги, боги антагон, система богов, infinitum, mater, fungus, finis, bellum, cosm, distorta, ignos, антагон реборн боги"
 ---
 
 <style>
-img {
+.pg-gods-index img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0px 0 0 !important;
 }
-
-.mcui-Crafting_Table img {
+.pg-gods-index .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 # Система богов (Gods System)

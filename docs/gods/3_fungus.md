@@ -1,15 +1,17 @@
 ---
+pageClass: pg-gods-3-fungus
 description: "Бог Расширения (Fungus) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, механике заражения и особенностях тела."
 ---
 
 <style>
-img {
+.pg-gods-3-fungus img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
 </style>
 
 # Бог Расширения

@@ -1,30 +1,28 @@
 ---
+pageClass: pg-guide-items-6-cosm-index
 description: "Предметы Бога Космоса (Cosm) - кастомные предметы сервера Re:Antagon"
 ---
 
 <style>
-img {
+.pg-guide-items-6-cosm-index img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
-
-img[alt*="Бог Космоса"] {
+.pg-guide-items-6-cosm-index img[alt*="Бог Космоса"] {
   width: 128px !important;
   height: 128px !important;
   image-rendering: pixelated;
 }
-
-.item-grid {
+.pg-guide-items-6-cosm-index .item-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 12px;
   margin: 16px 0;
 }
-
-.item-card {
+.pg-guide-items-6-cosm-index .item-card {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -35,33 +33,29 @@ img[alt*="Бог Космоса"] {
   color: inherit;
   transition: border-color .2s, background-color .2s;
 }
-
-.item-card:hover {
+.pg-guide-items-6-cosm-index .item-card:hover {
   border-color: var(--vp-c-brand, #3454d1);
   background-color: var(--vp-c-bg-soft, #f6f6f7);
 }
-
-.item-card img {
+.pg-guide-items-6-cosm-index .item-card img {
   width: 32px !important;
   height: 32px !important;
   image-rendering: pixelated;
   flex-shrink: 0;
 }
-
-.item-card .meta {
+.pg-guide-items-6-cosm-index .item-card .meta {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
 }
-
-.item-card .name {
+.pg-guide-items-6-cosm-index .item-card .name {
   font-weight: 600;
 }
-
-.item-card .type {
+.pg-guide-items-6-cosm-index .item-card .type {
   font-size: 12px;
   opacity: .7;
 }
+
 </style>
 
 # Бог Космоса

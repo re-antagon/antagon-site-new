@@ -1,15 +1,17 @@
 ---
+pageClass: pg-guide-mechanics-unique-effects
 description: "Особые эффекты на сервере Re:Antagon. Узнайте о неванильных бафах и дебафах: Уязвимость, Стойкость, Кровотечение, Поедатель, Самовозгорание, Взрыв трупа, Контузия, Безумие, Бешенство, Гравитационные колебания, Сквозной взгляд, Упокоение, Шипы, Оплетение корнями."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-unique-effects img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
 </style>
 
 # Особые эффекты

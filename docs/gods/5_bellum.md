@@ -1,15 +1,17 @@
 ---
+pageClass: pg-gods-5-bellum
 description: "Бог Войны (Bellum - Ignis Bellum) на сервере Re:Antagon. Узнайте о благословениях, проклятиях и особенностях тела."
 ---
 
 <style>
-img {
+.pg-gods-5-bellum img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
 </style>
 
 # Бог Войны

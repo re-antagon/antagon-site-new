@@ -1,20 +1,21 @@
 ---
+pageClass: pg-guide-mechanics-distortion-spells
 description: "Заклинания Бога Искажения на сервере Re:Antagon. Узнайте о всех 16 заклинаниях, их стоимости, перезарядках и эффектах."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-distortion-spells img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
-
-.mcui-Crafting_Table img {
+.pg-guide-mechanics-distortion-spells .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 # Заклинания Искажения

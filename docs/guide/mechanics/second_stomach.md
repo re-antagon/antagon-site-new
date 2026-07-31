@@ -1,17 +1,17 @@
 ---
+pageClass: pg-guide-mechanics-second-stomach
 description: "Второй желудок Бога Расширения на сервере Re:Antagon. Узнайте о механике поглощения блоков, накапливаемых эффектах, приоритетах переваривания и доступных блоках."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-second-stomach img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
-
-.concrete-powder-cycle {
+.pg-guide-mechanics-second-stomach .concrete-powder-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -22,7 +22,6 @@ img {
   background-repeat: no-repeat !important;
   animation: concrete-cycle 16s infinite steps(1);
 }
-
 @keyframes concrete-cycle {
   0%     { background-image: url("/assets/items/white_concrete_powder.png"); }
   6.25%  { background-image: url("/assets/items/orange_concrete_powder.png"); }
@@ -42,6 +41,7 @@ img {
   93.75% { background-image: url("/assets/items/black_concrete_powder.png"); }
   100%   { background-image: url("/assets/items/white_concrete_powder.png"); }
 }
+
 </style>
 
 # Второй желудок

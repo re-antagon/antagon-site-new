@@ -1,20 +1,21 @@
 ---
+pageClass: pg-guide-mechanics-atheism
 description: "Послесловие для атеистов на сервере Re:Antagon. Узнайте о системе блокираторов Богов: статичных и динамическом, их характеристиках, крафте и ограничениях."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-atheism img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
-
-.mcui-Crafting_Table img {
+.pg-guide-mechanics-atheism .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 # Послесловие для атеистов

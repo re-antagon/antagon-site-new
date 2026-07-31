@@ -1,20 +1,21 @@
 ---
+pageClass: pg-guide-mechanics-infinitum-spells
 description: "Заклинания Бога Постижения на сервере Re:Antagon. Узнайте о всех 12 заклинаниях, их стоимости, перезарядках и усиленных вариантах."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-infinitum-spells img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
-
-.mcui-Crafting_Table img {
+.pg-guide-mechanics-infinitum-spells .mcui-Crafting_Table img {
   width: 28px !important;
   height: 28px !important;
 }
+
 </style>
 
 # Заклинания Постижения

@@ -1,17 +1,17 @@
 ---
+pageClass: pg-guide-mechanics-anvil-crushes-block
 description: "Изменение и разрушение блоков при падении наковальни на сервере Re:Antagon. Узнайте, какие блоки меняются или ломаются под упавшей наковальней."
 ---
 
 <style>
-img {
+.pg-guide-mechanics-anvil-crushes-block img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
-
-.glass-cycle {
+.pg-guide-mechanics-anvil-crushes-block .glass-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -22,7 +22,6 @@ img {
   background-repeat: no-repeat !important;
   animation: glass-cycle 16s infinite steps(1);
 }
-
 @keyframes glass-cycle {
   0%     { background-image: url("/assets/items/white_stained_glass.png"); }
   6.25%  { background-image: url("/assets/items/orange_stained_glass.png"); }
@@ -42,8 +41,7 @@ img {
   93.75% { background-image: url("/assets/items/black_stained_glass.png"); }
   100%   { background-image: url("/assets/items/white_stained_glass.png"); }
 }
-
-.glass-pane-cycle {
+.pg-guide-mechanics-anvil-crushes-block .glass-pane-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -54,7 +52,6 @@ img {
   background-repeat: no-repeat !important;
   animation: glass-pane-cycle 16s infinite steps(1);
 }
-
 @keyframes glass-pane-cycle {
   0%     { background-image: url("/assets/items/white_stained_glass_pane.png"); }
   6.25%  { background-image: url("/assets/items/orange_stained_glass_pane.png"); }
@@ -74,8 +71,7 @@ img {
   93.75% { background-image: url("/assets/items/black_stained_glass_pane.png"); }
   100%   { background-image: url("/assets/items/white_stained_glass_pane.png"); }
 }
-
-.concrete-powder-cycle {
+.pg-guide-mechanics-anvil-crushes-block .concrete-powder-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -86,7 +82,6 @@ img {
   background-repeat: no-repeat !important;
   animation: concrete-powder-cycle 16s infinite steps(1);
 }
-
 @keyframes concrete-powder-cycle {
   0%     { background-image: url("/assets/items/white_concrete_powder.png"); }
   6.25%  { background-image: url("/assets/items/orange_concrete_powder.png"); }
@@ -106,8 +101,7 @@ img {
   93.75% { background-image: url("/assets/items/black_concrete_powder.png"); }
   100%   { background-image: url("/assets/items/white_concrete_powder.png"); }
 }
-
-.concrete-cycle {
+.pg-guide-mechanics-anvil-crushes-block .concrete-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
@@ -118,7 +112,6 @@ img {
   background-repeat: no-repeat !important;
   animation: concrete-cycle 16s infinite steps(1);
 }
-
 @keyframes concrete-cycle {
   0%     { background-image: url("/assets/items/white_concrete.png"); }
   6.25%  { background-image: url("/assets/items/orange_concrete.png"); }
@@ -138,6 +131,7 @@ img {
   93.75% { background-image: url("/assets/items/black_concrete.png"); }
   100%   { background-image: url("/assets/items/white_concrete.png"); }
 }
+
 </style>
 
 # Изменение блоков при падении наковальни

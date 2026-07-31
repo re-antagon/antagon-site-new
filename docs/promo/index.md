@@ -1,12 +1,14 @@
 ---
+pageClass: pg-promo-index
 description: "Промо материалы сервера Re:Antagon, включая 3Д рендеры персонажа Антатяна и логотипы."
 ---
 
 <style>
-.main img {
+.pg-promo-index .main img {
   max-width: 16rem; /* Adjust to your desired size */
   height: auto;     /* Maintain aspect ratio */
 }
+
 </style>
 
 # Промо материалы Re:Antagon

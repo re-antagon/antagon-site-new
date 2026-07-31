@@ -1,15 +1,17 @@
 ---
+pageClass: pg-gods-2-mater
 description: "Бог Естества (Prima Natura) на сервере Re:Antagon. Узнайте о благословениях, проклятиях и особенностях тела."
 ---
 
 <style>
-img {
+.pg-gods-2-mater img {
   display: inline-block !important;
   vertical-align: middle !important;
   width: 24px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
+
 </style>
 
 # Бог Естества
