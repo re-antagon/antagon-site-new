@@ -164,6 +164,7 @@ description: "Второй желудок Бога Расширения на с�
 - ![Камень](/assets/items/stone.png) Камень
 - ![Сланец](/assets/items/deepslate.png) Сланец
 - ![Булыжник](/assets/items/cobblestone.png) Булыжник
+- ![Мшистый булыжник](/assets/items/mossy_cobblestone.png) Мшистый булыжник
 - ![Колотый сланец](/assets/items/cobbled_deepslate.png) Колотый дипслейт
 - ![Гранит](/assets/items/granite.png) Гранит
 - ![Диорит](/assets/items/diorite.png) Диорит
