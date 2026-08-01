@@ -108,9 +108,10 @@ export default defineConfig({
 
     nav: [
       { text: 'Главная', link: '/' },
+      { text: 'Для новичков', link: '/guide/start' },
+      { text: 'Кастомный контент', link: '/gods/' },
+      { text: 'Улучшения игры', link: '/guide/mechanics/' },
       { text: 'Правила', link: '/rules' },
-      { text: 'Вики', link: '/guide/start/' },
-      { text: 'Боги', link: '/gods/' },
       { text: 'Промоматериалы', link: '/promo/' }
     ],
     
@@ -137,25 +138,61 @@ export default defineConfig({
     externalLinkIcon: true,
 
     sidebar: {
-      guide: [
+      '/guide/': [
         {
-          text: 'Начало игры',
+          text: 'Для новичков',
+          collapsed: false,
           items: [
-            { text: 'Старт', link: '/guide/start' },
-            { text: 'Наша команда', link: '/guide/team' }
+            { text: 'Быстрый старт', link: '/guide/start' },
+            { text: 'Наша команда', link: '/guide/team' },
+            { text: 'Правила сервера', link: '/rules' },
+            {
+              text: 'Часто задаваемые вопросы',
+              collapsed: true,
+              items: [
+                { text: 'Общие вопросы', link: '/guide/faq/' },
+                { text: 'Фишки сервера', link: '/guide/faq/features' },
+                { text: 'Кастомные крафты', link: '/guide/faq/custom_crafts' },
+                { text: 'О названии и синонимы', link: '/guide/faq/terminology' }
+              ]
+            }
           ]
         },
         {
-          text: 'Часто задаваемые вопросы',
+          text: 'Кастомный контент',
+          collapsed: false,
           items: [
-            { text: 'Общие вопросы', link: '/guide/faq/' },
-            { text: 'Фишки сервера', link: '/guide/faq/features' },
-            { text: 'Кастомные крафты', link: '/guide/faq/custom_crafts' },
-            { text: 'О названии и синонимы', link: '/guide/faq/terminology' }
+            {
+              text: 'Хабы Богов',
+              collapsed: false,
+              items: [
+                { text: 'Обзор Богов', link: '/gods/' },
+                { text: 'Система Праны', link: '/gods/prana' },
+                { text: 'Постижение (Infinitum)', link: '/gods/1_infinitum' },
+                { text: 'Естество (Mater)', link: '/gods/2_mater' },
+                { text: 'Расширение (Fungus)', link: '/gods/3_fungus' },
+                { text: 'Окончание (Finis)', link: '/gods/4_finis' },
+                { text: 'Война (Bellum)', link: '/gods/5_bellum' },
+                { text: 'Космос (Cosm)', link: '/gods/6_cosm' },
+                { text: 'Искажение (Distorta)', link: '/gods/7_distorta' },
+                { text: 'Хаос (Ignos)', link: '/gods/8_ignos' },
+                { text: 'Блокираторы Богов (Атеизм)', link: '/guide/mechanics/atheism' }
+              ]
+            },
+            {
+              text: 'Дополнительно',
+              collapsed: false,
+              items: [
+                { text: 'Обзор кастомных предметов', link: '/guide/items/' },
+                { text: 'Уникальные артефакты', link: '/guide/items/unique_items' },
+                { text: 'Общие кастомные предметы', link: '/guide/items/0%20General/index' }
+              ]
+            }
           ]
         },
         {
-          text: 'Предметы',
+          text: 'Улучшения игры',
+          collapsed: false,
           items: [
             { text: 'Обзор предметов', link: '/guide/items/' },
             { text: 'Уникальные артефакты', link: '/guide/items/unique_items' },
@@ -165,37 +202,108 @@ export default defineConfig({
             { text: 'Окончание', link: '/guide/items/4%20Finis/index' },
             { text: 'Война', link: '/guide/items/5%20Bellum/index' }
           ]
+        }
+      ],
+      '/gods/': [
+        {
+          text: 'Для новичков',
+          collapsed: false,
+          items: [
+            { text: 'Быстрый старт', link: '/guide/start' },
+            { text: 'Наша команда', link: '/guide/team' },
+            { text: 'Правила сервера', link: '/rules' },
+            {
+              text: 'Часто задаваемые вопросы',
+              collapsed: true,
+              items: [
+                { text: 'Общие вопросы', link: '/guide/faq/' },
+                { text: 'Фишки сервера', link: '/guide/faq/features' },
+                { text: 'Кастомные крафты', link: '/guide/faq/custom_crafts' },
+                { text: 'О названии и синонимы', link: '/guide/faq/terminology' }
+              ]
+            }
+          ]
         },
         {
-          text: 'Механики',
+          text: 'Кастомный контент',
+          collapsed: false,
+          items: [
+            {
+              text: 'Хабы Богов',
+              collapsed: false,
+              items: [
+                { text: 'Обзор Богов', link: '/gods/' },
+                { text: 'Система Праны', link: '/gods/prana' },
+                { text: 'Постижение (Infinitum)', link: '/gods/1_infinitum' },
+                { text: 'Естество (Mater)', link: '/gods/2_mater' },
+                { text: 'Расширение (Fungus)', link: '/gods/3_fungus' },
+                { text: 'Окончание (Finis)', link: '/gods/4_finis' },
+                { text: 'Война (Bellum)', link: '/gods/5_bellum' },
+                { text: 'Космос (Cosm)', link: '/gods/6_cosm' },
+                { text: 'Искажение (Distorta)', link: '/gods/7_distorta' },
+                { text: 'Хаос (Ignos)', link: '/gods/8_ignos' },
+                { text: 'Блокираторы Богов (Атеизм)', link: '/guide/mechanics/atheism' }
+              ]
+            },
+            {
+              text: 'Дополнительно',
+              collapsed: false,
+              items: [
+                { text: 'Обзор кастомных предметов', link: '/guide/items/' },
+                { text: 'Уникальные артефакты', link: '/guide/items/unique_items' },
+                { text: 'Общие кастомные предметы', link: '/guide/items/0%20General/index' }
+              ]
+            }
+          ]
+        },
+        {
+          text: 'Улучшения игры',
+          collapsed: false,
           items: [
             { text: 'Обзор механик', link: '/guide/mechanics/' },
-            { text: 'Система богов', link: '/gods/index' }
-          ]
-        },
-        {
-          text: 'Места',
-          items: [
-            { text: 'Места', link: '/guide/places/' }
+            {
+              text: 'Ванилла и Рецепты',
+              collapsed: true,
+              items: [
+                { text: 'Изменения ванильных рецептов', link: '/guide/items/van/index' },
+                { text: 'Декоративные предметы', link: '/guide/items/deco/index' }
+              ]
+            },
+            {
+              text: 'Измерения и Места',
+              collapsed: true,
+              items: [
+                { text: 'Измерение Чистилище', link: '/guide/mechanics/purgatory' },
+                { text: 'Места и локации', link: '/guide/places/' }
+              ]
+            },
+            {
+              text: 'Физика и Окружающий мир',
+              collapsed: true,
+              items: [
+                { text: 'Разрушение блоков наковальней', link: '/guide/mechanics/anvil/crushes_block' },
+                { text: 'Физика поршней и наковальни', link: '/guide/mechanics/anvil/piston_physics' },
+                { text: 'Ускоренное окисление меди', link: '/guide/mechanics/copper_oxidation' },
+                { text: 'Скоростные вагонетки', link: '/guide/mechanics/minecarts_acceleration' },
+                { text: 'Пожары и древесный уголь', link: '/guide/mechanics/fire_adjustment' },
+                { text: 'Особенности паутины', link: '/guide/mechanics/web' }
+              ]
+            },
+            {
+              text: 'Утилиты, Боевка & QoL',
+              collapsed: true,
+              items: [
+                { text: 'Зелья-индикаторы', link: '/guide/mechanics/indicators' },
+                { text: 'Арбалет "Тройной выстрел"', link: '/guide/mechanics/multishot_crossbow' },
+                { text: 'Кастомные пластинки (/cd)', link: '/guide/mechanics/custom_discs' },
+                { text: 'Картинки в рамках (/imageframe)', link: '/guide/mechanics/image_frame' },
+                { text: 'Уникальные эффекты', link: '/guide/mechanics/unique_effects' }
+              ]
+            }
           ]
         }
       ],
-      gods: [
-        {
-          text: 'Боги',
-          items: [
-            { text: 'Постижение', link: '/gods/1_infinitum' },
-            { text: 'Естество', link: '/gods/2_mater' },
-            { text: 'Расширение', link: '/gods/3_fungus' },
-            { text: 'Окончание', link: '/gods/4_finis' },
-            { text: 'Война', link: '/gods/5_bellum' },
-            { text: 'Космос', link: '/gods/6_cosm' },
-            { text: 'Искажение', link: '/gods/7_distorta' },
-            { text: 'Хаос', link: '/gods/8_ignos' }
-          ]
-        }
-      ],
-      promo: [
+      '/promo/': [
         {
           items: [
             { text: 'Промо материалы', link: '/promo/' },
