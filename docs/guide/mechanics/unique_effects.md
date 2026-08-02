@@ -7,7 +7,7 @@ description: "Особые эффекты на сервере Re:Antagon. Узн
 .pg-guide-mechanics-unique-effects img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }

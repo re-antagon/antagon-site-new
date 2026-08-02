@@ -7,7 +7,7 @@ description: "Бог Искажения (Distorta - Malum) на сервере R
 .pg-gods-7-distorta img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }

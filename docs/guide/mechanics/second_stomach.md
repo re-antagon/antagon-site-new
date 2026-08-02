@@ -7,18 +7,18 @@ description: "Второй желудок Бога Расширения на с�
 .pg-guide-mechanics-second-stomach img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
 .pg-guide-mechanics-second-stomach .concrete-powder-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/white_concrete_powder.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: concrete-cycle 16s infinite steps(1);
 }

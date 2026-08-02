@@ -7,7 +7,7 @@ description: "Бог Постижения (Infinitum Conscientia) на серв�
 .pg-gods-1-infinitum img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }

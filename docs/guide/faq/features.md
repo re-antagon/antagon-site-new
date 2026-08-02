@@ -14,11 +14,11 @@ description: "Особые фишки на сервере Re:Antagon."
 .pg-guide-faq-features .banner-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/white_banner.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: banner-cycle 16s infinite steps(1);
 }

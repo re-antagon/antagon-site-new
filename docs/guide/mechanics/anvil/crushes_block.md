@@ -7,18 +7,18 @@ description: "Изменение и разрушение блоков при п�
 .pg-guide-mechanics-anvil-crushes-block img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
 .pg-guide-mechanics-anvil-crushes-block .glass-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/white_stained_glass.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: glass-cycle 16s infinite steps(1);
 }
@@ -44,11 +44,11 @@ description: "Изменение и разрушение блоков при п�
 .pg-guide-mechanics-anvil-crushes-block .glass-pane-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/white_stained_glass_pane.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: glass-pane-cycle 16s infinite steps(1);
 }
@@ -74,11 +74,11 @@ description: "Изменение и разрушение блоков при п�
 .pg-guide-mechanics-anvil-crushes-block .concrete-powder-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/white_concrete_powder.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: concrete-powder-cycle 16s infinite steps(1);
 }
@@ -104,11 +104,11 @@ description: "Изменение и разрушение блоков при п�
 .pg-guide-mechanics-anvil-crushes-block .concrete-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/white_concrete.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: concrete-cycle 16s infinite steps(1);
 }

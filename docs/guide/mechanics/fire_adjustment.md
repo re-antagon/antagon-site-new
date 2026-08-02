@@ -7,7 +7,7 @@ description: "Пожары и добыча древесного угля на с
 .pg-guide-mechanics-fire-adjustment img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 4px 0 0 !important;
 }
@@ -24,11 +24,11 @@ description: "Пожары и добыча древесного угля на с
 .pg-guide-mechanics-fire-adjustment .wood-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/oak_wood.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: wood-cycle 34s infinite steps(1);
 }
@@ -72,11 +72,11 @@ description: "Пожары и добыча древесного угля на с
 .pg-guide-mechanics-fire-adjustment .planks-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/oak_planks.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: planks-cycle 23s infinite steps(1);
 }
@@ -108,11 +108,11 @@ description: "Пожары и добыча древесного угля на с
 .pg-guide-mechanics-fire-adjustment .other-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/oak_door.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: other-cycle 67s infinite steps(1);
 }
@@ -188,11 +188,11 @@ description: "Пожары и добыча древесного угля на с
 .pg-guide-mechanics-fire-adjustment .leaves-cycle {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 32px !important;
+  height: 32px !important;
   margin: 0 0 0 0 !important;
   background-image: url("/assets/items/oak_leaves.png");
-  background-size: 24px 24px !important;
+  background-size: 32px 32px !important;
   background-repeat: no-repeat !important;
   animation: leaves-cycle 12s infinite steps(1);
 }

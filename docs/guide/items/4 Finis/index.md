@@ -7,9 +7,9 @@ description: "Предметы Бога Окончания (Finis) - касто�
 .pg-guide-items-4-finis-index img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
-  margin: 0 4px 0 0 !important;
+  margin: 0 0 0 0 !important;
 }
 .pg-guide-items-4-finis-index img[alt*="Бог Окончания"] {
   width: 128px !important;

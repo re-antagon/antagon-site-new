@@ -7,7 +7,7 @@ description: "Бог Космоса (Cosm - Cielo infinito) на сервере 
 .pg-gods-6-cosm img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }

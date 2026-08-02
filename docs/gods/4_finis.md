@@ -7,7 +7,7 @@ description: "Бог Окончания (Finis - Ultimum Tectumque) на сер�
 .pg-gods-4-finis img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }

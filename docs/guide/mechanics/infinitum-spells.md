@@ -7,7 +7,7 @@ description: "Заклинания Бога Постижения на серве
 .pg-guide-mechanics-infinitum-spells img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 24px !important;
+  width: 32px !important;
   height: auto !important;
   margin: 0 0 0 0 !important;
 }
