@@ -40,7 +40,6 @@ description: "Предметы Бога Космоса (Cosm) - кастомны
 .pg-guide-items-6-cosm-index .item-card img {
   width: 32px !important;
   height: 32px !important;
-  image-rendering: pixelated;
   flex-shrink: 0;
 }
 .pg-guide-items-6-cosm-index .item-card .meta {

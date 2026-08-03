@@ -40,7 +40,6 @@ description: "Предметы Бога Искажения (Distorta) - каст
 .pg-guide-items-7-distorta-index .item-card img {
   width: 32px !important;
   height: 32px !important;
-  image-rendering: pixelated;
   flex-shrink: 0;
 }
 .pg-guide-items-7-distorta-index .item-card .meta {

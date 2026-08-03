@@ -40,7 +40,6 @@ description: "Предметы Бога Расширения (Fungus) - каст
 .pg-guide-items-3-fungus-index .item-card img {
   width: 32px !important;
   height: 32px !important;
-  image-rendering: pixelated;
   flex-shrink: 0;
 }
 .pg-guide-items-3-fungus-index .item-card .meta {

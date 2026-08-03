@@ -40,7 +40,6 @@ description: "Предметы Бога Естества (Mater) - кастом�
 .pg-guide-items-2-mater-index .item-card img {
   width: 32px !important;
   height: 32px !important;
-  image-rendering: pixelated;
   flex-shrink: 0;
 }
 .pg-guide-items-2-mater-index .item-card .meta {

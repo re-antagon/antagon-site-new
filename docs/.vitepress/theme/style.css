@@ -129,5 +129,4 @@
 .vp-doc img[src^="/assets/items/"] {
   display: inline-block; vertical-align: middle;
   width: 32px; height: auto; margin: 0 0 0 0;
-  image-rendering: pixelated;
 }
