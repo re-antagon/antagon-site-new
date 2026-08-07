@@ -130,3 +130,122 @@
   display: inline-block; vertical-align: middle;
   width: 32px; height: auto; margin: 0 0 0 0;
 }
+
+/**
+ * Component: Feature Cards Grid for Hub Pages
+ * -------------------------------------------------------------------------- */
+
+.feature-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 20px 0 32px 0;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-bg-soft);
+  text-decoration: none !important;
+  color: var(--vp-c-text-1) !important;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.feature-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.feature-card-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.feature-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin: 0;
+}
+
+.feature-card-desc {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.5;
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+
+.feature-card-action {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/**
+ * Component: Item Cards Grid
+ * -------------------------------------------------------------------------- */
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 16px 0 24px 0;
+}
+
+.item-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--vp-c-bg-soft);
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-soft);
+  text-decoration: none !important;
+  color: var(--vp-c-text-1) !important;
+  transition: border-color 0.2s, background-color 0.2s, transform 0.2s;
+}
+
+.item-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.item-card img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.item-card .meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.item-card .name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.item-card .type {
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2);
+}
+

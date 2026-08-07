@@ -1,48 +1,6 @@
 ---
-pageClass: pg-guide-mechanics-second-stomach
 description: "Второй желудок Бога Расширения на сервере Re:Antagon. Узнайте о механике поглощения блоков, накапливаемых эффектах, приоритетах переваривания и доступных блоках."
 ---
-
-<style>
-.pg-guide-mechanics-second-stomach img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-.pg-guide-mechanics-second-stomach .concrete-powder-cycle {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: 32px !important;
-  margin: 0 0 0 0 !important;
-  background-image: url("/assets/items/white_concrete_powder.png");
-  background-size: 32px 32px !important;
-  background-repeat: no-repeat !important;
-  animation: concrete-cycle 16s infinite steps(1);
-}
-@keyframes concrete-cycle {
-  0%     { background-image: url("/assets/items/white_concrete_powder.png"); }
-  6.25%  { background-image: url("/assets/items/orange_concrete_powder.png"); }
-  12.5%  { background-image: url("/assets/items/magenta_concrete_powder.png"); }
-  18.75% { background-image: url("/assets/items/light_blue_concrete_powder.png"); }
-  25%    { background-image: url("/assets/items/yellow_concrete_powder.png"); }
-  31.25% { background-image: url("/assets/items/lime_concrete_powder.png"); }
-  37.5%  { background-image: url("/assets/items/pink_concrete_powder.png"); }
-  43.75% { background-image: url("/assets/items/gray_concrete_powder.png"); }
-  50%    { background-image: url("/assets/items/light_gray_concrete_powder.png"); }
-  56.25% { background-image: url("/assets/items/cyan_concrete_powder.png"); }
-  62.5%  { background-image: url("/assets/items/purple_concrete_powder.png"); }
-  68.75% { background-image: url("/assets/items/blue_concrete_powder.png"); }
-  75%    { background-image: url("/assets/items/brown_concrete_powder.png"); }
-  81.25% { background-image: url("/assets/items/green_concrete_powder.png"); }
-  87.5%  { background-image: url("/assets/items/red_concrete_powder.png"); }
-  93.75% { background-image: url("/assets/items/black_concrete_powder.png"); }
-  100%   { background-image: url("/assets/items/white_concrete_powder.png"); }
-}
-
-</style>
 
 # Второй желудок
 
@@ -134,7 +92,7 @@ description: "Второй желудок Бога Расширения на с�
 - ![Блок незерского нароста](/assets/items/nether_wart_block.png) Блок незерского нароста
 - ![Блок искаженного нароста](/assets/items/warped_wart_block.png) Блок искаженного нароста
 - ![Грибосвет](/assets/items/shroomlight.png) Грибосвет
-- <span class="concrete-powder-cycle"></span> Все цвета сухого бетона
+- <InventorySlot item="white_concrete_powder;orange_concrete_powder;magenta_concrete_powder;light_blue_concrete_powder;yellow_concrete_powder;lime_concrete_powder;pink_concrete_powder;gray_concrete_powder;light_gray_concrete_powder;cyan_concrete_powder;purple_concrete_powder;blue_concrete_powder;brown_concrete_powder;green_concrete_powder;red_concrete_powder;black_concrete_powder" /> Все цвета сухого бетона
 
 
 ## Снижение набранных эффектов
@@ -159,7 +117,6 @@ description: "Второй желудок Бога Расширения на с�
 - ![Камень](/assets/items/stone.png) Камень
 - ![Сланец](/assets/items/deepslate.png) Сланец
 - ![Булыжник](/assets/items/cobblestone.png) Булыжник
-- ![Мшистый булыжник](/assets/items/mossy_cobblestone.png) Мшистый булыжник
 - ![Колотый сланец](/assets/items/cobbled_deepslate.png) Колотый дипслейт
 - ![Гранит](/assets/items/granite.png) Гранит
 - ![Диорит](/assets/items/diorite.png) Диорит

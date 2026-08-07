@@ -1,18 +1,6 @@
 ---
-pageClass: pg-gods-2-mater
 description: "Бог Естества (Prima Natura) на сервере Re:Antagon. Узнайте о благословениях, проклятиях и особенностях тела."
 ---
-
-<style>
-.pg-gods-2-mater img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-
-</style>
 
 # Бог Естества
 
@@ -207,8 +195,8 @@ description: "Бог Естества (Prima Natura) на сервере Re:Anta
 :::
 
 
-## Связанные страницы
+## 🌿 Хаб Естества (Механики & Предметы)
 
-- [Прана](/gods/prana.md) - общая информация о пране
-- [Система богов](/gods/index.md) - общая информация о системе богов
-- [Особые эффекты](/guide/mechanics/unique_effects) - детальное описание уникальных эффектов
+- 🎒 **[Предметы и Артефакты Естества](/guide/items/2%20Mater/index.md)** — травяные снадобья, мази, повязки и снаряжение Естества
+- ⚡ **[Система Праны](/gods/prana.md)** — основы божественной энергии
+- ✨ **[Уникальные эффекты](/guide/mechanics/unique_effects.md)** — кровотечение, бешенство, стойкость и другие эффекты

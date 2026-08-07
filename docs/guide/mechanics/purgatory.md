@@ -1,18 +1,6 @@
 ---
-pageClass: pg-guide-mechanics-purgatory
 description: "Измерение Чистилища на сервере Re:Antagon. Узнайте о четвертом измерении, Буре Праха, порталах, бункерах, боссе Око Шторма и луте в руинах."
 ---
-
-<style>
-.pg-guide-mechanics-purgatory img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-
-</style>
 
 # Измерение Чистилища
 

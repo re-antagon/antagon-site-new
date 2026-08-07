@@ -1,27 +1,6 @@
 ---
-pageClass: pg-guide-items-1-infinitum-mih
 description: "MiH - предмет Бога Постижения, позволяющее перематывать время"
 ---
-
-<style>
-.pg-guide-items-1-infinitum-mih img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-.pg-guide-items-1-infinitum-mih img[alt*="MiH"] {
-  width: 128px !important;
-  height: 128px !important;
-  image-rendering: pixelated;
-}
-.pg-guide-items-1-infinitum-mih .mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-
-</style>
 
 ![MiH](/assets/items/custom/big/MiH.png){width=128 height=128 style="image-rendering: pixelated;"}
 # Описание
@@ -33,6 +12,7 @@ description: "MiH - предмет Бога Постижения, позволя
 | Перезарядка       | 20 минут (для всех)  |
 | Перемотка времени | 12 игровых часов     |
 | Стакается         | Нет                  |
+
 
 
 ## Эффект
@@ -51,37 +31,22 @@ description: "MiH - предмет Бога Постижения, позволя
 Поскольку предмет не стакается, для повторного применения потребуется скрафтить новый экземпляр.
 
 
+
 ## Получение
 Крафтится по **бесформенному рецепту** из двух компонентов:
 - ![Часовой кристалл](/assets/items/custom/big/clock_crystal.png) [Часовой кристалл](/guide/items/1%20Infinitum/Часовой%20кристалл)
 - ![Механическое сердце](/assets/items/custom/big/mechanic_heart.png) [Механическое сердце](/guide/items/1%20Infinitum/Механическое%20сердце)
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/assets/items/custom/big/clock_crystal" class="image"><img src="/assets/items/custom/big/clock_crystal.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/assets/items/custom/big/mechanic_heart" class="image"><img src="/assets/items/custom/big/mechanic_heart.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-      <span class="mcui-arrow"></span>
-      <span class="mcui-output">
-      <span class="invslot"><span class="invslot-item"><a href="/assets/items/custom/big/MiH" class="image"><img src="/assets/items/custom/big/MiH.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="clock_crystal"
+  input2="mechanic_heart"
+  output="MiH"
+  shapeless="true"
+/>
+
 
 
 ## Связанные предметы
 - [Часовой кристалл](/guide/items/1%20Infinitum/Часовой%20кристалл) - компонент крафта.
 - [Механическое сердце](/guide/items/1%20Infinitum/Механическое%20сердце) - компонент крафта.
+

@@ -1,57 +1,13 @@
 ---
-pageClass: pg-guide-items-index
 title: "Предметы и Артефакты (Custom Items) | Re:Antagon"
 description: "Кастомные предметы и крафты сервера Антагон (Re:Antagon / Antagon Reborn). Инструменты, оружие, артефакты богов и рецепты крафта в Minecraft."
 keywords: "антагон предметы, антагон реборн предметы, фишки antagon, кастомные предметы майнкрафт, артефакты антагон, рецепты крафта antagon"
 ---
 
-<style>
-.pg-guide-items-index img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 24px !important;
-  height: auto !important;
-  margin: 0 4px 0 0 !important;
-}
-.pg-guide-items-index .faction-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 12px;
-  margin: 16px 0;
-}
-.pg-guide-items-index .faction-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
-  border: 1px solid var(--vp-c-divider, #e2e2e3);
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
-  transition: border-color .2s, background-color .2s;
-}
-.pg-guide-items-index .faction-card:hover {
-  border-color: var(--vp-c-brand, #3454d1);
-  background-color: var(--vp-c-bg-soft, #f6f6f7);
-}
-.pg-guide-items-index .faction-card .meta {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-}
-.pg-guide-items-index .faction-card .name {
-  font-weight: 600;
-}
-.pg-guide-items-index .faction-card .type {
-  font-size: 12px;
-  opacity: .7;
-}
-
-</style>
-
 # Предметы и Артефакты (Custom Items)
 
 Уникальные кастомные предметы и рецепты крафта сервера **Re:Antagon** (также известного как *Антагон Реборн*). Все предметы разделены по Богам и категориям — от механизмов Бога Постижения до артефактов Хаоса.
+
 
 
 ## Категории предметов
@@ -95,7 +51,9 @@ keywords: "антагон предметы, антагон реборн пред
 </div>
 
 
+
 ## Быстрые ссылки
 
 - [Уникальные предметы](/guide/items/unique_items) - особые предметы сервера вне фракций.
 - [Система богов](/gods/) - описание Богов, благословений и проклятий.
+

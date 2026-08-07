@@ -1,61 +1,6 @@
 ---
-pageClass: pg-guide-items-3-fungus-index
 description: "Предметы Бога Расширения (Fungus) - кастомные предметы сервера Re:Antagon"
 ---
-
-<style>
-.pg-guide-items-3-fungus-index img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-.pg-guide-items-3-fungus-index img[alt*="Бог Расширения"] {
-  width: 128px !important;
-  height: 128px !important;
-  image-rendering: pixelated;
-}
-.pg-guide-items-3-fungus-index .item-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 12px;
-  margin: 16px 0;
-}
-.pg-guide-items-3-fungus-index .item-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border: 1px solid var(--vp-c-divider, #e2e2e3);
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
-  transition: border-color .2s, background-color .2s;
-}
-.pg-guide-items-3-fungus-index .item-card:hover {
-  border-color: var(--vp-c-brand, #3454d1);
-  background-color: var(--vp-c-bg-soft, #f6f6f7);
-}
-.pg-guide-items-3-fungus-index .item-card img {
-  width: 32px !important;
-  height: 32px !important;
-  flex-shrink: 0;
-}
-.pg-guide-items-3-fungus-index .item-card .meta {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-.pg-guide-items-3-fungus-index .item-card .name {
-  font-weight: 600;
-}
-.pg-guide-items-3-fungus-index .item-card .type {
-  font-size: 12px;
-  opacity: .7;
-}
-
-</style>
 
 # Бог Расширения
 
@@ -64,6 +9,7 @@ description: "Предметы Бога Расширения (Fungus) - каст
 ::: info Сводка
 Всего предметов: **17**. Ниже они сгруппированы по назначению. Каждая карточка ведёт на подробную страницу с описанием, эффектом и рецептом крафта.
 :::
+
 
 
 ## Одежда
@@ -167,3 +113,4 @@ description: "Предметы Бога Расширения (Fungus) - каст
 ---
 
 > Вернуться к [оглавлению предметов](/guide/items/).
+

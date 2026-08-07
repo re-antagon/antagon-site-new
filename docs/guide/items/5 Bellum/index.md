@@ -1,28 +1,30 @@
 ---
-pageClass: pg-guide-items-5-bellum-index
 description: "Предметы Бога Войны (Bellum) - кастомные предметы сервера Re:Antagon"
 ---
 
 <style>
-.pg-guide-items-5-bellum-index img {
+img {
   display: inline-block !important;
   vertical-align: middle !important;
-  width: 32px !important;
+  width: 24px !important;
   height: auto !important;
-  margin: 0 0 0 0 !important;
+  margin: 0 4px 0 0 !important;
 }
-.pg-guide-items-5-bellum-index img[alt*="Бог Войны"] {
+
+img[alt*="Бог Войны"] {
   width: 128px !important;
   height: 128px !important;
   image-rendering: pixelated;
 }
-.pg-guide-items-5-bellum-index .item-grid {
+
+.item-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 12px;
   margin: 16px 0;
 }
-.pg-guide-items-5-bellum-index .item-card {
+
+.item-card {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -33,33 +35,38 @@ description: "Предметы Бога Войны (Bellum) - кастомные
   color: inherit;
   transition: border-color .2s, background-color .2s;
 }
-.pg-guide-items-5-bellum-index .item-card:hover {
+
+.item-card:hover {
   border-color: var(--vp-c-brand, #3454d1);
   background-color: var(--vp-c-bg-soft, #f6f6f7);
 }
-.pg-guide-items-5-bellum-index .item-card img {
+
+.item-card img {
   width: 32px !important;
   height: 32px !important;
+  image-rendering: pixelated;
   flex-shrink: 0;
 }
-.pg-guide-items-5-bellum-index .item-card .meta {
+
+.item-card .meta {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
 }
-.pg-guide-items-5-bellum-index .item-card .name {
+
+.item-card .name {
   font-weight: 600;
 }
-.pg-guide-items-5-bellum-index .item-card .type {
+
+.item-card .type {
   font-size: 12px;
   opacity: .7;
 }
-
 </style>
 
 # Бог Войны
 
-Предметы **Бога Войны** - уникальные инструменты, оружие, броня, расходники и компоненты сервера Re:Antagon. Механика Бога Войны строится вокруг стали, битв и боевых усилений: от мощной брони Сталевара до боевых горнов, вдохновляющих союзников, и осколков битвы, выпадающих с боссов.
+Предметы **Бога Войны** (Bellum) - уникальные инструменты, оружие, броня, расходники и компоненты сервера Re:Antagon. Механика Бога Войны строится вокруг стали, битв и боевых усилений: от мощной брони Сталевара до боевых горнов, вдохновляющих союзников, и осколков битвы, выпадающих с боссов.
 
 ::: info Сводка
 Всего предметов: **18**. Ниже они сгруппированы по назначению. Каждая карточка ведёт на подробную страницу с описанием, эффектом и рецептом крафта.

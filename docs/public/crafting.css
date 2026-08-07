@@ -352,7 +352,9 @@
     color: #404040
 }
 
-.mcui-Brewing_Stand > * {
+.mcui-Brewing_Stand > *,
+.mcui-Brewing_Stand .mcui-input > .mcui-paths,
+.mcui-Brewing_Stand .mcui-input > .mcui-output {
     display: block
 }
 
@@ -360,23 +362,40 @@
     vertical-align: top
 }
 
-.mcui-Brewing_Stand > .mcui-input {
-    text-align: center
-}
-
 .mcui-Brewing_Stand > .mcui-input > .invslot {
     margin-top: 3px
+}
+
+.mcui-Brewing_Stand .mcui-blaze {
+    background-image: url(/assets/utils/Grid_layout_Brewing_Blaze.png);
+    width: 92px;
+    height: 69px;
+    position: relative;
+    z-index: 1;
+    margin-left: -2px;
+    display: inline-block;
+    background-repeat: no-repeat
+}
+
+.mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-blaze {
+    background-image: url(/assets/utils/Grid_layout_Brewing_Blaze_In-active.png)
+}
+
+.mcui-Brewing_Stand .mcui-blaze > .invslot {
+    margin: 19px 0 0 19px
 }
 
 .mcui-Brewing_Stand .mcui-bubbling,.mcui-Brewing_Stand .mcui-arrow {
     display: inline-block;
     background-repeat: no-repeat;
-    width: 24px;
-    height: 57px
+    width: 24px
 }
 
 .mcui-Brewing_Stand .mcui-bubbling,.mcui-Inventory-Brewing_Stand-bubbles {
-    background-image: url(/assets/utils/Grid_layout_Brewing_Bubbles.gif)
+    background-image: url(/assets/utils/Grid_layout_Brewing_Bubbles.gif);
+    height: 57px;
+    margin-left: -30px;
+    margin-right: 4px
 }
 
 .mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-bubbling,.mcui-Inventory-Brewing_Stand-bubbles-inactive {
@@ -384,20 +403,27 @@
 }
 
 .mcui-Brewing_Stand .mcui-arrow,.mcui-Inventory-Brewing_Stand-arrow {
-    background-image: url(/assets/utils/Grid_layout_Brewing_Arrow.png)
+    background-image: url(/assets/utils/Grid_layout_Brewing_Arrow.png);
+    margin-right: 22px;
+    height: 59px
 }
 
 .mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-arrow,.mcui-Inventory-Brewing_Stand-arrow-inactive {
     background-image: url(/assets/utils/Grid_layout_Brewing_Arrow_In-active.png)
 }
 
-.mcui-Brewing_Stand > .mcui-paths {
+.mcui-Brewing_Stand > .mcui-paths,
+.mcui-Brewing_Stand .mcui-input > .mcui-paths {
     position: relative;
     background: url(/assets/utils/Grid_layout_Brewing_Paths.png) no-repeat;
     width: 60px;
-    height: 40px;
-    margin: -20px auto -16px;
+    height: 50px;
+    margin: -32px 0 -16px 112px;
     z-index: 1
+}
+
+.mcui-Brewing_Stand .mcui-output {
+    margin-left: 78px
 }
 
 .mcui-Brewing_Stand .mcui-output .invslot,.mcui-Brewing_Stand .mcui-base .invslot {

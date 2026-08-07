@@ -1,22 +1,6 @@
 ---
-pageClass: pg-guide-mechanics-atheism
 description: "Послесловие для атеистов на сервере Re:Antagon. Узнайте о системе блокираторов Богов: статичных и динамическом, их характеристиках, крафте и ограничениях."
 ---
-
-<style>
-.pg-guide-mechanics-atheism img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 4px 0 0 !important;
-}
-.pg-guide-mechanics-atheism .mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-
-</style>
 
 # Послесловие для атеистов
 
@@ -48,109 +32,52 @@ description: "Послесловие для атеистов на сервере
 Все блокираторы крафтятся **в любой форме** (без учета расположения ингредиентов):
 
 - **Базовый**: 1 ![Кристалл Энда](/assets/items/end_crystal.png) кристалл Энда + 3 ![Громоотвод](/assets/items/lightning_rod.png) громоотвода
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/end_crystal" class="image"><img src="/assets/items/end_crystal.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/lodestone" class="image"><img src="/assets/items/lodestone.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="end_crystal"
+  input2="lightning_rod"
+  input3="lightning_rod"
+  output="lodestone"
+  shapeless="true"
+/>
 
 - **Усиленный**: 2 базовых блокиратора + 3 ![Громоотвод](/assets/items/lightning_rod.png) громоотвода + 3 ![Изумруд](/assets/items/emerald.png) изумруда
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/lodestone" class="image"><img src="/assets/items/lodestone.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="nether_brick"
+  input2="nether_brick"
+  input3="lightning_rod"
+  input4="lightning_rod"
+  input5="lightning_rod"
+  input6="emerald"
+  input7="emerald"
+  input8="emerald"
+  output="lodestone"
+  shapeless="true"
+/>
 
 - **Продвинутый**: 2 усиленных блокиратора + 3 ![Громоотвод](/assets/items/lightning_rod.png) громоотвода + 2 ![Алмаз](/assets/items/diamond.png) алмаза
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/lodestone" class="image"><img src="/assets/items/lodestone.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="nether_brick"
+  input2="nether_brick"
+  input3="lightning_rod"
+  input4="lightning_rod"
+  input5="lightning_rod"
+  input6="diamond"
+  input7="diamond"
+  output="lodestone"
+  shapeless="true"
+/>
 
 - **Максимальный**: 2 продвинутых блокиратора + 3 ![Громоотвод](/assets/items/lightning_rod.png) громоотвода + 1 ![Незеритовый слиток](/assets/items/netherite_ingot.png) незеритовый слиток
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/lightning_rod" class="image"><img src="/assets/items/lightning_rod.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/netherite_ingot" class="image"><img src="/assets/items/netherite_ingot.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/lodestone" class="image"><img src="/assets/items/lodestone.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
-
+<CraftingRecipe
+  input1="nether_brick"
+  input2="nether_brick"
+  input3="lightning_rod"
+  input4="lightning_rod"
+  input5="lightning_rod"
+  input6="netherite_ingot"
+  output="lodestone"
+  shapeless="true"
+/>
 
 ::: tip Примечание
 Каждый следующий уровень блокиратора крафтится из **двух блокираторов предыдущего уровня** плюс громоотводы и ценный ресурс. Таким образом блокираторы «прокачиваются» через крафт, а не скармливание.
@@ -165,30 +92,12 @@ description: "Послесловие для атеистов на сервере
 - **Пассивно снижает** эффект благословений на **2** у всех игроков в радиусе **8 блоков** от держателя
 
 **Крафт**: 1 максимальный статичный блокиратор сверху по середине + 2 ![палки](/assets/items/stick.png) палки под ним
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/stick" class="image"><img src="/assets/items/stick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/stick" class="image"><img src="/assets/items/stick.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/iron_shovel" class="image"><img src="/assets/items/iron_shovel.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
-</div>
+<CraftingRecipe
+  input2="nether_brick"
+  input5="stick"
+  input8="stick"
+  output="iron_shovel"
+/>
 
 
 ## Ограничения установки

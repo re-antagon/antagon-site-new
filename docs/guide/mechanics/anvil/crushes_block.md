@@ -1,138 +1,6 @@
 ---
-pageClass: pg-guide-mechanics-anvil-crushes-block
 description: "Изменение и разрушение блоков при падении наковальни на сервере Re:Antagon. Узнайте, какие блоки меняются или ломаются под упавшей наковальней."
 ---
-
-<style>
-.pg-guide-mechanics-anvil-crushes-block img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-.pg-guide-mechanics-anvil-crushes-block .glass-cycle {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: 32px !important;
-  margin: 0 0 0 0 !important;
-  background-image: url("/assets/items/white_stained_glass.png");
-  background-size: 32px 32px !important;
-  background-repeat: no-repeat !important;
-  animation: glass-cycle 16s infinite steps(1);
-}
-@keyframes glass-cycle {
-  0%     { background-image: url("/assets/items/white_stained_glass.png"); }
-  6.25%  { background-image: url("/assets/items/orange_stained_glass.png"); }
-  12.5%  { background-image: url("/assets/items/magenta_stained_glass.png"); }
-  18.75% { background-image: url("/assets/items/light_blue_stained_glass.png"); }
-  25%    { background-image: url("/assets/items/yellow_stained_glass.png"); }
-  31.25% { background-image: url("/assets/items/lime_stained_glass.png"); }
-  37.5%  { background-image: url("/assets/items/pink_stained_glass.png"); }
-  43.75% { background-image: url("/assets/items/gray_stained_glass.png"); }
-  50%    { background-image: url("/assets/items/light_gray_stained_glass.png"); }
-  56.25% { background-image: url("/assets/items/cyan_stained_glass.png"); }
-  62.5%  { background-image: url("/assets/items/purple_stained_glass.png"); }
-  68.75% { background-image: url("/assets/items/blue_stained_glass.png"); }
-  75%    { background-image: url("/assets/items/brown_stained_glass.png"); }
-  81.25% { background-image: url("/assets/items/green_stained_glass.png"); }
-  87.5%  { background-image: url("/assets/items/red_stained_glass.png"); }
-  93.75% { background-image: url("/assets/items/black_stained_glass.png"); }
-  100%   { background-image: url("/assets/items/white_stained_glass.png"); }
-}
-.pg-guide-mechanics-anvil-crushes-block .glass-pane-cycle {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: 32px !important;
-  margin: 0 0 0 0 !important;
-  background-image: url("/assets/items/white_stained_glass_pane.png");
-  background-size: 32px 32px !important;
-  background-repeat: no-repeat !important;
-  animation: glass-pane-cycle 16s infinite steps(1);
-}
-@keyframes glass-pane-cycle {
-  0%     { background-image: url("/assets/items/white_stained_glass_pane.png"); }
-  6.25%  { background-image: url("/assets/items/orange_stained_glass_pane.png"); }
-  12.5%  { background-image: url("/assets/items/magenta_stained_glass_pane.png"); }
-  18.75% { background-image: url("/assets/items/light_blue_stained_glass_pane.png"); }
-  25%    { background-image: url("/assets/items/yellow_stained_glass_pane.png"); }
-  31.25% { background-image: url("/assets/items/lime_stained_glass_pane.png"); }
-  37.5%  { background-image: url("/assets/items/pink_stained_glass_pane.png"); }
-  43.75% { background-image: url("/assets/items/gray_stained_glass_pane.png"); }
-  50%    { background-image: url("/assets/items/light_gray_stained_glass_pane.png"); }
-  56.25% { background-image: url("/assets/items/cyan_stained_glass_pane.png"); }
-  62.5%  { background-image: url("/assets/items/purple_stained_glass_pane.png"); }
-  68.75% { background-image: url("/assets/items/blue_stained_glass_pane.png"); }
-  75%    { background-image: url("/assets/items/brown_stained_glass_pane.png"); }
-  81.25% { background-image: url("/assets/items/green_stained_glass_pane.png"); }
-  87.5%  { background-image: url("/assets/items/red_stained_glass_pane.png"); }
-  93.75% { background-image: url("/assets/items/black_stained_glass_pane.png"); }
-  100%   { background-image: url("/assets/items/white_stained_glass_pane.png"); }
-}
-.pg-guide-mechanics-anvil-crushes-block .concrete-powder-cycle {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: 32px !important;
-  margin: 0 0 0 0 !important;
-  background-image: url("/assets/items/white_concrete_powder.png");
-  background-size: 32px 32px !important;
-  background-repeat: no-repeat !important;
-  animation: concrete-powder-cycle 16s infinite steps(1);
-}
-@keyframes concrete-powder-cycle {
-  0%     { background-image: url("/assets/items/white_concrete_powder.png"); }
-  6.25%  { background-image: url("/assets/items/orange_concrete_powder.png"); }
-  12.5%  { background-image: url("/assets/items/magenta_concrete_powder.png"); }
-  18.75% { background-image: url("/assets/items/light_blue_concrete_powder.png"); }
-  25%    { background-image: url("/assets/items/yellow_concrete_powder.png"); }
-  31.25% { background-image: url("/assets/items/lime_concrete_powder.png"); }
-  37.5%  { background-image: url("/assets/items/pink_concrete_powder.png"); }
-  43.75% { background-image: url("/assets/items/gray_concrete_powder.png"); }
-  50%    { background-image: url("/assets/items/light_gray_concrete_powder.png"); }
-  56.25% { background-image: url("/assets/items/cyan_concrete_powder.png"); }
-  62.5%  { background-image: url("/assets/items/purple_concrete_powder.png"); }
-  68.75% { background-image: url("/assets/items/blue_concrete_powder.png"); }
-  75%    { background-image: url("/assets/items/brown_concrete_powder.png"); }
-  81.25% { background-image: url("/assets/items/green_concrete_powder.png"); }
-  87.5%  { background-image: url("/assets/items/red_concrete_powder.png"); }
-  93.75% { background-image: url("/assets/items/black_concrete_powder.png"); }
-  100%   { background-image: url("/assets/items/white_concrete_powder.png"); }
-}
-.pg-guide-mechanics-anvil-crushes-block .concrete-cycle {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: 32px !important;
-  margin: 0 0 0 0 !important;
-  background-image: url("/assets/items/white_concrete.png");
-  background-size: 32px 32px !important;
-  background-repeat: no-repeat !important;
-  animation: concrete-cycle 16s infinite steps(1);
-}
-@keyframes concrete-cycle {
-  0%     { background-image: url("/assets/items/white_concrete.png"); }
-  6.25%  { background-image: url("/assets/items/orange_concrete.png"); }
-  12.5%  { background-image: url("/assets/items/magenta_concrete.png"); }
-  18.75% { background-image: url("/assets/items/light_blue_concrete.png"); }
-  25%    { background-image: url("/assets/items/yellow_concrete.png"); }
-  31.25% { background-image: url("/assets/items/lime_concrete.png"); }
-  37.5%  { background-image: url("/assets/items/pink_concrete.png"); }
-  43.75% { background-image: url("/assets/items/gray_concrete.png"); }
-  50%    { background-image: url("/assets/items/light_gray_concrete.png"); }
-  56.25% { background-image: url("/assets/items/cyan_concrete.png"); }
-  62.5%  { background-image: url("/assets/items/purple_concrete.png"); }
-  68.75% { background-image: url("/assets/items/blue_concrete.png"); }
-  75%    { background-image: url("/assets/items/brown_concrete.png"); }
-  81.25% { background-image: url("/assets/items/green_concrete.png"); }
-  87.5%  { background-image: url("/assets/items/red_concrete.png"); }
-  93.75% { background-image: url("/assets/items/black_concrete.png"); }
-  100%   { background-image: url("/assets/items/white_concrete.png"); }
-}
-
-</style>
 
 # Изменение блоков при падении наковальни
 
@@ -188,8 +56,8 @@ description: "Изменение и разрушение блоков при п�
 |:----------------|:---------:|
 | ![Стекло](/assets/items/glass.png) Стекло | Разрушается |
 | ![Стеклянная панель](/assets/items/glass_pane.png) Стеклянная панель | Разрушается |
-| <span class="glass-cycle"></span> Все цвета стекла | Разрушается |
-| <span class="glass-pane-cycle"></span> Все цвета стеклянной панели | Разрушается |
+| <InventorySlot item="white_stained_glass;orange_stained_glass;magenta_stained_glass;light_blue_stained_glass;yellow_stained_glass;lime_stained_glass;pink_stained_glass;gray_stained_glass;light_gray_stained_glass;cyan_stained_glass;purple_stained_glass;blue_stained_glass;brown_stained_glass;green_stained_glass;red_stained_glass;black_stained_glass" /> Все цвета стекла | Разрушается |
+| <InventorySlot item="white_stained_glass_pane;orange_stained_glass_pane;magenta_stained_glass_pane;light_blue_stained_glass_pane;yellow_stained_glass_pane;lime_stained_glass_pane;pink_stained_glass_pane;gray_stained_glass_pane;light_gray_stained_glass_pane;cyan_stained_glass_pane;purple_stained_glass_pane;blue_stained_glass_pane;brown_stained_glass_pane;green_stained_glass_pane;red_stained_glass_pane;black_stained_glass_pane" /> Все цвета стеклянной панели | Разрушается |
 
 
 ## Бетон в порошок
@@ -198,7 +66,7 @@ description: "Изменение и разрушение блоков при п�
 
 | Блок до падения | Блок после падения |
 |:----------------|:-------------------|
-| <span class="concrete-cycle"></span> Бетон | <span class="concrete-powder-cycle"></span> Бетонный порошок |
+| <InventorySlot item="white_concrete;orange_concrete;magenta_concrete;light_blue_concrete;yellow_concrete;lime_concrete;pink_concrete;gray_concrete;light_gray_concrete;cyan_concrete;purple_concrete;blue_concrete;brown_concrete;green_concrete;red_concrete;black_concrete" /> Бетон | <InventorySlot item="white_concrete_powder;orange_concrete_powder;magenta_concrete_powder;light_blue_concrete_powder;yellow_concrete_powder;lime_concrete_powder;pink_concrete_powder;gray_concrete_powder;light_gray_concrete_powder;cyan_concrete_powder;purple_concrete_powder;blue_concrete_powder;brown_concrete_powder;green_concrete_powder;red_concrete_powder;black_concrete_powder" /> Бетонный порошок |
 
 
 ## Связанные страницы

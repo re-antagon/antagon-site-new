@@ -1,18 +1,6 @@
 ---
-pageClass: pg-guide-mechanics-cursed-golden-swords
 description: "Проклятые золотые мечи Бога Искажения на сервере Re:Antagon. Узнайте о проклятии золота, тотемах, уровнях мечей и их способностях."
 ---
-
-<style>
-.pg-guide-mechanics-cursed-golden-swords img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-
-</style>
 
 # Проклятые золотые мечи
 
