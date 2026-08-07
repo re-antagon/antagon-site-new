@@ -1,23 +1,51 @@
 ---
+pageClass: pg-guide-mechanics-distortion-spells
 description: "Заклинания Бога Искажения на сервере Re:Antagon. Узнайте о всех 16 заклинаниях, их стоимости, перезарядках и эффектах."
 ---
+
+<style>
+.pg-guide-mechanics-distortion-spells img {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 32px !important;
+  height: auto !important;
+  margin: 0 0 0 0 !important;
+}
+.pg-guide-mechanics-distortion-spells .mcui-Crafting_Table img {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+</style>
 
 # Заклинания Искажения
 
 Все заклинания Бога Искажения применяются через **Искаженный свиток** - предмет, крафтящийся из пустой карты в центре, алмаза над ней и 7 редстоуна на верстаке **в полной темноте**.
 
-<CraftingRecipe
-  input1="redstone"
-  input2="diamond"
-  input3="redstone"
-  input4="redstone"
-  input5="map"
-  input6="redstone"
-  input7="redstone"
-  input8="redstone"
-  input9="redstone"
-  output="nether_brick"
-/>
+<div class="mcui mcui-Crafting_Table">redstone
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/map" class="image"><img src="/assets/items/map.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
+</div>
 
 ## Общие правила
 
@@ -52,6 +80,7 @@ description: "Заклинания Бога Искажения на сервер
 | ![Некротическое](/assets/items/wither_effect.png) Некротические | Зеленая | Усиливаются при выборе **Некротического тела** |
 | ![Нейтральное](/assets/items/ender_eye.png) Нейтральные | Синяя | Не усиливаются никаким телом |
 
+---
 
 ## Кровавые заклинания
 
@@ -87,10 +116,10 @@ description: "Заклинания Бога Искажения на сервер
 | **Тип** | ![Кровавое](/assets/items/bleeding.png) Кровавое |
 
 **Описание:**
-При активации вешает ![Стойкость](/assets/items/persistance.png) Стойкость II на **60 секунд**.
+При активации вешает ![Сопротивление](/assets/items/resistance.png) Сопротивление I на **15 секунд**.
 
 **Усиленный вариант** (Жаждущее тело):
-- Вешает ![Стойкость](/assets/items/persistance.png) Стойкость **III**
+- Длительность увеличена до **30 секунд**
 
 ---
 
@@ -171,6 +200,7 @@ description: "Заклинания Бога Искажения на сервер
 Нечестивые тотемы и червоточины позволяют игрокам собирать единую сеть порталов в любых точках одного мира и с динамической картой. Об этом можно прочитать подробней в разделе [Паутина](/guide/mechanics/web.md).
 :::
 
+---
 
 ## Некротические заклинания
 
@@ -331,6 +361,7 @@ description: "Заклинания Бога Искажения на сервер
 Кладбищенская земля отлично подходит для массовых боев - не только отнимает прану у врагов, но и призывает армию нежити в конце.
 :::
 
+---
 
 ## Нейтральные заклинания
 
@@ -429,13 +460,18 @@ description: "Заклинания Бога Искажения на сервер
 | **Тип** | ![Нейтральное](/assets/items/ender_eye.png) Нейтральное |
 
 **Описание:**
-Забирает **все HP кастера кроме 1**, умножает следующую атаку ближнего боя в **x/6 раз**, где **x** - количество забранного HP.
+Забирает **все HP кастера кроме 1**, умножает следующую атаку ближнего боя в **x/10 раз**, где **x** - количество забранного HP (за каждые **10 забранных HP** урон умножается на **1**).
+
+**Дополнительные эффекты:**
+- Накладывает на кастера ![Кровотечение](/assets/items/bleeding.png) **Кровотечение** на **10 секунд**
+- Активация оставляет кастеру **1 HP**, а кровотечение **не дает его вылечить от еды**
 
 **Ограничения:**
 - Время действия множителя: **10 секунд** после активации
 - Либо до **первого удара**
 - Если кастер умрет до удара, заклинание сработает впустую
 
+---
 
 ## Сравнительная таблица заклинаний
 
@@ -458,6 +494,7 @@ description: "Заклинания Бога Искажения на сервер
 | 15. Создание нечестивого тотема | ![Кровавое](/assets/items/bleeding.png) | 10 праны + 10 HP | 300с | Да |
 | 16. Кладбищенская земля | ![Некротическое](/assets/items/wither_effect.png) | 2 праны + 2 HP | 180с | Да |
 
+---
 
 ## Связанные страницы
 

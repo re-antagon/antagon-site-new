@@ -1,12 +1,14 @@
 ---
+pageClass: pg-promo-index
 description: "Промо материалы сервера Re:Antagon, включая 3Д рендеры персонажа Антатяна и логотипы."
 ---
 
 <style>
-.main img {
+.pg-promo-index .main img {
   max-width: 16rem; /* Adjust to your desired size */
   height: auto;     /* Maintain aspect ratio */
 }
+
 </style>
 
 # Промо материалы Re:Antagon
@@ -16,13 +18,13 @@ description: "Промо материалы сервера Re:Antagon, вклю�
 ## 3Д Рендеры
 | Рендеры без фона | Рендеры с фоном |
 |------------------|-----------------|
-| ![Антатян смотрит без фона](../assets/promo/3d/looking-transparent.png) | ![Антатян смотрит с фоном](../assets/promo/3d/looking.png) |
-| ![Антатян с метеоритом без фона](../assets/promo/3d/meteo-transparent.png) | ![Антатян с метеоритом с фоном](../assets/promo/3d/meteo.png) |
-| ![Антатян читает без фона](../assets/promo/3d/reading-transparent.png) | ![Антатян читает с фоном](../assets/promo/3d/reading.png) |
-| ![Антатян торгует без фона](../assets/promo/3d/trading-transparent.png) | ![Антатян торгует с фоном](../assets/promo/3d/trading.jpg) |
+| ![Антатян смотрит без фона](/public/assets/promo/3d/looking-transparent.png) | ![Антатян смотрит с фоном](/public/assets/promo/3d/looking.png) |
+| ![Антатян с метеоритом без фона](/public/assets/promo/3d/meteo-transparent.png) | ![Антатян с метеоритом с фоном](/public/assets/promo/3d/meteo.png) |
+| ![Антатян читает без фона](/public/assets/promo/3d/reading-transparent.png) | ![Антатян читает с фоном](/public/assets/promo/3d/reading.png) |
+| ![Антатян торгует без фона](/public/assets/promo/3d/trading-transparent.png) | ![Антатян торгует с фоном](/public/assets/promo/3d/trading.jpg) |
 ## Логотипы
 | Логотип без фона | Логотип с фоном |
 |------------------|-----------------|
-| ![Логотип Re:Antagon](../assets/promo/logo/logo.png) | ![Логотип Re:Antagon](../assets/promo/logo/logo-transparent.png) |
+| ![Логотип Re:Antagon](/public/assets/promo/logo/logo.png) | ![Логотип Re:Antagon](/public/assets/promo/logo/logo-transparent.png) |
 
-![Монета Antacoin](../assets/promo/logo/antacoin.png)
+![Монета Antacoin](/public/assets/promo/logo/antacoin.png)

@@ -1,6 +1,22 @@
 ---
+pageClass: pg-gods-prana
 description: "Информация о пране - ключевой механике богов."
 ---
+
+<style>
+.pg-gods-prana img {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 32px !important;
+  height: auto !important;
+  margin: 0 0 0 0 !important;
+}
+.pg-gods-prana .mcui-Crafting_Table img {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+</style>
 
 ::: info Что такое прана?
 Каждый игрок всегда имеет помимо хп дополнительный параметр - прану. Данный параметр со старта стоит в значении **40** и пока он полон, не оказывает никакого влияния.
@@ -8,6 +24,7 @@ description: "Информация о пране - ключевой механи
 
 Для простоты понимания стоит воспринимать прану как **кровь** - она всегда есть в организме в определенном количестве, если ее будет не хватать, начнутся проблемы и ухудшение состояния. Разве что в отличие от реальной крови, переизбыток праны дает позитивные эффекты, а не отрицательные. Однако набранная сверх лимита прана постепенно выветривается из организма, как и в целом отнять ее у кого-то довольно трудно без особых билдов.
 
+---
 
 ## Основные механики
 
@@ -25,6 +42,7 @@ description: "Информация о пране - ключевой механи
 - Если у игрока **41** прана и часть праны теряется от времени, она опустится до **40**, а не до 38
 - Набрать дополнительной праны нельзя выше максимума игрока (если максимум 40, то дополнительную прану можно набрать тоже только 40, имея в сумме 80)
 
+---
 
 ## Эффекты при недостатке праны
 
@@ -43,6 +61,7 @@ description: "Информация о пране - ключевой механи
 Информация о пране нежити описана в разделе **Обращение в нежить**. Прана нежити не восстанавливается, и если она закончится, нежить очень быстро умрет.
 :::
 
+---
 
 ## Эффекты при избытке праны
 
@@ -60,6 +79,7 @@ description: "Информация о пране - ключевой механи
 Максимальный положительный эффект от праны достигается при значении 176-200% (71-80 единиц при стандартном максимуме 40).
 :::
 
+---
 
 ## Особые случаи
 
@@ -80,13 +100,31 @@ description: "Информация о пране - ключевой механи
 1. При помощи заклинания Сцеживание праны от Бога Искажения 
 2. При помощи артефакта **Капельница** (крафтится из нитки, железного самородка и бутылки в любом порядке)
 
-<CraftingRecipe
-  input1="string"
-  input2="iron_nugget"
-  input3="glass_bottle"
-  output="nether_wart"
-  shapeless="true"
-/>
+<div class="mcui mcui-Crafting_Table">
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/string" class="image"><img src="/assets/items/string.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/iron_nugget" class="image"><img src="/assets/items/iron_nugget.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/glass_bottle" class="image"><img src="/assets/items/glass_bottle.png" width="64" height="64"></a></span></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/nether_wart" class="image"><img src="/assets/items/nether_wart.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+</div>
+
 
 ::: warning Ограничения
 - Капельница не работает на игроках-нежити

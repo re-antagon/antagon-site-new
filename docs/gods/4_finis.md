@@ -1,11 +1,28 @@
 ---
+pageClass: pg-gods-4-finis
 description: "Бог Окончания (Finis - Ultimum Tectumque) на сервере Re:Antagon. Узнайте о благословениях, проклятиях и особенностях тела."
 ---
+
+<style>
+.pg-gods-4-finis img {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 32px !important;
+  height: auto !important;
+  margin: 0 0 0 0 !important;
+}
+.pg-gods-4-finis .mcui-Crafting_Table img {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+</style>
 
 # Бог Окончания
 
 **Finis** - Бог Окончания, покровитель смерти, пустоты и загробного мира. Его последователи владеют силами пустоты, могут превращаться в статуи и получают защиту от опасностей Края и Чистилища.
 
+---
 
 ## Проклятия
 
@@ -28,6 +45,7 @@ description: "Бог Окончания (Finis - Ultimum Tectumque) на сер�
 Минусы к восстановлению праны (уровни -3, -4, -5), а также полная заморозка регена (уровень -6), **действуют только если у игрока больше 30 праны**. Если у игрока 30 праны или меньше, штрафы к естественному восстановлению праны не применяются - реген работает как обычно.
 :::
 
+---
 
 ## Благословения
 
@@ -95,13 +113,32 @@ description: "Бог Окончания (Finis - Ultimum Tectumque) на сер�
 
 На 6 уровне становится доступен крафт **Стирателя** (2 угля), который может удалять блоки.
 
-<CraftingRecipe
-  input1="coal"
-  input2="coal"
-  output="nether_brick"
-  shapeless="true"
-/>
+<div class="mcui mcui-Crafting_Table">
+  <div class="mcui-input">
+    <div class="mcui-row">
+      <span class="invslot"><span class="invslot-item"><a href="/items/coal" class="image"><img src="/assets/items/coal.png" width="64" height="64"></a></span></span>
+      <span class="invslot"><span class="invslot-item"><a href="/items/coal" class="image"><img src="/assets/items/coal.png" width="64" height="64"></a></span></span>
+      <span class="invslot"></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+    <div class="mcui-row">
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+      <span class="invslot"></span>
+    </div>
+  </div>
+  <span class="mcui-arrow"></span>
+  <span class="mcui-output">
+    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
+  </span>
+  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
+</div>
 
+---
 
 ## Особенности тела
 
@@ -148,10 +185,11 @@ description: "Бог Окончания (Finis - Ultimum Tectumque) на сер�
 Пепельное тело требует учета цикличности эффектов. Планируйте свою активность в соответствии с фазами - используйте фазу скорости и сопротивления для опасных ситуаций.
 :::
 
+---
 
-## ⌛ Хаб Окончания (Механики & Предметы)
+## Связанные страницы
 
-- 🎒 **[Предметы и Артефакты Окончания](/guide/items/4%20Finis/index.md)** — косы, пустотное оружие и артефакты смерти
-- 🌀 **[Измерение Чистилище](/guide/mechanics/purgatory.md)** — четвертое измерение, Буря Праха и Око Шторма
-- ⚡ **[Система Праны](/gods/prana.md)** — энергетика и восстановление праны
-- ✨ **[Уникальные эффекты](/guide/mechanics/unique_effects.md)** — Безумие, Сквозной взгляд и другие эффекты
+- [Прана](/gods/prana.md) - общая информация о пране
+- [Система богов](/gods/index.md) - общая информация о системе богов
+- [Особые эффекты](/guide/mechanics/unique_effects) - детальное описание уникальных эффектов (Безумие, Сквозной взгляд и др.)
+- [Измерение Чистилища](/guide/mechanics/purgatory) - подробное описание особого измерения

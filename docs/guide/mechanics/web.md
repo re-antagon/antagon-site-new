@@ -1,6 +1,18 @@
 ---
+pageClass: pg-guide-mechanics-web
 description: "Паутина Бога Искажения на сервере Re:Antagon. Узнайте о создании сети телепортов, тотемах, червоточинах и их механиках."
 ---
+
+<style>
+.pg-guide-mechanics-web img {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 32px !important;
+  height: auto !important;
+  margin: 0 0 0 0 !important;
+}
+
+</style>
 
 # Паутина
 
@@ -8,6 +20,7 @@ description: "Паутина Бога Искажения на сервере Re:
 
 > Данная механика начинается с предмета - **Нечестивый тотем** (см [Заклинания Искажения](/guide/mechanics/distortion-spells.md)). Это будущие точки-ретрансляторы сети телепортов.
 
+---
 
 ## Создание Паутины
 
@@ -151,6 +164,7 @@ description: "Паутина Бога Искажения на сервере Re:
 Используйте карту Паутины для мониторинга состояния сети и быстрого реагирования на атаки врагов на ваши тотемы.
 :::
 
+---
 
 ## Связанные страницы
 
