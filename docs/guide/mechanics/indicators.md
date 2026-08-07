@@ -25,7 +25,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 Все зелья-индикаторы создаются на **верстаке**, а не в варочной стойке.
 :::
 
----
 
 ## Общие сведения о взрывных индикаторах
 
@@ -41,7 +40,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 Взрывной индикатор учитывает только действия, совершенные **не позднее чем 12 часов** до момента броска зелья. Более старые действия не будут подсвечены.
 :::
 
----
 
 ## Подозрительное светящееся зелье
 
@@ -76,7 +74,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Взрывное подозрительное светящееся зелье
 
@@ -111,7 +108,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Подозрительный синий индикатор
 
@@ -146,7 +142,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Взрывной подозрительный синий индикатор
 
@@ -181,7 +176,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Подозрительный зеленый индикатор
 
@@ -216,7 +210,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Взрывной подозрительный зеленый индикатор
 
@@ -251,7 +244,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Подозрительный розовый индикатор
 
@@ -286,7 +278,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Взрывной подозрительный розовый индикатор
 
@@ -321,7 +312,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Подозрительный красный индикатор
 
@@ -356,7 +346,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Взрывной подозрительный красный индикатор
 
@@ -391,7 +380,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
   <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
 </div>
 
----
 
 ## Сводная таблица взрывных индикаторов
 
@@ -406,7 +394,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 «Подозрительные» зелья (без приставки «взрывной») сами по себе не имеют эффекта - они являются полуфабрикатами. Добавление пороха (и, для синего/розового/красного, соответствующего ингредиента) превращает их во взрывные индикаторы, готовые к броску.
 :::
 
----
 
 ## Связанные страницы
 
