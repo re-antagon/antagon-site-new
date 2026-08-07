@@ -17,7 +17,7 @@ description: "Промо материалы сервера Re:Antagon, вклю�
 
 <div class="feature-cards-grid" style="margin-bottom: 2rem;">
 
-  <a class="feature-card" href="/guide/team">
+  <a class="feature-card" href="/promo/team">
     <div>
       <div class="feature-card-header">
         <span class="feature-card-icon">👥</span>

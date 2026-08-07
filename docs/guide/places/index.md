@@ -22,7 +22,7 @@ description: "Значимые места, точки спавна, динами
     <span class="feature-card-action">Открыть карту ↗</span>
   </a>
 
-  <a class="feature-card" href="/guide/mechanics/purgatory">
+  <a class="feature-card" href="/gods/purgatory">
     <div>
       <div class="feature-card-header">
         <span class="feature-card-icon">🌪️</span>

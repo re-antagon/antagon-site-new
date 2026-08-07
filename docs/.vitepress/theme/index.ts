@@ -5,6 +5,8 @@ import CraftingRecipe from './CraftingRecipe.vue'
 import FurnaceRecipe from './FurnaceRecipe.vue'
 import SmeltingRecipe from './SmeltingRecipe.vue'
 import StonecuttingRecipe from './StonecuttingRecipe.vue'
+import ItemCard from './ItemCard.vue'
+import ItemGrid from './ItemGrid.vue'
 import InventorySlot from './minecraft_inventory/InventorySlot.vue'
 import './style.css'
 
@@ -21,6 +23,8 @@ export default {
     app.component('StonecuttingRecipe', StonecuttingRecipe)
     app.component('SmeltingRecipe', SmeltingRecipe)
     app.component('InventorySlot', InventorySlot)
+    app.component('ItemCard', ItemCard)
+    app.component('ItemGrid', ItemGrid)
   }
 } satisfies Theme
 
