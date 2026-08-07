@@ -20,7 +20,6 @@ description: "Промо материалы сервера Re:Antagon, вклю�
   <a class="feature-card" href="/promo/team">
     <div>
       <div class="feature-card-header">
-        <span class="feature-card-icon">👥</span>
         <h3 class="feature-card-title">Наша команда</h3>
       </div>
       <div class="feature-card-desc">
@@ -33,7 +32,6 @@ description: "Промо материалы сервера Re:Antagon, вклю�
   <a class="feature-card" href="/promo/referral">
     <div>
       <div class="feature-card-header">
-        <span class="feature-card-icon">🎁</span>
         <h3 class="feature-card-title">Реферральная система</h3>
       </div>
       <div class="feature-card-desc">
