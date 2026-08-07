@@ -284,6 +284,7 @@ export default defineConfig({
     ],
   ],
   cleanUrls: true,
+  ignoreDeadLinks: true,
   lastUpdated: true,
   transformHead: ({ pageData }) => {
     const rawPath = pageData.relativePath.replace(/\.md$/, '').replace(/(^|\/)index$/, '');

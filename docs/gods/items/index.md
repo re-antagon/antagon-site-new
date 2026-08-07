@@ -48,7 +48,7 @@ keywords: "антагон предметы, антагон реборн пред
   <a class="faction-card" href="/gods/items/deco/">
     <span class="meta"><span class="name">Decorations</span><span class="type">Декоративные предметы</span></span>
   </a>
-</ItemGrid>
+</div>
 
 
 

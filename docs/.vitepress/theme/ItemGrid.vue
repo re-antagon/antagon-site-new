@@ -1,5 +1,6 @@
 <template>
   <div class="item-grid">
+    <slot />
     <ItemCard
       v-for="item in items"
       :key="item.href"
@@ -23,6 +24,6 @@ interface Item {
 }
 
 defineProps<{
-  items: Item[]
+  items?: Item[]
 }>()
 </script>
