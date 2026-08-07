@@ -248,4 +248,51 @@
   font-size: 0.8rem;
   color: var(--vp-c-text-2);
 }
+
+/**
+ * Component: Faction Cards Grid
+ * -------------------------------------------------------------------------- */
+
+.faction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin: 16px 0 24px 0;
+}
+
+.faction-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 18px;
+  border: 1px solid var(--vp-c-bg-soft);
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-soft);
+  text-decoration: none !important;
+  color: var(--vp-c-text-1) !important;
+  transition: border-color 0.2s, background-color 0.2s, transform 0.2s;
+}
+
+.faction-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.faction-card .meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.faction-card .name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--vp-c-text-1);
+}
+
+.faction-card .type {
+  font-size: 0.825rem;
+  color: var(--vp-c-text-2);
+}
+
 
