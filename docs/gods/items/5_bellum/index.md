@@ -77,44 +77,44 @@ img[alt*="Бог Войны"] {
 ## Одежда
 
 <ItemGrid>
-  <ItemCard href="/gods/items/5_bellum/Броня%20Сталевара" img="/assets/items/custom/big/steel_helmet.png" name="Броня Сталевара" type="Одежда · полный сет, иммунитет к замедлению" />
-  <ItemCard href="/gods/items/5_bellum/Лёгкая%20броня" img="/assets/items/custom/big/light_armor_helmet.png" name="Лёгкая броня" type="Одежда · скорость при полном сете" />
-  <ItemCard href="/gods/items/5_bellum/Плащ%20Берсерка" img="/assets/items/custom/big/berserker_cloak.png" name="Плащ Берсерка" type="Одежда · сопротивление при уроне" />
-  <ItemCard href="/gods/items/5_bellum/Плащ%20Полководца" img="/assets/items/custom/big/commander_cloak.png" name="Плащ Полководца" type="Одежда · скорость при уроне" />
-  <ItemCard href="/gods/items/5_bellum/Сапоги%20Удара" img="/assets/items/custom/big/fall_boots.png" name="Сапоги Удара" type="Одежда · ударная волна при падении" />
+  <ItemCard item="Броня Сталевара" type="Одежда · полный сет, иммунитет к замедлению" />
+  <ItemCard item="Лёгкая броня" type="Одежда · скорость при полном сете" />
+  <ItemCard item="Плащ Берсерка" type="Одежда · сопротивление при уроне" />
+  <ItemCard item="Плащ Полководца" type="Одежда · скорость при уроне" />
+  <ItemCard item="Сапоги Удара" type="Одежда · ударная волна при падении" />
 </ItemGrid>
 
 ## Оружие
 
 <ItemGrid>
-  <ItemCard href="/gods/items/5_bellum/Лук%20Сталевара" img="/assets/items/custom/big/steel_bow.png" name="Лук Сталевара" type="Оружие · мощный лук с оглушением" />
-  <ItemCard href="/gods/items/5_bellum/Меч%20Сталевара" img="/assets/items/custom/big/steel_sword.png" name="Меч Сталевара" type="Оружие · оглушающий удар" />
-  <ItemCard href="/gods/items/5_bellum/Медальон%20Испепеления" img="/assets/items/custom/big/blaze_locket.png" name="Медальон Испепеления" type="Оружие · взрыв при смерти" />
+  <ItemCard item="Лук Сталевара" type="Оружие · мощный лук с оглушением" />
+  <ItemCard item="Меч Сталевара" type="Оружие · оглушающий удар" />
+  <ItemCard item="Медальон Испепеления" type="Оружие · взрыв при смерти" />
 </ItemGrid>
 
 ## Инструменты
 
 <ItemGrid>
-  <ItemCard href="/gods/items/5_bellum/Боевой%20горн" img="/assets/items/custom/big/battle_horn.png" name="Боевой горн" type="Инструмент · боевые усиления" />
-  <ItemCard href="/gods/items/5_bellum/Поясной%20запас" img="/assets/items/custom/big/stock_belt.png" name="Поясной запас" type="Инструмент · экономия еды" />
-  <ItemCard href="/gods/items/5_bellum/Щит%20Сталевара" img="/assets/items/custom/big/steel_shield.png" name="Щит Сталевара" type="Инструмент · защита + замедление" />
+  <ItemCard item="Боевой горн" type="Инструмент · боевые усиления" />
+  <ItemCard item="Поясной запас" type="Инструмент · экономия еды" />
+  <ItemCard item="Щит Сталевара" type="Инструмент · защита + замедление" />
 </ItemGrid>
 
 ## Расходники
 
 <ItemGrid>
-  <ItemCard href="/gods/items/5_bellum/Стальная%20стрела" img="/assets/items/custom/big/steel_arrow.png" name="Стальная стрела" type="Расходник · боеприпас для лука Сталевара" />
+  <ItemCard item="Стальная стрела" type="Расходник · боеприпас для лука Сталевара" />
 </ItemGrid>
 
 ## Компоненты и материалы
 
 <ItemGrid>
-  <ItemCard href="/gods/items/5_bellum/Верёвка" img="/assets/items/custom/big/rope.png" name="Верёвка" type="Компонент · тетива для лука" />
-  <ItemCard href="/gods/items/5_bellum/Кристалл%20Битвы" img="/assets/items/custom/big/fight_crystal.png" name="Кристалл Битвы" type="Компонент · основа крафтов" />
-  <ItemCard href="/gods/items/5_bellum/Кусочек%20оружейной%20стали" img="/assets/items/custom/big/steel_nugget.png" name="Кусочек оружейной стали" type="Компонент · стальной самородок" />
-  <ItemCard href="/gods/items/5_bellum/Оружейная%20сталь" img="/assets/items/custom/big/steel_ingot.png" name="Оружейная сталь" type="Компонент · основной металл" />
-  <ItemCard href="/gods/items/5_bellum/Осколок%20битвы" img="/assets/items/custom/big/fight_shard.png" name="Осколок битвы" type="Компонент · дроп с боссов" />
-  <ItemCard href="/gods/items/5_bellum/Прочная%20кожа" img="/assets/items/custom/big/tough_leather.png" name="Прочная кожа" type="Компонент · выделанная кожа" />
+  <ItemCard item="Верёвка" type="Компонент · тетива для лука" />
+  <ItemCard item="Кристалл Битвы" type="Компонент · основа крафтов" />
+  <ItemCard item="Кусочек оружейной стали" type="Компонент · стальной самородок" />
+  <ItemCard item="Оружейная сталь" type="Компонент · основной металл" />
+  <ItemCard item="Осколок битвы" type="Компонент · дроп с боссов" />
+  <ItemCard item="Прочная кожа" type="Компонент · выделанная кожа" />
 </ItemGrid>
 
 ---
