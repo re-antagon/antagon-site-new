@@ -5970,6 +5970,7 @@ export const isItemEnchanted = (itemName: string): boolean => {
 
 export const getItemTitle = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   const cleanName = itemName.trim()
   const lowerName = cleanName.toLowerCase()
   const underscored = cleanName.replace(/ /g, '_')
@@ -5992,6 +5993,7 @@ export const getItemTitle = (itemName: string): string => {
 
 export const getItemType = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   const cleanName = itemName.trim()
   const lowerName = cleanName.toLowerCase()
   const underscored = cleanName.replace(/ /g, '_')
@@ -6011,6 +6013,7 @@ export const getItemType = (itemName: string): string => {
 
 export const getItemWikiUrl = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   const cleanName = itemName.trim()
   const lowerName = cleanName.toLowerCase()
   const underscored = cleanName.replace(/ /g, '_')
@@ -6031,12 +6034,14 @@ export const getItemWikiUrl = (itemName: string): string => {
 
 export const getItemAlt = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   const title = getItemTitle(itemName)
   return `Иконка ${title}.png: Спрайт для инвентаря, как показано в игре.`
 }
 
 export const getItemSrc = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   if (itemName.startsWith('/') || itemName.includes('.')) {
     return itemName
   }
