@@ -2,12 +2,9 @@
   <div class="item-grid">
     <slot />
     <ItemCard
-      v-for="item in items"
-      :key="item.href"
-      :href="item.href"
-      :img="item.img"
-      :title="item.title || item.name"
-      :type="item.type"
+      v-for="(item, idx) in items"
+      :key="typeof item === 'string' ? item : (item.href || item.item || item.name || idx)"
+      v-bind="typeof item === 'string' ? { item } : item"
     />
   </div>
 </template>
@@ -15,15 +12,16 @@
 <script setup lang="ts">
 import ItemCard from './ItemCard.vue'
 
-interface Item {
-  href: string
-  img: string
+interface ItemObj {
+  item?: string
+  href?: string
+  img?: string
   title?: string
   name?: string
   type?: string
 }
 
 defineProps<{
-  items?: Item[]
+  items?: (string | ItemObj)[]
 }>()
 </script>

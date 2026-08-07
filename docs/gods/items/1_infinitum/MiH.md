@@ -1,4 +1,7 @@
 ---
+title: "MiH"
+type: "Расходник"
+img: "/assets/items/custom/big/MiH.png"
 description: "MiH - предмет Бога Постижения, позволяющее перематывать время"
 ---
 

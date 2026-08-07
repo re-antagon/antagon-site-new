@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const itemsDir = path.join(__dirname, '../docs/assets/items');
+const itemsDir = path.join(__dirname, '../docs/public/assets/items');
 const files = fs.readdirSync(itemsDir).filter(f => f.endsWith('.png')).map(f => f.replace('.png', ''));
 
 const dict = {
@@ -576,20 +576,155 @@ files.forEach(id => {
 
 console.log('Total files mapped:', files.length, 'Total keys in dict:', Object.keys(dict).length);
 
+// --- SCAN CUSTOM GOD ITEMS ---
+const customItemAssets = {};
+const customRuItemNames = {};
+const localItemRoutes = {};
+const customItemTypes = {};
+
+function scanCustomItems(dir) {
+  if (!fs.existsSync(dir)) return;
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      scanCustomItems(fullPath);
+    } else if (file.endsWith('.md') && !file.endsWith('index.md') && !file.endsWith('unique_items.md')) {
+      const content = fs.readFileSync(fullPath, 'utf-8');
+      const filenameTitle = path.basename(file, '.md').trim();
+      const relativeRoute = '/' + path.relative(path.join(__dirname, '../docs'), fullPath)
+        .replace(/\\/g, '/')
+        .replace(/\.md$/, '');
+
+      // Parse YAML frontmatter fields
+      const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      let title = filenameTitle;
+      let type = '';
+      let imgPath = null;
+
+      if (fmMatch) {
+        const fmText = fmMatch[1];
+        const titleMatch = fmText.match(/title:\s*["']?(.*?)["']?\r?$/m);
+        if (titleMatch && titleMatch[1].trim()) title = titleMatch[1].trim();
+
+        const typeMatch = fmText.match(/type:\s*["']?(.*?)["']?\r?$/m);
+        if (typeMatch && typeMatch[1].trim()) type = typeMatch[1].trim();
+
+        const imgFmMatch = fmText.match(/img:\s*["']?(.*?)["']?\r?$/m);
+        if (imgFmMatch && imgFmMatch[1].trim()) imgPath = imgFmMatch[1].trim();
+      }
+
+      // Fallback extract image path from markdown body if not in frontmatter
+      if (!imgPath) {
+        const imgMatch = content.match(/!\[.*?\]\((.*?)\)/);
+        if (imgMatch) imgPath = imgMatch[1].split(' ')[0].trim();
+      }
+
+      let imgKey = null;
+      if (imgPath) {
+        imgKey = path.basename(imgPath, path.extname(imgPath)).trim();
+      }
+
+      const keys = new Set();
+      if (title) {
+        keys.add(title);
+        keys.add(title.toLowerCase());
+        keys.add(title.replace(/ /g, '_'));
+        keys.add(title.toLowerCase().replace(/ /g, '_'));
+      }
+      if (filenameTitle) {
+        keys.add(filenameTitle);
+        keys.add(filenameTitle.toLowerCase());
+        keys.add(filenameTitle.replace(/ /g, '_'));
+        keys.add(filenameTitle.toLowerCase().replace(/ /g, '_'));
+      }
+      if (imgKey) {
+        keys.add(imgKey);
+        keys.add(imgKey.toLowerCase());
+        keys.add(imgKey.replace(/_/g, ' '));
+        keys.add(imgKey.toLowerCase().replace(/_/g, ' '));
+      }
+
+      keys.forEach(k => {
+        if (!k) return;
+        customRuItemNames[k] = title;
+        localItemRoutes[k] = relativeRoute;
+        if (type) customItemTypes[k] = type;
+        if (imgPath) customItemAssets[k] = imgPath;
+      });
+    }
+  });
+}
+
+const godsItemsDir = path.join(__dirname, '../docs/gods/items');
+scanCustomItems(godsItemsDir);
+console.log('Custom items mapped count:', Object.keys(customRuItemNames).length);
+
 const tsContent = `// Auto-generated Russian Minecraft Item Names Dictionary
 export const ruItemNames: Record<string, string> = ${JSON.stringify(dict, null, 2)};
+export const customItemAssets: Record<string, string> = ${JSON.stringify(customItemAssets, null, 2)};
+export const customRuItemNames: Record<string, string> = ${JSON.stringify(customRuItemNames, null, 2)};
+export const localItemRoutes: Record<string, string> = ${JSON.stringify(localItemRoutes, null, 2)};
+export const customItemTypes: Record<string, string> = ${JSON.stringify(customItemTypes, null, 2)};
 
 export const getItemTitle = (itemName: string): string => {
   if (!itemName) return ''
-  const cleanName = itemName.trim().toLowerCase()
-  if (ruItemNames[cleanName]) {
-    return ruItemNames[cleanName]
-  }
-  return itemName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+  const cleanName = itemName.trim()
+  const lowerName = cleanName.toLowerCase()
+  const underscored = cleanName.replace(/ /g, '_')
+  const lowerUnderscored = lowerName.replace(/ /g, '_')
+  const spaced = cleanName.replace(/_/g, ' ')
+  const lowerSpaced = lowerName.replace(/_/g, ' ')
+
+  if (customRuItemNames[cleanName]) return customRuItemNames[cleanName]
+  if (customRuItemNames[lowerName]) return customRuItemNames[lowerName]
+  if (customRuItemNames[underscored]) return customRuItemNames[underscored]
+  if (customRuItemNames[lowerUnderscored]) return customRuItemNames[lowerUnderscored]
+  if (customRuItemNames[spaced]) return customRuItemNames[spaced]
+  if (customRuItemNames[lowerSpaced]) return customRuItemNames[lowerSpaced]
+
+  if (ruItemNames[lowerUnderscored]) return ruItemNames[lowerUnderscored]
+  if (ruItemNames[lowerName]) return ruItemNames[lowerName]
+
+  return cleanName.split(/[_ ]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+}
+
+export const getItemType = (itemName: string): string => {
+  if (!itemName) return ''
+  const cleanName = itemName.trim()
+  const lowerName = cleanName.toLowerCase()
+  const underscored = cleanName.replace(/ /g, '_')
+  const lowerUnderscored = lowerName.replace(/ /g, '_')
+  const spaced = cleanName.replace(/_/g, ' ')
+  const lowerSpaced = lowerName.replace(/_/g, ' ')
+
+  if (customItemTypes[cleanName]) return customItemTypes[cleanName]
+  if (customItemTypes[lowerName]) return customItemTypes[lowerName]
+  if (customItemTypes[underscored]) return customItemTypes[underscored]
+  if (customItemTypes[lowerUnderscored]) return customItemTypes[lowerUnderscored]
+  if (customItemTypes[spaced]) return customItemTypes[spaced]
+  if (customItemTypes[lowerSpaced]) return customItemTypes[lowerSpaced]
+
+  return ''
 }
 
 export const getItemWikiUrl = (itemName: string): string => {
   if (!itemName) return ''
+  const cleanName = itemName.trim()
+  const lowerName = cleanName.toLowerCase()
+  const underscored = cleanName.replace(/ /g, '_')
+  const lowerUnderscored = lowerName.replace(/ /g, '_')
+  const spaced = cleanName.replace(/_/g, ' ')
+  const lowerSpaced = lowerName.replace(/_/g, ' ')
+
+  if (localItemRoutes[cleanName]) return localItemRoutes[cleanName]
+  if (localItemRoutes[lowerName]) return localItemRoutes[lowerName]
+  if (localItemRoutes[underscored]) return localItemRoutes[underscored]
+  if (localItemRoutes[lowerUnderscored]) return localItemRoutes[lowerUnderscored]
+  if (localItemRoutes[spaced]) return localItemRoutes[spaced]
+  if (localItemRoutes[lowerSpaced]) return localItemRoutes[lowerSpaced]
+
   const title = getItemTitle(itemName)
   return \`https://ru.minecraft.wiki/w/\${encodeURIComponent(title.replace(/ /g, '_'))}\`
 }
@@ -602,9 +737,28 @@ export const getItemAlt = (itemName: string): string => {
 
 export const getItemSrc = (itemName: string): string => {
   if (!itemName) return ''
-  return \`/assets/items/\${itemName}.png\`
+  if (itemName.startsWith('/') || itemName.includes('.')) {
+    return itemName
+  }
+  const cleanName = itemName.trim()
+  const lowerName = cleanName.toLowerCase()
+  const underscored = cleanName.replace(/ /g, '_')
+  const lowerUnderscored = lowerName.replace(/ /g, '_')
+  const spaced = cleanName.replace(/_/g, ' ')
+  const lowerSpaced = lowerName.replace(/_/g, ' ')
+
+  if (customItemAssets[cleanName]) return customItemAssets[cleanName]
+  if (customItemAssets[lowerName]) return customItemAssets[lowerName]
+  if (customItemAssets[underscored]) return customItemAssets[underscored]
+  if (customItemAssets[lowerUnderscored]) return customItemAssets[lowerUnderscored]
+  if (customItemAssets[spaced]) return customItemAssets[spaced]
+  if (customItemAssets[lowerSpaced]) return customItemAssets[lowerSpaced]
+
+  return \`/assets/items/\${cleanName}.png\`
 }
 `;
 
 fs.writeFileSync(path.join(__dirname, '../docs/.vitepress/theme/minecraft_inventory/itemUtils.ts'), tsContent);
 console.log('Successfully generated itemUtils.ts!');
+
+
