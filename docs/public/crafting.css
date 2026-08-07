@@ -282,14 +282,45 @@
 }
 
 .mcui-Furnace > .mcui-arrow {
+    position: relative;
     background: url(/assets/utils/Grid_layout_Furnace_Progress.png) no-repeat;
     width: 44px;
     height: 32px;
-    margin: 36px 18px 0 14px
+    margin: 36px 18px 0 14px;
 }
 
 .mcui-Furnace > .mcui-arrow.mcui-inactive,.mcui-Inventory-Crafting_Table-arrow {
-    background-image: url(/assets/utils/Grid_layout_Furnace_Progress_in-active.png)
+    background-image: url(/assets/utils/Grid_layout_Furnace_Progress_in-active.png);
+}
+
+.mcui-Furnace > .mcui-arrow.mcui-animated {
+    background-image: url(/assets/utils/Grid_layout_Furnace_Progress_in-active.png) !important;
+    overflow: hidden;
+}
+
+.mcui-Furnace > .mcui-arrow.mcui-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: url(/assets/utils/Grid_layout_Furnace_Progress.png) no-repeat;
+    animation: mcui-furnace-arrow-fill var(--cooking-time, 10s) steps(22, end) infinite;
+}
+
+.mcui-Furnace > .mcui-arrow.mcui-inactive.mcui-animated::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes mcui-furnace-arrow-fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 .mcui-Furnace > .mcui-output {

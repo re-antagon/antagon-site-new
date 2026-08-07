@@ -6,7 +6,6 @@ description: "Изменение и разрушение блоков при п�
 
 На сервере Re:Antagon **наковальня, упавшая с высоты на определенный блок, изменяет его**. В зависимости от типа блока он либо превращается в другой, либо полностью разрушается (исчезает).
 
----
 
 ## Демонстрация
 
@@ -14,7 +13,6 @@ description: "Изменение и разрушение блоков при п�
 
 <video controls width="640" src="/assets/videos/crushes_block.mp4"></video>
 
----
 
 ## Превращение камня и грунта
 
@@ -27,7 +25,6 @@ description: "Изменение и разрушение блоков при п�
 | ![Гравий](/assets/items/gravel.png) Гравий | ![Песок](/assets/items/sand.png) Песок |
 | ![Песок](/assets/items/sand.png) Песок | ![Песчаник](/assets/items/sandstone.png) Песчаник |
 
----
 
 ## Металлические блоки
 
@@ -50,7 +47,6 @@ description: "Изменение и разрушение блоков при п�
 Любая разновидность меди (чистая, окисленная, погодная, глубоко окисленная, вощеная) под наковальней превращается в **блок необработанной меди** независимо от стадии окисления или вощения.
 :::
 
----
 
 ## Разрушение стекла
 
@@ -63,7 +59,6 @@ description: "Изменение и разрушение блоков при п�
 | <InventorySlot item="white_stained_glass;orange_stained_glass;magenta_stained_glass;light_blue_stained_glass;yellow_stained_glass;lime_stained_glass;pink_stained_glass;gray_stained_glass;light_gray_stained_glass;cyan_stained_glass;purple_stained_glass;blue_stained_glass;brown_stained_glass;green_stained_glass;red_stained_glass;black_stained_glass" /> Все цвета стекла | Разрушается |
 | <InventorySlot item="white_stained_glass_pane;orange_stained_glass_pane;magenta_stained_glass_pane;light_blue_stained_glass_pane;yellow_stained_glass_pane;lime_stained_glass_pane;pink_stained_glass_pane;gray_stained_glass_pane;light_gray_stained_glass_pane;cyan_stained_glass_pane;purple_stained_glass_pane;blue_stained_glass_pane;brown_stained_glass_pane;green_stained_glass_pane;red_stained_glass_pane;black_stained_glass_pane" /> Все цвета стеклянной панели | Разрушается |
 
----
 
 ## Бетон в порошок
 
@@ -73,7 +68,6 @@ description: "Изменение и разрушение блоков при п�
 |:----------------|:-------------------|
 | <InventorySlot item="white_concrete;orange_concrete;magenta_concrete;light_blue_concrete;yellow_concrete;lime_concrete;pink_concrete;gray_concrete;light_gray_concrete;cyan_concrete;purple_concrete;blue_concrete;brown_concrete;green_concrete;red_concrete;black_concrete" /> Бетон | <InventorySlot item="white_concrete_powder;orange_concrete_powder;magenta_concrete_powder;light_blue_concrete_powder;yellow_concrete_powder;lime_concrete_powder;pink_concrete_powder;gray_concrete_powder;light_gray_concrete_powder;cyan_concrete_powder;purple_concrete_powder;blue_concrete_powder;brown_concrete_powder;green_concrete_powder;red_concrete_powder;black_concrete_powder" /> Бетонный порошок |
 
----
 
 ## Связанные страницы
 

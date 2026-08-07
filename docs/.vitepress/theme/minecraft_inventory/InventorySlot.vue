@@ -44,7 +44,7 @@ const frameIndex = ref(0)
 let timer: ReturnType<typeof setInterval> | null = null
 
 onMounted(() => {
-  if (props.item && props.item.includes(';')) {
+  if (props.item && (props.item.includes(';') || props.item.includes(','))) {
     timer = setInterval(() => {
       frameIndex.value++
     }, 2000)
@@ -57,7 +57,7 @@ onUnmounted(() => {
 
 const currentItem = computed(() => {
   if (!props.item) return ''
-  const frames = props.item.split(';').map(s => s.trim()).filter(Boolean)
+  const frames = props.item.split(/[;,]/).map(s => s.trim()).filter(Boolean)
   if (frames.length <= 1) return frames[0] ?? ''
   return frames[frameIndex.value % frames.length]
 })
