@@ -112,7 +112,7 @@ description: "Бог Космоса (Cosm - Cielo infinito) на сервере 
 <CraftingRecipe
   input1="ender_pearl"
   input2="ender_pearl"
-  output="ender_pearl"
+  output="ender_pearl:enchanted"
   shapeless="true"
 />
 
@@ -138,10 +138,10 @@ description: "Бог Космоса (Cosm - Cielo infinito) на сервере 
   input4="obsidian"
   input5="obsidian"
   input6="obsidian"
-  input7="ender_pearl"
-  input8="ender_pearl"
-  input9="ender_pearl"
-  output="lapis_lazuli"
+  input7="ender_pearl:enchanted"
+  input8="ender_pearl:enchanted"
+  input9="ender_pearl:enchanted"
+  output="lapis_lazuli:enchanted"
   shapeless="true"
 />
 

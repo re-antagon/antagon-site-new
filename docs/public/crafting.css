@@ -1831,13 +1831,15 @@ body.wgl-theme-dark .sound-title::after {
 }
 
 .invslot.enchanted,
-.invslot-item.enchanted {
+.invslot-item.enchanted,
+.item-card-icon.enchanted {
     position: relative;
     overflow: hidden;
 }
 
 .invslot.enchanted::after,
-.invslot-item.enchanted::after {
+.invslot-item.enchanted::after,
+.item-card-icon.enchanted::after {
     content: "";
     position: absolute;
     top: -50%;

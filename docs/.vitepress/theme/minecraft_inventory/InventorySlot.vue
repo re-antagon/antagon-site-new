@@ -1,8 +1,9 @@
 <template>
-  <span class="invslot">
+  <span class="invslot" :class="{ enchanted: isEnchanted }">
     <a 
       v-if="currentItem" 
       class="invslot-item invslot-item-image" 
+      :class="{ enchanted: isEnchanted }"
       :data-minetip-title="getItemTitle(currentItem)"
       :href="getItemWikiUrl(currentItem)"
       :target="getItemWikiUrl(currentItem).startsWith('/') ? undefined : '_blank'"
@@ -28,16 +29,18 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { getItemTitle, getItemAlt, getItemSrc, getItemWikiUrl } from './itemUtils'
+import { getItemTitle, getItemAlt, getItemSrc, getItemWikiUrl, isItemEnchanted } from './itemUtils'
 
 interface Props {
   item?: string
   count?: number
+  enchanted?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   item: '',
-  count: 1
+  count: 1,
+  enchanted: false
 })
 
 const frameIndex = ref(0)
@@ -60,5 +63,11 @@ const currentItem = computed(() => {
   const frames = props.item.split(/[;,]/).map(s => s.trim()).filter(Boolean)
   if (frames.length <= 1) return frames[0] ?? ''
   return frames[frameIndex.value % frames.length]
+})
+
+const isEnchanted = computed(() => {
+  if (props.enchanted) return true
+  if (!currentItem.value) return false
+  return isItemEnchanted(currentItem.value)
 })
 </script>

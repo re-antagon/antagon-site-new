@@ -657,9 +657,82 @@ function scanCustomItems(dir) {
   });
 }
 
+function scanCustomAssetDir(assetDir, webPrefix) {
+  if (!fs.existsSync(assetDir)) return;
+  const files = fs.readdirSync(assetDir);
+  files.forEach(f => {
+    const ext = path.extname(f);
+    if (ext === '.png' || ext === '.gif') {
+      const base = path.basename(f, ext).trim();
+      const webPath = `${webPrefix}/${f}`;
+      const keys = [base, base.toLowerCase(), base.replace(/_/g, ' '), base.toLowerCase().replace(/_/g, ' ')];
+      keys.forEach(k => {
+        if (!customItemAssets[k]) {
+          customItemAssets[k] = webPath;
+        }
+      });
+    }
+  });
+}
+
+scanCustomAssetDir(path.join(__dirname, '../docs/public/assets/items/custom/big'), '/assets/items/custom/big');
+scanCustomAssetDir(path.join(__dirname, '../docs/public/assets/items/custom'), '/assets/items/custom');
+
+const knownCustomTitles = {
+  shade_helmet: 'Шлем отвода глаз',
+  shade_chestplate: 'Нагрудник отвода глаз',
+  shade_leggings: 'Поножи отвода глаз',
+  shade_boots: 'Ботинки отвода глаз',
+  wood_helmet: 'Древесный шлем',
+  wood_chestplate: 'Древесный нагрудник',
+  wood_leggings: 'Древесные поножи',
+  wood_boots: 'Древесные ботинки',
+  steel_helmet: 'Стальной шлем',
+  steel_chestplate: 'Стальной нагрудник',
+  steel_leggings: 'Стальные поножи',
+  steel_boots: 'Стальные ботинки',
+  pufferfish_helmet: 'Шлем Иглобрюха',
+  pufferfish_chestplate: 'Кираса Иглобрюха',
+  pufferfish_leggings: 'Поножи Иглобрюха',
+  pufferfish_boots: 'Ботинки Иглобрюха',
+  light_armor_helmet: 'Лёгкий шлем',
+  light_armor_chestplate: 'Лёгкий нагрудник',
+  light_armor_leggings: 'Лёгкие поножи',
+  light_armor_boots: 'Лёгкие ботинки',
+  floatcover_helmet: 'Шлем водяного покрова',
+  floatcover_chestplate: 'Нагрудник водяного покрова',
+  floatcover_leggings: 'Поножи водяного покрова',
+  floatcover_boots: 'Ботинки водяного покрова',
+  red_helmet: 'Красный шлем',
+  red_chestplate: 'Красный нагрудник',
+  red_leggings: 'Красные поножи',
+  red_boots: 'Красные ботинки',
+};
+
+Object.entries(knownCustomTitles).forEach(([key, title]) => {
+  const keys = [key, key.toLowerCase(), key.replace(/_/g, ' '), key.toLowerCase().replace(/_/g, ' ')];
+  keys.forEach(k => {
+    if (!customRuItemNames[k]) customRuItemNames[k] = title;
+  });
+});
+
 const godsItemsDir = path.join(__dirname, '../docs/gods/items');
 scanCustomItems(godsItemsDir);
 console.log('Custom items mapped count:', Object.keys(customRuItemNames).length);
+
+const customEnchantedItems = {
+  'enchanted_book': true,
+  'enchanted_golden_apple': true,
+  'enchanted_golden_poisonous_potato': true,
+  'жемчуг_космоса': true,
+  'жемчуг космоса': true,
+  'ключ_измерений': true,
+  'ключ измерений': true,
+  'барьер_цепей': true,
+  'барьер цепей': true,
+  'лазуритовый_резонатор': true,
+  'лазуритовый резонатор': true
+};
 
 const tsContent = `// Auto-generated Russian Minecraft Item Names Dictionary
 export const ruItemNames: Record<string, string> = ${JSON.stringify(dict, null, 2)};
@@ -667,6 +740,36 @@ export const customItemAssets: Record<string, string> = ${JSON.stringify(customI
 export const customRuItemNames: Record<string, string> = ${JSON.stringify(customRuItemNames, null, 2)};
 export const localItemRoutes: Record<string, string> = ${JSON.stringify(localItemRoutes, null, 2)};
 export const customItemTypes: Record<string, string> = ${JSON.stringify(customItemTypes, null, 2)};
+export const customEnchantedItems: Record<string, boolean> = ${JSON.stringify(customEnchantedItems, null, 2)};
+
+export const cleanItemName = (name: string): string => {
+  if (!name) return ''
+  return name.replace(/:(enchanted|e|glint)|[#?](enchanted|e|glint)/i, '').trim()
+}
+
+export const defaultEnchantedItems = new Set([
+  'enchanted_book',
+  'enchanted_golden_apple',
+  'enchanted_golden_poisonous_potato',
+  'жемчуг_космоса',
+  'жемчуг космоса',
+  'ключ_измерений',
+  'ключ измерений',
+  'барьер_цепей',
+  'барьер цепей',
+  'лазуритовый_резонатор',
+  'лазуритовый резонатор'
+])
+
+export const isItemEnchanted = (itemName: string): boolean => {
+  if (!itemName) return false
+  if (/:(enchanted|e|glint)|[#?](enchanted|e|glint)/i.test(itemName)) return true
+  const clean = cleanItemName(itemName).toLowerCase()
+  const cleanUnderscored = clean.replace(/ /g, '_')
+  if (defaultEnchantedItems.has(clean) || defaultEnchantedItems.has(cleanUnderscored)) return true
+  if (customEnchantedItems[clean] || customEnchantedItems[cleanUnderscored]) return true
+  return false
+}
 
 export const getItemTitle = (itemName: string): string => {
   if (!itemName) return ''
