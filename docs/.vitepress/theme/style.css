@@ -131,6 +131,13 @@
   width: 32px; height: auto; margin: 0 0 0 0;
 }
 
+.vp-doc > div:first-child > p:first-child > img[src^="/assets/items/"]:only-child {
+  display: block !important;
+  width: 128px !important;
+  height: 128px !important;
+  margin: 0 auto 16px auto !important;
+}
+
 /**
  * Component: Feature Cards Grid for Hub Pages
  * -------------------------------------------------------------------------- */
@@ -295,4 +302,4 @@
   color: var(--vp-c-text-2);
 }
 
-
+
