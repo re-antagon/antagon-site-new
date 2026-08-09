@@ -42,11 +42,11 @@ const moderators = [
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/1221055867634319444/4043c7bd49b9afa1c6b5208292156c4f.webp?size=1024',
+    avatar: 'https://cdn.discordapp.com/avatars/1525487098487115959/17c1959e83ea8c23c6081fe457547e5f.webp?size=1024',
     name: 'samikoppersi',
     title: 'Ивент-мейкер, Чат-менеджер',
     links: [
-      { icon: 'discord', link: 'https://discord.com/users/1221055867634319444' }
+      { icon: 'discord', link: 'https://discord.com/users/1525487098487115959' }
     ]
   }
 ]
