@@ -165,9 +165,6 @@ onMounted(() => {
 
 .VPTeamMembersItem.birthday-today {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.14), rgba(255, 107, 107, 0.14), rgba(77, 150, 255, 0.14));
-  border: 2px solid #FFD700 !important;
-  border-radius: 16px !important;
   box-shadow: 0 0 22px rgba(255, 215, 0, 0.35), 0 6px 16px rgba(0,0,0,0.12);
   transform: translateY(-3px);
   transition: all 0.35s ease;
@@ -178,23 +175,32 @@ onMounted(() => {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 0 32px rgba(255, 215, 0, 0.55), 0 10px 24px rgba(0,0,0,0.18);
 }
+
+.VPTeamMembersItem.birthday-today .profile {
+  position: relative;
+  border-radius: 16px !important;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.25) inset;
+}
+
 .VPTeamMembersItem.birthday-today .avatar {
   position: relative;
   overflow: visible !important;
   border: 3px solid #FFD700;
   box-shadow: 0 0 18px rgba(255, 215, 0, 0.5);
 }
-.VPTeamMembersItem.birthday-today .profile { overflow: visible; }
 
 .VPTeamMembersItem.birthday-soon {
   position: relative;
-  border: 1.5px dashed #FFB347 !important;
-  border-radius: 14px !important;
-  background: linear-gradient(135deg, rgba(255, 179, 71, 0.08), rgba(255, 215, 0, 0.06));
   overflow: visible !important;
 }
-.VPTeamMembersItem.birthday-soon .avatar {
-  overflow: visible !important;
+.VPTeamMembersItem.birthday-soon .profile {
+  border-radius: 14px !important;
+  border: 1.5px dashed #FFB347 !important;
+  background: linear-gradient(135deg, rgba(255, 179, 71, 0.08), rgba(255, 215, 0, 0.06)),
+              var(--vp-c-bg-soft);
+  background-clip: padding-box;
+  overflow: hidden;
 }
 
 @keyframes birthday-gradient {
