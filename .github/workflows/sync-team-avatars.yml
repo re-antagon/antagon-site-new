@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: refactor/wiki-restructure
+          ref: main
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -42,5 +42,5 @@ jobs:
             echo "Изменений нет, коммит не нужен."
           else
             git commit -m "chore(team): sync Discord avatars [skip ci]"
-            git push origin HEAD:refactor/wiki-restructure
+            git push origin HEAD:main
           fi
