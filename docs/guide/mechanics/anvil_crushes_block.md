@@ -20,6 +20,7 @@ description: "Изменение и разрушение блоков при п�
 
 | Блок до падения | Блок после падения |
 |:----------------|:-------------------|
+| ![Каменные кирпичи](/assets/items/stone_bricks.png) Каменные кирпичи | ![Потресканные каменные кирпичи](/assets/items/cracked_stone_bricks.png) Потресканные каменные кирпичи |
 | ![Камень](/assets/items/stone.png) Камень | ![Булыжник](/assets/items/cobblestone.png) Булыжник |
 | ![Булыжник](/assets/items/cobblestone.png) Булыжник | ![Гравий](/assets/items/gravel.png) Гравий |
 | ![Гравий](/assets/items/gravel.png) Гравий | ![Песок](/assets/items/sand.png) Песок |
