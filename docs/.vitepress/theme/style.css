@@ -131,6 +131,16 @@
   width: 32px; height: auto; margin: 0 0 0 0;
 }
 
+.vp-doc img[src*="/models_preview/"],
+.vp-doc img.is-3d {
+  image-rendering: auto !important;
+}
+
+.vp-doc img[src*="/small/"],
+.vp-doc img.is-2d {
+  image-rendering: pixelated;
+}
+
 .vp-doc > div:first-child > p:first-child > img[src^="/assets/items/"]:only-child {
   display: block !important;
   width: 128px !important;

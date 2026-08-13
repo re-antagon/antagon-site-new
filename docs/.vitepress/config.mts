@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 interface SidebarOptions {
-  mechanicsSection?: 'none' | 'physics' | 'utilities';
+  mechanicsSection?: 'none' | 'gods' | 'physics' | 'transport' | 'utilities';
   god?: '1_infinitum' | '2_mater' | '3_fungus' | '4_finis' | '5_bellum' | '6_cosm' | '7_distorta' | '8_ignos';
   godItems?: boolean;
 }
@@ -29,7 +29,9 @@ function getWikiSidebar(options: SidebarOptions = {}) {
       text: 'Для новичков',
       items: [
         { text: 'Быстрый старт', link: '/guide/start' },
-        { text: 'Часто задаваемые вопросы', link: '/guide/faq/' }
+        { text: 'Часто задаваемые вопросы', link: '/guide/faq/' },
+        { text: 'Кастомные крафты', link: '/guide/faq/custom_crafts' },
+        { text: 'Локации и Мир', link: '/guide/places/' }
       ]
     },
     {
@@ -45,6 +47,8 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           items: [
             { text: 'Благословения & Проклятия', link: '/gods/1_infinitum#проклятия' },
             { text: 'Особенности тела', link: '/gods/1_infinitum#особенности-тела' },
+            { text: 'Заклинания Постижения', link: '/guide/mechanics/infinitum-spells' },
+            { text: 'Автоматоны', link: '/guide/mechanics/automatons' },
             {
               text: 'Предметы',
               link: '/gods/items/1_infinitum/',
@@ -75,6 +79,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           items: [
             { text: 'Благословения & Проклятия', link: '/gods/3_fungus#проклятия' },
             { text: 'Особенности тела', link: '/gods/3_fungus#особенности-тела' },
+            { text: 'Второй желудок', link: '/guide/mechanics/second_stomach' },
             {
               text: 'Предметы',
               link: '/gods/items/3_fungus/',
@@ -120,6 +125,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           items: [
             { text: 'Благословения & Проклятия', link: '/gods/6_cosm#проклятия' },
             { text: 'Особенности тела', link: '/gods/6_cosm#особенности-тела' },
+            { text: 'Звёздная броня', link: '/guide/mechanics/star_armor' },
             {
               text: 'Предметы',
               link: '/gods/items/6_cosm/',
@@ -135,6 +141,10 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           items: [
             { text: 'Благословения & Проклятия', link: '/gods/7_distorta#проклятия' },
             { text: 'Особенности тела', link: '/gods/7_distorta#особенности-тела' },
+            { text: 'Заклинания Искажения', link: '/guide/mechanics/distortion-spells' },
+            { text: 'Некромантия', link: '/guide/mechanics/necromancy' },
+            { text: 'Изгнание нежити', link: '/guide/mechanics/turn_undead' },
+            { text: 'Проклятые мечи', link: '/guide/mechanics/cursed_golden_swords' },
             {
               text: 'Предметы',
               link: '/gods/items/7_distorta/',
@@ -169,19 +179,45 @@ function getWikiSidebar(options: SidebarOptions = {}) {
         {
           text: 'Обзор всех механик',
           link: '/guide/mechanics/',
-          collapsed: mechanicsSection === 'none',
           items: [
             {
+              text: 'Механики Богов и Пантеона',
+              link: '/guide/mechanics/#механики-богов-и-пантеона',
+              collapsed: mechanicsSection !== 'gods',
+              items: [
+                { text: 'Обзор Богов', link: '/gods/' },
+                { text: 'Система Праны', link: '/gods/prana' },
+                { text: 'Блокираторы Богов (Атеизм)', link: '/gods/atheism' },
+                { text: 'Заклинания Постижения', link: '/guide/mechanics/infinitum-spells' },
+                { text: 'Автоматоны Постижения', link: '/guide/mechanics/automatons' },
+                { text: 'Второй желудок (Fungus)', link: '/guide/mechanics/second_stomach' },
+                { text: 'Звёздная броня (Cosm)', link: '/guide/mechanics/star_armor' },
+                { text: 'Заклинания Искажения', link: '/guide/mechanics/distortion-spells' },
+                { text: 'Некромантия (Distorta)', link: '/guide/mechanics/necromancy' },
+                { text: 'Изгнание нежити (Distorta)', link: '/guide/mechanics/turn_undead' },
+                { text: 'Проклятые мечи (Distorta)', link: '/guide/mechanics/cursed_golden_swords' }
+              ]
+            },
+            {
               text: 'Физика и окружающий мир',
-              link: '/guide/mechanics/#физика-и-окружающий-мир',
+              link: '/guide/mechanics/#физика-и-окружающии-мир',
               collapsed: mechanicsSection !== 'physics',
               items: [
                 { text: 'Разрушение блоков наковальней', link: '/guide/mechanics/anvil_crushes_block' },
                 { text: 'Физика поршней и наковальни', link: '/guide/mechanics/anvil_piston_physics' },
                 { text: 'Ускоренное окисление меди', link: '/guide/mechanics/copper_oxidation' },
-                { text: 'Скоростные вагонетки', link: '/guide/mechanics/minecarts_acceleration' },
                 { text: 'Пожары и древесный уголь', link: '/guide/mechanics/fire_adjustment' },
                 { text: 'Особенности паутины', link: '/guide/mechanics/web' }
+              ]
+            },
+            {
+              text: 'Транспорт и Измерения',
+              link: '/guide/mechanics/#транспорт-и-измерения',
+              collapsed: mechanicsSection !== 'transport',
+              items: [
+                { text: 'Скоростные вагонетки', link: '/guide/mechanics/minecarts_acceleration' },
+                { text: 'Измерение Чистилище', link: '/gods/purgatory' },
+                { text: 'Локации и Мир', link: '/guide/places/' }
               ]
             },
             {
@@ -193,6 +229,11 @@ function getWikiSidebar(options: SidebarOptions = {}) {
                 { text: 'Арбалет "Тройной выстрел"', link: '/guide/mechanics/multishot_crossbow' },
                 { text: 'Кастомные пластинки (/cd)', link: '/guide/mechanics/custom_discs' },
                 { text: 'Картинки в рамках (/imageframe)', link: '/guide/mechanics/image_frame' },
+                { text: 'Невидимые рамки', link: '/guide/mechanics/invisible_frames' },
+                { text: 'Головы игроков при PVP', link: '/guide/mechanics/player_heads' },
+                { text: 'Ношение баннеров', link: '/guide/mechanics/banner_hats' },
+                { text: 'Камнерез и песок', link: '/guide/mechanics/stonecutter' },
+                { text: 'Перевозка жителей', link: '/guide/mechanics/villager_transport' },
                 { text: 'Уникальные эффекты', link: '/guide/mechanics/unique_effects' }
               ]
             }
@@ -333,16 +374,33 @@ export default defineConfig({
       '/guide/mechanics/anvil_crushes_block': getWikiSidebar({ mechanicsSection: 'physics' }),
       '/guide/mechanics/anvil_piston_physics': getWikiSidebar({ mechanicsSection: 'physics' }),
       '/guide/mechanics/copper_oxidation': getWikiSidebar({ mechanicsSection: 'physics' }),
-      '/guide/mechanics/minecarts_acceleration': getWikiSidebar({ mechanicsSection: 'physics' }),
       '/guide/mechanics/fire_adjustment': getWikiSidebar({ mechanicsSection: 'physics' }),
       '/guide/mechanics/web': getWikiSidebar({ mechanicsSection: 'physics' }),
+
+      // Mechanics Transport routes
+      '/guide/mechanics/minecarts_acceleration': getWikiSidebar({ mechanicsSection: 'transport' }),
 
       // Mechanics Utility routes
       '/guide/mechanics/indicators': getWikiSidebar({ mechanicsSection: 'utilities' }),
       '/guide/mechanics/multishot_crossbow': getWikiSidebar({ mechanicsSection: 'utilities' }),
       '/guide/mechanics/custom_discs': getWikiSidebar({ mechanicsSection: 'utilities' }),
       '/guide/mechanics/image_frame': getWikiSidebar({ mechanicsSection: 'utilities' }),
+      '/guide/mechanics/invisible_frames': getWikiSidebar({ mechanicsSection: 'utilities' }),
+      '/guide/mechanics/player_heads': getWikiSidebar({ mechanicsSection: 'utilities' }),
+      '/guide/mechanics/banner_hats': getWikiSidebar({ mechanicsSection: 'utilities' }),
+      '/guide/mechanics/stonecutter': getWikiSidebar({ mechanicsSection: 'utilities' }),
+      '/guide/mechanics/villager_transport': getWikiSidebar({ mechanicsSection: 'utilities' }),
       '/guide/mechanics/unique_effects': getWikiSidebar({ mechanicsSection: 'utilities' }),
+
+      // God-specific mechanics routes
+      '/guide/mechanics/infinitum-spells': getWikiSidebar({ mechanicsSection: 'gods', god: '1_infinitum' }),
+      '/guide/mechanics/automatons': getWikiSidebar({ mechanicsSection: 'gods', god: '1_infinitum' }),
+      '/guide/mechanics/second_stomach': getWikiSidebar({ mechanicsSection: 'gods', god: '3_fungus' }),
+      '/guide/mechanics/star_armor': getWikiSidebar({ mechanicsSection: 'gods', god: '6_cosm' }),
+      '/guide/mechanics/distortion-spells': getWikiSidebar({ mechanicsSection: 'gods', god: '7_distorta' }),
+      '/guide/mechanics/necromancy': getWikiSidebar({ mechanicsSection: 'gods', god: '7_distorta' }),
+      '/guide/mechanics/turn_undead': getWikiSidebar({ mechanicsSection: 'gods', god: '7_distorta' }),
+      '/guide/mechanics/cursed_golden_swords': getWikiSidebar({ mechanicsSection: 'gods', god: '7_distorta' }),
 
       // Gods individual routes
       '/gods/1_infinitum': getWikiSidebar({ god: '1_infinitum' }),
@@ -380,9 +438,18 @@ export default defineConfig({
           ]
         }
       ],
-      '/guide/mechanics/': getWikiSidebar({ mechanicsSection: 'none' }),
-      '/guide/': getWikiSidebar({ mechanicsSection: 'none' }),
-      '/gods/': getWikiSidebar({ mechanicsSection: 'none' }),
+      '/guide/mechanics/': getWikiSidebar(),
+      '/guide/places/': getWikiSidebar({ mechanicsSection: 'transport' }),
+      '/guide/faq/custom_crafts': getWikiSidebar(),
+      '/guide/faq/': getWikiSidebar(),
+      '/guide/start': getWikiSidebar(),
+      '/guide/': getWikiSidebar(),
+      '/gods/prana': getWikiSidebar({ mechanicsSection: 'gods' }),
+      '/gods/purgatory': getWikiSidebar({ mechanicsSection: 'transport' }),
+      '/gods/atheism': getWikiSidebar({ mechanicsSection: 'gods' }),
+      '/gods/items/unique_items': getWikiSidebar(),
+      '/gods/items/': getWikiSidebar(),
+      '/gods/': getWikiSidebar({ mechanicsSection: 'gods' }),
       '/promo/': [
         {
           items: [

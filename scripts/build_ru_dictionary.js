@@ -657,7 +657,7 @@ function scanCustomItems(dir) {
   });
 }
 
-function scanCustomAssetDir(assetDir, webPrefix) {
+function scanCustomAssetDir(assetDir, webPrefix, isModelDir = false) {
   if (!fs.existsSync(assetDir)) return;
   const files = fs.readdirSync(assetDir);
   files.forEach(f => {
@@ -666,6 +666,12 @@ function scanCustomAssetDir(assetDir, webPrefix) {
       const base = path.basename(f, ext).trim();
       const webPath = `${webPrefix}/${f}`;
       const keys = [base, base.toLowerCase(), base.replace(/_/g, ' '), base.toLowerCase().replace(/_/g, ' ')];
+      
+      if (isModelDir && base.endsWith('_gui')) {
+        const rootBase = base.replace(/_gui$/, '');
+        keys.push(rootBase, rootBase.toLowerCase(), rootBase.replace(/_/g, ' '), rootBase.toLowerCase().replace(/_/g, ' '));
+      }
+      
       keys.forEach(k => {
         if (!customItemAssets[k]) {
           customItemAssets[k] = webPath;
@@ -675,7 +681,8 @@ function scanCustomAssetDir(assetDir, webPrefix) {
   });
 }
 
-scanCustomAssetDir(path.join(__dirname, '../docs/public/assets/items/custom/big'), '/assets/items/custom/big');
+scanCustomAssetDir(path.join(__dirname, '../docs/public/assets/items/custom/models_preview'), '/assets/items/custom/models_preview', true);
+scanCustomAssetDir(path.join(__dirname, '../docs/public/assets/items/custom/small'), '/assets/items/custom/small');
 scanCustomAssetDir(path.join(__dirname, '../docs/public/assets/items/custom'), '/assets/items/custom');
 
 const knownCustomTitles = {
@@ -773,6 +780,7 @@ export const isItemEnchanted = (itemName: string): boolean => {
 
 export const getItemTitle = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   const cleanName = itemName.trim()
   const lowerName = cleanName.toLowerCase()
   const underscored = cleanName.replace(/ /g, '_')
@@ -795,6 +803,7 @@ export const getItemTitle = (itemName: string): string => {
 
 export const getItemType = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   const cleanName = itemName.trim()
   const lowerName = cleanName.toLowerCase()
   const underscored = cleanName.replace(/ /g, '_')
@@ -814,6 +823,7 @@ export const getItemType = (itemName: string): string => {
 
 export const getItemWikiUrl = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   const cleanName = itemName.trim()
   const lowerName = cleanName.toLowerCase()
   const underscored = cleanName.replace(/ /g, '_')
@@ -834,14 +844,50 @@ export const getItemWikiUrl = (itemName: string): string => {
 
 export const getItemAlt = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   const title = getItemTitle(itemName)
   return \`Иконка \${title}.png: Спрайт для инвентаря, как показано в игре.\`
 }
 
+export const isModelPath = (src: string): boolean => {
+  if (!src) return false
+  return src.includes('/models_preview/') || src.includes('/models_png/')
+}
+
+export const isModelItem = (itemName: string): boolean => {
+  if (!itemName) return false
+  const src = getItemSrc(itemName)
+  return isModelPath(src)
+}
+
+export const normalizeItemSrc = (src: string): string => {
+  if (!src) return ''
+  let cleaned = src.trim().split(' ')[0].split('?')[0].split('{')[0]
+  if (cleaned.includes('/assets/items/custom/big/models_png/')) {
+    cleaned = cleaned.replace('/assets/items/custom/big/models_png/', '/assets/items/custom/models_preview/')
+  }
+  if (cleaned.includes('/assets/items/custom/big/')) {
+    const file = cleaned.split('/assets/items/custom/big/')[1]
+    const baseName = file.replace(/\\.(png|gif|jpg|webp)$/i, '')
+    if (customItemAssets[baseName]) {
+      return customItemAssets[baseName]
+    }
+    if (customItemAssets[baseName + '_gui']) {
+      return customItemAssets[baseName + '_gui']
+    }
+    return \`/assets/items/custom/small/\${file.replace(/\\.gif$/i, '.png')}\`
+  }
+  if (cleaned.startsWith('/')) {
+    return cleaned
+  }
+  return getItemSrc(cleaned)
+}
+
 export const getItemSrc = (itemName: string): string => {
   if (!itemName) return ''
+  itemName = cleanItemName(itemName)
   if (itemName.startsWith('/') || itemName.includes('.')) {
-    return itemName
+    return normalizeItemSrc(itemName)
   }
   const cleanName = itemName.trim()
   const lowerName = cleanName.toLowerCase()
@@ -863,5 +909,6 @@ export const getItemSrc = (itemName: string): string => {
 
 fs.writeFileSync(path.join(__dirname, '../docs/.vitepress/theme/minecraft_inventory/itemUtils.ts'), tsContent);
 console.log('Successfully generated itemUtils.ts!');
+
 
 

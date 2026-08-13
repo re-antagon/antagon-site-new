@@ -6,7 +6,8 @@
     "sitemap-ts": "^1.10.1",
     "vite-plugin-pwa": "^1.0.3",
     "vite-plugin-sitemap": "^0.8.2",
-    "vitepress": "^2.0.0-alpha.15"
+    "vitepress": "^2.0.0-alpha.15",
+    "vitepress-plugin-mcp": "^0.2.0"
   },
   "scripts": {
     "docs:dev": "npx vitepress dev docs",

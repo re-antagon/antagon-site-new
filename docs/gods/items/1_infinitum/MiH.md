@@ -1,11 +1,11 @@
 ---
 title: "MiH"
 type: "Расходник"
-img: "/assets/items/custom/big/MiH.png"
+img: "/assets/items/custom/small/MiH.png"
 description: "MiH - предмет Бога Постижения, позволяющее перематывать время"
 ---
 
-![MiH](/assets/items/custom/big/MiH.png){width=128 height=128 style="image-rendering: pixelated;"}
+![MiH](/assets/items/custom/small/MiH.png){width=128 height=128 style="image-rendering: pixelated;"}
 # Описание
 **MiH** - одноразовый расходник Бога Постижения, способный перемотать время всего мира вперед. При активации игровые часы мира принудительно сдвигаются на 12 часов, мгновенно прокручивая цикл дня и ночи для всех игроков на сервере.
 
@@ -37,8 +37,8 @@ description: "MiH - предмет Бога Постижения, позволя
 
 ## Получение
 Крафтится по **бесформенному рецепту** из двух компонентов:
-- ![Часовой кристалл](/assets/items/custom/big/clock_crystal.png) [Часовой кристалл](/gods/items/1_infinitum/Часовой%20кристалл)
-- ![Механическое сердце](/assets/items/custom/big/mechanic_heart.png) [Механическое сердце](/gods/items/1_infinitum/Механическое%20сердце)
+- ![Часовой кристалл](/assets/items/custom/small/clock_crystal.png) [Часовой кристалл](/gods/items/1_infinitum/Часовой%20кристалл)
+- ![Механическое сердце](/assets/items/custom/small/mechanic_heart.png) [Механическое сердце](/gods/items/1_infinitum/Механическое%20сердце)
 
 <CraftingRecipe
   input1="clock_crystal"
