@@ -8,7 +8,6 @@ description: "Некромантия Бога Искажения на серве
 
 > Некромантия работает при помощи посохов некромантии, а также при помощи предметов - рун. Когда кто-то в радиусе n блоков от держащего посох игрока, либо Лича умирает, посох получает часть праны умершего, которая впитается в него. Не обязательно убивать самому - смерть может произойти по любым причинам.
 
----
 
 ## Сбор праны
 
@@ -38,7 +37,6 @@ description: "Некромантия Бога Искажения на серве
 | Лич | 30 блоков |
 | АрхиЛич | 40 блоков |
 
----
 
 ## Руны нежити
 
@@ -52,178 +50,76 @@ description: "Некромантия Бога Искажения на серве
 
 #### 1. Руна зомби
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/rotten_flesh" class="image"><img src="/assets/items/rotten_flesh.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="rotten_flesh"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 
 #### 2. Руна скелета
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/bone" class="image"><img src="/assets/items/bone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="bone"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 
 #### 3. Руна взрывного черепа
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/bone" class="image"><img src="/assets/items/bone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/fire_charge" class="image"><img src="/assets/items/fire_charge.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="bone"
+  input3="fire_charge"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 
 #### 4. Руна знаменосец
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/breeze_rod" class="image"><img src="/assets/items/breeze_rod.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="breeze_rod"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 
 #### 5. Руна бегун
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/rotten_flesh" class="image"><img src="/assets/items/rotten_flesh.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/sugar" class="image"><img src="/assets/items/sugar.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="rotten_flesh"
+  input3="sugar"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 
 #### 6. Руна призрака (×8)
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/phantom_membrane" class="image"><img src="/assets/items/phantom_membrane.png" width="64" height="64"></a></span></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot">
-      <span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span>
-      <span class="invslot-stacksize">8</span>
-    </span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="cobblestone"
+  input3="cobblestone"
+  input4="cobblestone"
+  input5="cobblestone"
+  input6="cobblestone"
+  input7="cobblestone"
+  input8="cobblestone"
+  input9="phantom_membrane"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ::: tip Примечание
 Руна призрака (№6) крафтится сразу в количестве 8 штук за один раз.
@@ -233,119 +129,54 @@ description: "Некромантия Бога Искажения на серве
 
 #### 7. Руна арбалиста
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/bone" class="image"><img src="/assets/items/bone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/tripwire_hook" class="image"><img src="/assets/items/tripwire_hook.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="bone"
+  input3="tripwire_hook"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 
 #### 8. Руна зомбосс
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/rotten_flesh" class="image"><img src="/assets/items/rotten_flesh.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/rotten_flesh" class="image"><img src="/assets/items/rotten_flesh.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/blaze_powder" class="image"><img src="/assets/items/blaze_powder.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="rotten_flesh"
+  input3="rotten_flesh"
+  input4="blaze_powder"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 
 #### 9. Руна некромага
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/bone" class="image"><img src="/assets/items/bone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/bone" class="image"><img src="/assets/items/bone.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/ghast_tear" class="image"><img src="/assets/items/ghast_tear.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="bone"
+  input3="bone"
+  input4="ghast_tear"
+  output="nether_brick"
+  shapeless="true"
+/>
 
 ---
 
 #### 10. Руна рыцаря смерти
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/cobblestone" class="image"><img src="/assets/items/cobblestone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/bone" class="image"><img src="/assets/items/bone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/iron_ingot" class="image"><img src="/assets/items/iron_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/iron_ingot" class="image"><img src="/assets/items/iron_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="cobblestone"
+  input2="bone"
+  input3="diamond"
+  input4="iron_ingot"
+  input5="iron_ingot"
+  output="nether_brick"
+  shapeless="true"
+/>
 
----
 
 ## Посохи некромантии
 
@@ -367,7 +198,6 @@ description: "Некромантия Бога Искажения на серве
 - **Урон**: 1 неблокируемого урона
 - **Эффект**: Устанавливает цель для атаки всей подконтрольной нежити (личам или игрокам)
 
----
 
 ## Механика праны нежити
 
@@ -383,7 +213,6 @@ description: "Некромантия Бога Искажения на серве
 
 Призыв требует праны из посоха в количестве, равном **мощности призываемой нежити** (сколько затрачено на призыв, такого размера резерв праны у нежити).
 
----
 
 ## Зиккурат
 
@@ -417,7 +246,6 @@ description: "Некромантия Бога Искажения на серве
 
 Если к зиккурату привязано **слишком много нежити**, они могут выпить его досуха. Тогда зиккурат, не успев восстановить себе энергию, умрет. **Вся нежить около него тоже умрет.**
 
----
 
 ## Типы нежити
 
@@ -442,7 +270,6 @@ description: "Некромантия Бога Искажения на серве
 | **Некромаг** | 12 | 1 ед./2 мин | При создании запоминает один аспект и вкладывает его в дистанционные атаки (поджог, отравление, ослабление, иссушение), накладываемые по площади радиусом 2.5 от точки попадания. Эффекты сильные, но кратковременные |
 | **Рыцарь смерти** | 20 | 1 ед./1 мин | Воин в полном доспехе, когда цель дальше 8 блоков берет в руки лук, иначе бежит в ближний бой с мечом. Высокая скорость, защита и сопротивление отдаче, 100 HP, малая регенерация. Выбирает аспект как некромаг. Может при смерти дропнуть предмет в руках или элемент брони |
 
----
 
 ## Лич и АрхиЛич
 
@@ -492,7 +319,6 @@ description: "Некромантия Бога Искажения на серве
 АрхиЛич - вершина некромантической мощи. Управляйте его армией из 15 существ и используйте 2 зиккурата для стабильного подвода праны.
 :::
 
----
 
 ## Принципы работы нежити
 
@@ -509,7 +335,6 @@ description: "Некромантия Бога Искажения на серве
 - **Следование за игроком**: Нежить следует за хозяином и получает прану от посоха
 - **Переключение**: Выстрел в зиккурат привязывает, выстрел в нежить отвязывает
 
----
 
 ## Связанные страницы
 

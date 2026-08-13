@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/minecraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .invslot {
     position: relative;
-    display: inline-block;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     background: #8B8B8B no-repeat center center / 32px 32px;
     border: 2px solid;
     border-color: #373737 #FFF #FFF #373737;
@@ -9,7 +19,8 @@
     font-size: 16px;
     line-height: 1;
     text-align: left;
-    vertical-align: bottom
+    vertical-align: bottom;
+    box-sizing: content-box;
 }
 
 .invslot::before,.invslot::after {
@@ -33,16 +44,100 @@
 
 .invslot-large {
     box-sizing: content-box;
-    padding: 8px
+    padding: 8px;
+    width: 32px;
+    height: 32px;
 }
 
 .invslot-item,.invslot-item a:first-child {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.invslot-item > span[typeof="mw:File"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.invslot-item img {
+    display: block !important;
+    width: 32px !important;
+    height: 32px !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
+    image-rendering: pixelated !important;
+    image-rendering: crisp-edges !important;
+}
+
+#minetip-tooltip {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #100010;
+    background-color: rgba(16,0,16,0.94);
+    padding: 0.375em;
+    font-family: Minecraft, sans-serif;
+    font-size: 16px;
+    word-spacing: 4px;
+    white-space: nowrap;
+    line-height: 1.25em;
+    margin: 0.125em 0.25em;
+    pointer-events: none;
+    z-index: 9999;
+    color: #FBFBFB;
+    text-shadow: 0.125em 0.125em 0 #3E3E3E;
+    box-sizing: border-box;
+}
+
+#minetip-tooltip::before {
+    content: "";
+    position: absolute;
+    top: 0.125em;
+    right: -0.125em;
+    bottom: 0.125em;
+    left: -0.125em;
+    border: 0.15em solid #100010;
+    border-style: none solid;
+    border-color: rgba(16,0,16,0.94);
+}
+
+#minetip-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 0.125em;
+    right: 0;
+    bottom: 0.125em;
+    left: 0;
+    border: 0.125em solid #2D0A63;
+    border-image: -webkit-linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+    border-image: linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+}
+
+#minetip-tooltip > .description,#minetip-tooltip > .minetip-description {
     display: block;
-    margin: -2px;
-    padding: 2px;
-    width: 32px;
-    height: 32px
+    margin-top: 0.25em;
 }
 
 .invslot-item-image a.new:first-child {
@@ -57,7 +152,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    font-family: "Pixelify Sans",sans-serif !important;
+    font-family: Minecraft, sans-serif !important;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: normal !important;
@@ -187,14 +282,45 @@
 }
 
 .mcui-Furnace > .mcui-arrow {
+    position: relative;
     background: url(/assets/utils/Grid_layout_Furnace_Progress.png) no-repeat;
     width: 44px;
     height: 32px;
-    margin: 36px 18px 0 14px
+    margin: 36px 18px 0 14px;
 }
 
 .mcui-Furnace > .mcui-arrow.mcui-inactive,.mcui-Inventory-Crafting_Table-arrow {
-    background-image: url(/assets/utils/Grid_layout_Furnace_Progress_in-active.png)
+    background-image: url(/assets/utils/Grid_layout_Furnace_Progress_in-active.png);
+}
+
+.mcui-Furnace > .mcui-arrow.mcui-animated {
+    background-image: url(/assets/utils/Grid_layout_Furnace_Progress_in-active.png) !important;
+    overflow: hidden;
+}
+
+.mcui-Furnace > .mcui-arrow.mcui-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: url(/assets/utils/Grid_layout_Furnace_Progress.png) no-repeat;
+    animation: mcui-furnace-arrow-fill var(--cooking-time, 10s) steps(22, end) infinite;
+}
+
+.mcui-Furnace > .mcui-arrow.mcui-inactive.mcui-animated::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes mcui-furnace-arrow-fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 .mcui-Furnace > .mcui-output {
@@ -226,7 +352,9 @@
     color: #404040
 }
 
-.mcui-Brewing_Stand > * {
+.mcui-Brewing_Stand > *,
+.mcui-Brewing_Stand .mcui-input > .mcui-paths,
+.mcui-Brewing_Stand .mcui-input > .mcui-output {
     display: block
 }
 
@@ -234,23 +362,40 @@
     vertical-align: top
 }
 
-.mcui-Brewing_Stand > .mcui-input {
-    text-align: center
-}
-
 .mcui-Brewing_Stand > .mcui-input > .invslot {
     margin-top: 3px
+}
+
+.mcui-Brewing_Stand .mcui-blaze {
+    background-image: url(/assets/utils/Grid_layout_Brewing_Blaze.png);
+    width: 92px;
+    height: 69px;
+    position: relative;
+    z-index: 1;
+    margin-left: -2px;
+    display: inline-block;
+    background-repeat: no-repeat
+}
+
+.mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-blaze {
+    background-image: url(/assets/utils/Grid_layout_Brewing_Blaze_In-active.png)
+}
+
+.mcui-Brewing_Stand .mcui-blaze > .invslot {
+    margin: 19px 0 0 19px
 }
 
 .mcui-Brewing_Stand .mcui-bubbling,.mcui-Brewing_Stand .mcui-arrow {
     display: inline-block;
     background-repeat: no-repeat;
-    width: 24px;
-    height: 57px
+    width: 24px
 }
 
 .mcui-Brewing_Stand .mcui-bubbling,.mcui-Inventory-Brewing_Stand-bubbles {
-    background-image: url(/assets/utils/Grid_layout_Brewing_Bubbles.gif)
+    background-image: url(/assets/utils/Grid_layout_Brewing_Bubbles.gif);
+    height: 57px;
+    margin-left: -30px;
+    margin-right: 4px
 }
 
 .mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-bubbling,.mcui-Inventory-Brewing_Stand-bubbles-inactive {
@@ -258,20 +403,27 @@
 }
 
 .mcui-Brewing_Stand .mcui-arrow,.mcui-Inventory-Brewing_Stand-arrow {
-    background-image: url(/assets/utils/Grid_layout_Brewing_Arrow.png)
+    background-image: url(/assets/utils/Grid_layout_Brewing_Arrow.png);
+    margin-right: 22px;
+    height: 59px
 }
 
 .mcui-Brewing_Stand > .mcui-input.mcui-inactive > .mcui-arrow,.mcui-Inventory-Brewing_Stand-arrow-inactive {
     background-image: url(/assets/utils/Grid_layout_Brewing_Arrow_In-active.png)
 }
 
-.mcui-Brewing_Stand > .mcui-paths {
+.mcui-Brewing_Stand > .mcui-paths,
+.mcui-Brewing_Stand .mcui-input > .mcui-paths {
     position: relative;
     background: url(/assets/utils/Grid_layout_Brewing_Paths.png) no-repeat;
     width: 60px;
-    height: 40px;
-    margin: -20px auto -16px;
+    height: 50px;
+    margin: -32px 0 -16px 112px;
     z-index: 1
+}
+
+.mcui-Brewing_Stand .mcui-output {
+    margin-left: 78px
 }
 
 .mcui-Brewing_Stand .mcui-output .invslot,.mcui-Brewing_Stand .mcui-base .invslot {
@@ -1679,13 +1831,15 @@ body.wgl-theme-dark .sound-title::after {
 }
 
 .invslot.enchanted,
-.invslot-item.enchanted {
+.invslot-item.enchanted,
+.item-card-icon.enchanted {
     position: relative;
     overflow: hidden;
 }
 
 .invslot.enchanted::after,
-.invslot-item.enchanted::after {
+.invslot-item.enchanted::after,
+.item-card-icon.enchanted::after {
     content: "";
     position: absolute;
     top: -50%;

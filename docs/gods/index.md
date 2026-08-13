@@ -1,24 +1,8 @@
 ---
-pageClass: pg-gods-index
 title: "Система богов (Gods System) | Re:Antagon"
 description: "Как работают боги на сервере Антагон (Re:Antagon / Antagon Reborn). Узнайте о 8 Старших Богах, благословениях, проклятиях, алтарях и магии."
 keywords: "antagon как работают боги, боги антагон, система богов, infinitum, mater, fungus, finis, bellum, cosm, distorta, ignos, антагон реборн боги"
 ---
-
-<style>
-.pg-gods-index img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0px 0 0 !important;
-}
-.pg-gods-index .mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-
-</style>
 
 # Система богов (Gods System)
 
@@ -41,7 +25,6 @@ keywords: "antagon как работают боги, боги антагон, с
 Введение системы Богов означает, что у игроков со старта **40 максимального здоровья** вместо 20, а также имеется [прана](/gods/prana.md).
 :::
 
----
 
 ## Основные механики
 
@@ -113,30 +96,18 @@ keywords: "antagon как работают боги, боги антагон, с
 - **Эффект**: Сбрасывает 100% всей положительной накопленной у Бога репутации и снижает ее на 200
 - **Последствие**: Ушедший игрок получает проклятие **-3 уровня** (либо ниже, если уже был на отрицательной репутации)
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/netherite_ingot" class="image"><img src="/assets/items/netherite_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/milk_bucket" class="image"><img src="/assets/items/milk_bucket.png" width="64" height="64"></a></span></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
-</div>
+<CraftingRecipe
+  input1="milk_bucket"
+  input2="milk_bucket"
+  input3="milk_bucket"
+  input4="milk_bucket"
+  input5="netherite_ingot"
+  input6="milk_bucket"
+  input7="milk_bucket"
+  input8="milk_bucket"
+  input9="milk_bucket"
+  output="echo_shard"
+/>
 
 #### Перевыбор тела
 
@@ -144,30 +115,19 @@ keywords: "antagon как работают боги, боги антагон, с
 
 - **Крафт**: 4 алмаза + 4 изумруда + 1 золотое яблоко (в любом порядке) на верстаке
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/emerald" class="image"><img src="/assets/items/emerald.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/golden_apple" class="image"><img src="/assets/items/golden_apple.png" width="64" height="64"></a></span></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="diamond"
+  input2="diamond"
+  input3="diamond"
+  input4="diamond"
+  input5="emerald"
+  input6="emerald"
+  input7="emerald"
+  input8="emerald"
+  input9="golden_apple"
+  output="echo_shard"
+  shapeless="true"
+/>
 
 ### Ослабление эффектов
 

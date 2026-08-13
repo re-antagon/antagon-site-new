@@ -1,21 +1,6 @@
 ---
-pageClass: pg-guide-mechanics-indicators
 description: "Зелья-индикаторы на сервере Re:Antagon. Узнайте о подозрительных светящихся зельях и взрывных индикаторах, которые подсвечивают имена игроков, взаимодействовавших с блоками."
 ---
-
-<style>
-.pg-guide-mechanics-indicators img[alt*="зелье"],
-.pg-guide-mechanics-indicators img[alt*="индикатор"] {
-  width: 128px !important;
-  height: 128px !important;
-  image-rendering: pixelated;
-}
-.pg-guide-mechanics-indicators .mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-
-</style>
 
 # Зелья-индикаторы
 
@@ -25,7 +10,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 Все зелья-индикаторы создаются на **верстаке**, а не в варочной стойке.
 :::
 
----
 
 ## Общие сведения о взрывных индикаторах
 
@@ -41,7 +25,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 Взрывной индикатор учитывает только действия, совершенные **не позднее чем 12 часов** до момента броска зелья. Более старые действия не будут подсвечены.
 :::
 
----
 
 ## Подозрительное светящееся зелье
 
@@ -51,32 +34,13 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Пузырек воды + Светящиеся чернила спрута
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/water_bottle" class="image"><img src="/assets/items/water_bottle.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/glow_ink_sac" class="image"><img src="/assets/items/glow_ink_sac.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="water_bottle"
+  input2="glow_ink_sac"
+  output="basis_big"
+  shapeless="true"
+/>
 
----
 
 ## Взрывное подозрительное светящееся зелье
 
@@ -86,32 +50,13 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Подозрительное светящееся зелье + Порох
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/gunpowder" class="image"><img src="/assets/items/gunpowder.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/basis_splash" class="image"><img src="/assets/items/basis_splash_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="gunpowder"
+  output="basis_splash_big"
+  shapeless="true"
+/>
 
----
 
 ## Подозрительный синий индикатор
 
@@ -121,32 +66,13 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Подозрительное светящееся зелье + Осколок эха
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/blue_indicator" class="image"><img src="/assets/items/blue_indicator_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="echo_shard"
+  output="blue_indicator_big"
+  shapeless="true"
+/>
 
----
 
 ## Взрывной подозрительный синий индикатор
 
@@ -156,32 +82,14 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Подозрительное светящееся зелье + Осколок эха + Порох
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/echo_shard" class="image"><img src="/assets/items/echo_shard.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/gunpowder" class="image"><img src="/assets/items/gunpowder.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/blue_indicator_splash" class="image"><img src="/assets/items/blue_indicator_splash_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="echo_shard"
+  input3="gunpowder"
+  output="blue_indicator_splash_big"
+  shapeless="true"
+/>
 
----
 
 ## Подозрительный зеленый индикатор
 
@@ -191,32 +99,13 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Пузырек воды + Блок травы
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/grass_block" class="image"><img src="/assets/items/grass_block.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/green_indicator" class="image"><img src="/assets/items/green_indicator_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="grass_block"
+  output="green_indicator_big"
+  shapeless="true"
+/>
 
----
 
 ## Взрывной подозрительный зеленый индикатор
 
@@ -226,32 +115,14 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Пузырек воды + Блок травы + Порох
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/grass_block" class="image"><img src="/assets/items/grass_block.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/gunpowder" class="image"><img src="/assets/items/gunpowder.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/green_indicator_splash" class="image"><img src="/assets/items/green_indicator_splash_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="grass_block"
+  input3="gunpowder"
+  output="green_indicator_splash_big"
+  shapeless="true"
+/>
 
----
 
 ## Подозрительный розовый индикатор
 
@@ -261,32 +132,13 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Подозрительное светящееся зелье + Розовые лепестки
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/pink_petals" class="image"><img src="/assets/items/pink_petals.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/pink_indicator" class="image"><img src="/assets/items/pink_indicator_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="pink_petals"
+  output="pink_indicator_big"
+  shapeless="true"
+/>
 
----
 
 ## Взрывной подозрительный розовый индикатор
 
@@ -296,32 +148,14 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Подозрительное светящееся зелье + Розовые лепестки + Порох
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/pink_petals" class="image"><img src="/assets/items/pink_petals.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/gunpowder" class="image"><img src="/assets/items/gunpowder.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/pink_indicator_splash" class="image"><img src="/assets/items/pink_indicator_splash_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="pink_petals"
+  input3="gunpowder"
+  output="pink_indicator_splash_big"
+  shapeless="true"
+/>
 
----
 
 ## Подозрительный красный индикатор
 
@@ -331,32 +165,13 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Подозрительное светящееся зелье + Редстоун пыль
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/red_indicator" class="image"><img src="/assets/items/red_indicator_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="redstone"
+  output="red_indicator_big"
+  shapeless="true"
+/>
 
----
 
 ## Взрывной подозрительный красный индикатор
 
@@ -366,32 +181,14 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 
 **Создание:** Подозрительное светящееся зелье + Редстоун-пыль + Порох
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/basis" class="image"><img src="/assets/items/basis_big.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/gunpowder" class="image"><img src="/assets/items/gunpowder.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/red_indicator_splash" class="image"><img src="/assets/items/red_indicator_splash_big.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="basis_big"
+  input2="redstone"
+  input3="gunpowder"
+  output="red_indicator_splash_big"
+  shapeless="true"
+/>
 
----
 
 ## Сводная таблица взрывных индикаторов
 
@@ -406,7 +203,6 @@ description: "Зелья-индикаторы на сервере Re:Antagon. У
 «Подозрительные» зелья (без приставки «взрывной») сами по себе не имеют эффекта - они являются полуфабрикатами. Добавление пороха (и, для синего/розового/красного, соответствующего ингредиента) превращает их во взрывные индикаторы, готовые к броску.
 :::
 
----
 
 ## Связанные страницы
 

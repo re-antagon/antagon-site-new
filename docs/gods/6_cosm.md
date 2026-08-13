@@ -1,28 +1,11 @@
 ---
-pageClass: pg-gods-6-cosm
 description: "Бог Космоса (Cosm - Cielo infinito) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, звездных эффектах и особенностях тела."
 ---
-
-<style>
-.pg-gods-6-cosm img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-.pg-gods-6-cosm .mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-
-</style>
 
 # Бог Космоса
 
 **Cosm** - Бог Космоса, покровитель материи, элементальных сил и астрологии. Его последователи черпают силу из небесных тел, управляют стихиями.
 
----
 
 ## Проклятия
 
@@ -41,7 +24,6 @@ description: "Бог Космоса (Cosm - Cielo infinito) на сервере 
 В проклятиях эффекты звезд циклично меняются каждые 3 минуты, и выбрать конкретный эффект невозможно. Это делает проклятия непредсказуемыми и опасными.
 :::
 
----
 
 ## Эффекты звезд
 
@@ -103,7 +85,6 @@ description: "Бог Космоса (Cosm - Cielo infinito) на сервере 
 Каждая звезда имеет цикл функционирования. Огненная - 14 минут, Гравитационная - 22 минуты, Токсичная - 38 минут, Водная - 62 минуты. Шаг в циклах происходит раз в 1 минуту.
 :::
 
----
 
 ## Благословения
 
@@ -128,36 +109,12 @@ description: "Бог Космоса (Cosm - Cielo infinito) на сервере 
 - **КД**: 5 секунд (совмещенный с обычными эндерперлами)
 - **Тип**: Расходник
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-    <span class="mcui-output">
-        <span class="invslot enchanted">
-            <span class="invslot-item">
-                <a href="/items/ender_pearl" class="image">
-                    <img src="/assets/items/ender_pearl.png" width="64" height="64">
-                </a>
-            </span>
-        </span>
-    </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="ender_pearl"
+  input2="ender_pearl"
+  output="ender_pearl:enchanted"
+  shapeless="true"
+/>
 
 #### Ключ измерений
 
@@ -174,42 +131,24 @@ description: "Бог Космоса (Cosm - Cielo infinito) на сервере 
 - **КД**: 30 секунд
 - **Тип**: Расходник
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/obsidian" class="image"><img src="/assets/items/obsidian.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot enchanted"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
-      <span class="invslot enchanted"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
-      <span class="invslot enchanted"><span class="invslot-item"><a href="/items/ender_pearl" class="image"><img src="/assets/items/ender_pearl.png" width="64" height="64"></a></span></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-    <span class="mcui-output">
-        <span class="invslot enchanted">
-            <span class="invslot-item">
-                <a href="/items/lapis_lazuli" class="image">
-                    <img src="/assets/items/lapis_lazuli.png" width="64" height="64">
-                </a>
-            </span>
-        </span>
-    </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="obsidian"
+  input2="obsidian"
+  input3="obsidian"
+  input4="obsidian"
+  input5="obsidian"
+  input6="obsidian"
+  input7="ender_pearl:enchanted"
+  input8="ender_pearl:enchanted"
+  input9="ender_pearl:enchanted"
+  output="lapis_lazuli:enchanted"
+  shapeless="true"
+/>
 
 ::: tip Совет
 Жемчуг космоса идеален для быстрого перемещения в пределах 50 блоков, особенно для обхода препятствий. Ключ измерений удобен для быстрого перемещения между основными измерениями.
 :::
 
----
 
 ## Особенности тела
 
@@ -261,11 +200,10 @@ description: "Бог Космоса (Cosm - Cielo infinito) на сервере 
 Если на игрока не действует эффект ни одной звезды, он получает слабость и медлительность. Старайтесь всегда иметь хотя бы одну активную звезду.
 :::
 
----
 
 ## Связанные страницы
 
-- [Звёздная броня](/guide/mechanics/star_armor.md) - наборы брони из осколков Звёздного дракона
-- [Прана](/gods/prana.md) - общая информация о пране
-- [Система богов](/gods/index.md) - общая информация о системе богов
-- [Особые эффекты](/guide/mechanics/unique_effects) - детальное описание уникальных эффектов (Гравитационные колебания, и др.)
+- **[Звёздная броня и Звездный Дракон](/guide/mechanics/star_armor.md)** — босс Края, 4 пилона, звездные монстры и сет-бонусы
+- **[Предметы и Артефакты Космоса](/gods/items/6_cosm/index.md)** — телепортационный жемчуг, ключи измерений и реликвии
+- **[Система Праны](/gods/prana.md)** — энергетика и механики восстановления
+- **[Уникальные эффекты](/guide/mechanics/unique_effects.md)** — гравитационные колебания и другие особые эффекты

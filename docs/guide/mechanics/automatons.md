@@ -1,28 +1,11 @@
 ---
-pageClass: pg-guide-mechanics-automatons
 description: "Автоматоны Бога Постижения на сервере Re:Antagon. Узнайте о создании, зарядке, починке и всех 8 типах механизмов."
 ---
-
-<style>
-.pg-guide-mechanics-automatons img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-.pg-guide-mechanics-automatons .mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-
-</style>
 
 # Автоматоны Постижения
 
 Автоматоны - механические существа Бога Постижения, создаваемые из заготовок и управляемые через **Ящик инструментов**. Абсолютно все механизмы собираются по единой схеме: сначала создается пустая заготовка, затем в нее вкладывается функционал нужного автоматона.
 
----
 
 ## Базовые компоненты
 
@@ -35,30 +18,18 @@ description: "Автоматоны Бога Постижения на серве
 - Центр: ![Алмаз](/assets/items/diamond.png) алмаз
 - Оставшиеся 5 слотов: ![Медный слиток](/assets/items/copper_ingot.png) медные слитки
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/iron_ingot" class="image"><img src="/assets/items/iron_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/redstone" class="image"><img src="/assets/items/redstone.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/gold_ingot" class="image"><img src="/assets/items/gold_ingot.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/brick" class="image"><img src="/assets/items/brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
-</div>
+<CraftingRecipe
+  input1="iron_ingot"
+  input2="redstone"
+  input3="gold_ingot"
+  input4="copper_ingot"
+  input5="diamond"
+  input6="copper_ingot"
+  input7="copper_ingot"
+  input8="copper_ingot"
+  input9="copper_ingot"
+  output="brick"
+/>
 
 ### Шестерня
 
@@ -66,59 +37,25 @@ description: "Автоматоны Бога Постижения на серве
 
 **Крафт:** 4 ![Медный слиток](/assets/items/copper_ingot.png) медных слитка на верстаке (центральные поля с краев верстака).
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
-</div>
+<CraftingRecipe
+  input2="copper_ingot"
+  input4="copper_ingot"
+  input6="copper_ingot"
+  input8="copper_ingot"
+  output="nether_brick"
+/>
 
 ### Заготовка автоматона
 
 Пустой моб-автоматон, не имеющий собственного функционала. Создается из 4 ![Шестерня](/assets/items/copper_ingot.png) шестерней на верстаке (квадратом, в углах).
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/nether_brick" class="image"><img src="/assets/items/nether_brick.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
-</div>
+<CraftingRecipe
+  input1="copper_ingot"
+  input3="copper_ingot"
+  input7="copper_ingot"
+  input9="copper_ingot"
+  output="nether_brick"
+/>
 
 ### Энергоячейка
 
@@ -126,34 +63,15 @@ description: "Автоматоны Бога Постижения на серве
 
 **Крафт пустой ячейки:** 2 ![Медный слиток](/assets/items/copper_ingot.png) медных слитка (сверху и снизу) и ![Стекло](/assets/items/glass.png) стекло в между ними.
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/glass" class="image"><img src="/assets/items/glass.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/copper_ingot" class="image"><img src="/assets/items/copper_ingot.png" width="64" height="64"></a></span></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/amethyst_shard" class="image"><img src="/assets/items/amethyst_shard.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shaped"></span></div>
-</div>
+<CraftingRecipe
+  input1="copper_ingot"
+  input4="glass"
+  input7="copper_ingot"
+  output="amethyst_shard"
+/>
 
 **Заполнение:** производится заклинанием **Аккумуляция** (см. Заклинания Постижения).
 
----
 
 ## Создание автоматона
 
@@ -166,7 +84,6 @@ description: "Автоматоны Бога Постижения на серве
 Все материалы для сборки должны находиться в инвентаре игрока в момент удара по заготовке.
 :::
 
----
 
 ## Энергосистема
 
@@ -184,7 +101,6 @@ description: "Автоматоны Бога Постижения на серве
 1. **Энергоячейками** - подойдите к автоматону с непустой энергоячейкой в руке и ударьте по нему. Заряд из ячейки перейдет в автоматона, избыток энергии останется в предмете.
 2. **Зарядной станцией** - все автоматоны в радиусе от нее заряжаются из ее запаса напрямую.
 
----
 
 ## Управление автоматонами
 
@@ -198,7 +114,6 @@ description: "Автоматоны Бога Постижения на серве
 Автоматоны **не имеют естественной регенерации**. Починка возможна только шестеренками через Ящик инструментов.
 :::
 
----
 
 ## Уязвимость к воде
 
@@ -210,7 +125,6 @@ description: "Автоматоны Бога Постижения на серве
 Берегите автоматоны от дождя и водоемов - постоянный урон и слив заряда быстро выведут механизм из строя.
 :::
 
----
 
 ## Типы автоматонов
 
@@ -390,7 +304,6 @@ description: "Автоматоны Бога Постижения на серве
 - Позволяет снять боевой костюм без его поломки
 - Пока держится в руке, выводит в описании информацию о текущих прочности и заряде костюма
 
----
 
 ## Сравнительная таблица автоматонов
 
@@ -405,7 +318,6 @@ description: "Автоматоны Бога Постижения на серве
 | Телепорт | 1 энергоячейка, 48 шестерней, 1 осколок эха, 3 ока эндера, 9 обсидиана | 3600 ЕЗ | 160 |
 | Боевой Костюм | 2 энергоячейки, 64 шестерни, 16 алмазов, 1 раздатчик, 8 огненных зарядов, 1 стойка для брони | 7200 ЕЗ | 100 |
 
----
 
 ## Связанные страницы
 

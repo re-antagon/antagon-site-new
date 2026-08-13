@@ -1,28 +1,11 @@
 ---
-pageClass: pg-gods-8-ignos
 description: "Бог Хаоса (Ignos - Chaos) на сервере Re:Antagon. Узнайте о благословениях, проклятиях, игральной кости D20 и нестабильном теле."
 ---
-
-<style>
-.pg-gods-8-ignos img {
-  display: inline-block !important;
-  vertical-align: middle !important;
-  width: 32px !important;
-  height: auto !important;
-  margin: 0 0 0 0 !important;
-}
-.pg-gods-8-ignos .mcui-Crafting_Table img {
-  width: 28px !important;
-  height: 28px !important;
-}
-
-</style>
 
 # Бог Хаоса
 
 **Ignos** - Бог Хаоса, покровитель удачи, азарта и непредсказуемости. Его последователи живут по законам случайности, рискуя всем ради шанса на невероятную удачу. Хаос дарит мощные благословения, но делает жизнь своих последователей постоянной рулеткой.
 
----
 
 ## Проклятия
 
@@ -94,7 +77,6 @@ description: "Бог Хаоса (Ignos - Chaos) на сервере Re:Antagon. 
 На максимальном уровне проклятий Хаос может неожиданно развернуть ваше движение в противоположную сторону, что особенно опасно в бою или при передвижении по краям.
 :::
 
----
 
 ## Благословения
 
@@ -159,7 +141,6 @@ description: "Бог Хаоса (Ignos - Chaos) на сервере Re:Antagon. 
 На максимальном уровне благословения положительные эффекты становятся значительно сильнее и дольше.
 :::
 
----
 
 ## Игральная кость D20
 
@@ -167,30 +148,16 @@ description: "Бог Хаоса (Ignos - Chaos) на сервере Re:Antagon. 
 
 ### Крафт
 
-<div class="mcui mcui-Crafting_Table">
-  <div class="mcui-input">
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/resin_clump" class="image"><img src="/assets/items/resin_clump.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/bone_meal" class="image"><img src="/assets/items/bone_meal.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/fire_charge" class="image"><img src="/assets/items/fire_charge.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"><span class="invslot-item"><a href="/items/magma_cream" class="image"><img src="/assets/items/magma_cream.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/apple" class="image"><img src="/assets/items/apple.png" width="64" height="64"></a></span></span>
-      <span class="invslot"><span class="invslot-item"><a href="/items/diamond" class="image"><img src="/assets/items/diamond.png" width="64" height="64"></a></span></span>
-    </div>
-    <div class="mcui-row">
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-      <span class="invslot"></span>
-    </div>
-  </div>
-  <span class="mcui-arrow"></span>
-  <span class="mcui-output">
-    <span class="invslot"><span class="invslot-item"><a href="/items/popped_chorus_fruit" class="image"><img src="/assets/items/popped_chorus_fruit.png" width="64" height="64"></a></span></span>
-  </span>
-  <div class="mcui-icons"><span class="mcui-shapeless"></span></div>
-</div>
+<CraftingRecipe
+  input1="resin_clump"
+  input2="bone_meal"
+  input3="fire_charge"
+  input4="magma_cream"
+  input5="apple"
+  input6="diamond"
+  output="popped_chorus_fruit"
+  shapeless="true"
+/>
 
 ::: tip Примечание
 Ингредиенты можно размещать в любом порядке на верстаке.
@@ -239,7 +206,6 @@ description: "Бог Хаоса (Ignos - Chaos) на сервере Re:Antagon. 
 Чем выше уровень благословений, тем чаще вам будут выпадать высокие числа. На 4 уровне каждый 5-й бросок гарантированно дает 10+.
 :::
 
----
 
 ## Особенности тела
 
@@ -273,12 +239,10 @@ description: "Бог Хаоса (Ignos - Chaos) на сервере Re:Antagon. 
 Нестабильное тело делает вас непредсказуемым. В один момент вы можете наносить на 150% больше урона и прыгать на 150% выше, а через 10 минут стать слабым и медленным. Адаптируйте свой стиль игры под текущие характеристики.
 :::
 
----
 
 ## Связанные страницы
 
-- [Система богов](/gods/index.md) - общая информация о системе богов
-- [Прана](/gods/prana.md) - общая информация о пране
-- [Заклинания Постижения](/guide/mechanics/infinitum-spells.md#_12-очищение) - заклинание Очищения
-- [Расширение](/gods/3_fungus.md) - зараженность спорами
-- [Особые эффекты](/guide/mechanics/unique_effects) - детальное описание уникальных эффектов (Кровотечение, Уязвимость и др.)
+- **Кость D20**: Артефакт случайных эффектов и механики броска
+- **[Предметы и Артефакты Хаоса](/gods/items/8_ignos/index.md)** — хаотические реликвии и зажигательные артефакты
+- **[Система Праны](/gods/prana.md)** — энергетика и механики восстановления
+- **[Уникальные эффекты](/guide/mechanics/unique_effects.md)** — Кровотечение, Уязвимость и особые эффекты

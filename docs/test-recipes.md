@@ -20,11 +20,12 @@
 ## Плавка в печи
 
 <FurnaceRecipe 
-  input="iron_ore" 
+  input="porkchop" 
   fuel="coal" 
-  output="iron_ingot" 
+  output="cooked_porkchop" 
   output_count="1" 
-  experience="0.7"
+  experience="0.35"
+  cookingTime="10s"
 />
 
 ## Варка зелий
@@ -55,4 +56,5 @@
   output="iron_ingot" 
   output_count="1" 
   experience="0.7"
+  cookingTime="5s"
 />
