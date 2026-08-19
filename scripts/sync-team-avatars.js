@@ -44,6 +44,11 @@ if (!TOKEN || !GUILD_ID) {
 }
 
 const DISCORD_API = 'https://discord.com/api/v10'
+const REQUEST_DELAY_MS = 300
+
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms))
+}
 
 function avatarUrl(userId, hash) {
   if (!hash) {
@@ -54,11 +59,22 @@ function avatarUrl(userId, hash) {
   return `https://cdn.discordapp.com/avatars/${userId}/${hash}.${ext}?size=1024`
 }
 
-async function fetchMember(userId) {
+async function fetchMember(userId, attempt = 0) {
   const res = await fetch(
     `${DISCORD_API}/guilds/${GUILD_ID}/members/${userId}`,
     { headers: { Authorization: `Bot ${TOKEN}` } }
   )
+
+  if (res.status === 429 && attempt < 5) {
+    let retryAfter = 1
+    try {
+      const body = await res.json()
+      if (typeof body.retry_after === 'number') retryAfter = body.retry_after
+    } catch {}
+    await sleep(retryAfter * 1000 + 50)
+    return fetchMember(userId, attempt + 1)
+  }
+
   if (!res.ok) {
     const text = await res.text()
     throw new Error(`Discord API ${res.status} для ${userId}: ${text}`)
@@ -86,8 +102,11 @@ for (const id of ids) {
     member = await fetchMember(id)
   } catch (e) {
     errors.push(e.message)
+    await sleep(REQUEST_DELAY_MS)
     continue
   }
+
+  await sleep(REQUEST_DELAY_MS)
 
   const hash = member.user?.avatar ?? null
   const newUrl = avatarUrl(id, hash)
@@ -111,8 +130,6 @@ for (const id of ids) {
   updated = updated.replace(blockRe, (_m, p1, p2) => `${p1}${newUrl}${p2}`)
   changedCount += matches.length
   console.log(`✓ ${label} → ${newUrl}`)
-
-  await new Promise((r) => setTimeout(r, 250))
 }
 
 if (updated !== source) {
