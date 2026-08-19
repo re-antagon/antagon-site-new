@@ -45,7 +45,7 @@ description: "Гайд по началу игры на сервере Re:Antagon
 
 - [Discord сервер](https://discord.antagon.su/) — общение, новости, события
 - [Правила сервера](https://wiki.antagon.su/rules) — важно знать и соблюдать
-- [Карта сервера](https://map.antagon.ru) — динамическая карта мира
+- [Карта сервера](https://map.antagon.su) — динамическая карта мира
 
 ## Часто задаваемые вопросы
 
