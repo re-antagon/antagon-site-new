@@ -3283,7 +3283,11 @@ export const customItemAssets: Record<string, string> = {
   "Честная монетка": "/assets/items/custom/small/truth_coin.png",
   "честная монетка": "/assets/items/custom/small/truth_coin.png",
   "Честная_монетка": "/assets/items/custom/small/truth_coin.png",
-  "честная_монетка": "/assets/items/custom/small/truth_coin.png"
+  "честная_монетка": "/assets/items/custom/small/truth_coin.png",
+  "Амулет призыва": "/assets/items/custom/small/dragon_summoner.png",
+  "амулет призыва": "/assets/items/custom/small/dragon_summoner.png",
+  "Амулет_призыва": "/assets/items/custom/small/dragon_summoner.png",
+  "амулет_призыва": "/assets/items/custom/small/dragon_summoner.png"
 };
 export const customRuItemNames: Record<string, string> = {
   "shade_helmet": "Броня отвода глаз",
@@ -4403,7 +4407,8 @@ export const customRuItemNames: Record<string, string> = {
   "Честная_монетка": "Честная монетка",
   "честная_монетка": "Честная монетка",
   "truth_coin": "Честная монетка",
-  "truth coin": "Честная монетка"
+  "truth coin": "Честная монетка",
+  "dragon summoner": "Амулет призыва"
 };
 export const localItemRoutes: Record<string, string> = {
   "MiH": "/gods/items/1_infinitum/MiH",

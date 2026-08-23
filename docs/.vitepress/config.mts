@@ -126,6 +126,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
             { text: 'Благословения & Проклятия', link: '/gods/6_cosm#проклятия' },
             { text: 'Особенности тела', link: '/gods/6_cosm#особенности-тела' },
             { text: 'Звёздная броня', link: '/guide/mechanics/star_armor' },
+            { text: 'Звёздный дракон', link: '/guide/mechanics/star_dragon'},
             {
               text: 'Предметы',
               link: '/gods/items/6_cosm/',
@@ -192,6 +193,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
                 { text: 'Автоматоны Постижения', link: '/guide/mechanics/automatons' },
                 { text: 'Второй желудок (Fungus)', link: '/guide/mechanics/second_stomach' },
                 { text: 'Звёздная броня (Cosm)', link: '/guide/mechanics/star_armor' },
+                { text: 'Звёздный дракон (Cosm)', link: '/guide/mechanics/star_dragon'},
                 { text: 'Заклинания Искажения', link: '/guide/mechanics/distortion-spells' },
                 { text: 'Некромантия (Distorta)', link: '/guide/mechanics/necromancy' },
                 { text: 'Изгнание нежити (Distorta)', link: '/guide/mechanics/turn_undead' },
@@ -397,6 +399,7 @@ export default defineConfig({
       '/guide/mechanics/automatons': getWikiSidebar({ mechanicsSection: 'gods', god: '1_infinitum' }),
       '/guide/mechanics/second_stomach': getWikiSidebar({ mechanicsSection: 'gods', god: '3_fungus' }),
       '/guide/mechanics/star_armor': getWikiSidebar({ mechanicsSection: 'gods', god: '6_cosm' }),
+      '/guide/mechanics/star_dragon': getWikiSidebar({ mechanicsSection: 'gods', god: '6_cosm' }),
       '/guide/mechanics/distortion-spells': getWikiSidebar({ mechanicsSection: 'gods', god: '7_distorta' }),
       '/guide/mechanics/necromancy': getWikiSidebar({ mechanicsSection: 'gods', god: '7_distorta' }),
       '/guide/mechanics/turn_undead': getWikiSidebar({ mechanicsSection: 'gods', god: '7_distorta' }),
