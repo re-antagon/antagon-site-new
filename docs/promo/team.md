@@ -36,7 +36,7 @@ const moderators = [
   {
     avatar: 'https://cdn.discordapp.com/avatars/390564839950647297/151afcbd23a7cb50cdefeb2bdd2995ea.webp?size=1024',
     name: 'fenyanik',
-    title: 'Хостер, Чат-менеджер',
+    title: 'Хостер, Модератор',
     links: [
       { icon: 'discord', link: 'https://discord.com/users/390564839950647297' }
     ]
@@ -44,7 +44,7 @@ const moderators = [
   {
     avatar: 'https://cdn.discordapp.com/avatars/1525487098487115959/17c1959e83ea8c23c6081fe457547e5f.webp?size=1024',
     name: 'samikoppersi',
-    title: 'Ивент-мейкер, Чат-менеджер',
+    title: 'Моделлер, Модератор',
     links: [
       { icon: 'discord', link: 'https://discord.com/users/1525487098487115959' }
     ]
@@ -69,9 +69,9 @@ const builders = [
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/741388029154820208/2783a22c61bdb57778bc9bbb192fab7e.webp?size=1024',
+    avatar: 'https://cdn.discordapp.com/avatars/741388029154820208/0d8591dd39441c71a2c6f38be80d8a8f.webp?size=1024',
     name: 'qwillwood',
-    title: 'Билдер',
+    title: 'Билдер, Модератор',
     links: [
       { icon: 'discord', link: 'https://discord.com/users/741388029154820208' }
     ]
@@ -121,6 +121,14 @@ const other = [
     links: [
       { icon: 'discord', link: 'https://discord.com/users/810918366045798451' }
     ]
+  },
+  {
+    avatar: 'https://cdn.discordapp.com/avatars/1536892009401556992/884ddaa84438ecfd63e1da468fcbd6b7.webp?size=1024',
+    name: 'Антатян',
+    title: 'Маскот',
+    links: [
+      { icon: 'discord', link: 'https://discord.com/users/1536892009401556992' }
+    ]
   }
 ]
 
@@ -135,7 +143,8 @@ const BIRTHDAYS = {
   'qwillwood': { month: 10, day: 23 },
   'Tarteen228': { month: 6, day: 23 },
   'BloodySupport': { month: 1, day: 13 },
-  'MessageScheduler': { month: 2, day: 15 }
+  'MessageScheduler': { month: 2, day: 15 },
+  'Антатян': { month: 8, day: 12 }
 }
 
 const BIRTHDAY_SETTINGS = {

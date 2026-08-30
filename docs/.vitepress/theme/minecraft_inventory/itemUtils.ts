@@ -3255,7 +3255,7 @@ export const customItemAssets: Record<string, string> = {
   "кисть_реальности": "/assets/items/custom/small/brush_really.png",
   "Кубик": "/assets/items/custom/small/dice_one.png",
   "кубик": "/assets/items/custom/small/dice_one.png",
-  "Меч разлома": "/assets/items/custom/small/glitch.png",
+  "Меч разлома": "/assets/items/custom/models_preview/mech_razloma_gui.png",
   "меч разлома": "/assets/items/custom/small/glitch.png",
   "Меч_разлома": "/assets/items/custom/small/glitch.png",
   "меч_разлома": "/assets/items/custom/small/glitch.png",
@@ -3263,7 +3263,8 @@ export const customItemAssets: Record<string, string> = {
   "мультитул": "/assets/items/iron_pickaxe.png",
   "iron_pickaxe": "/assets/items/iron_pickaxe.png",
   "iron pickaxe": "/assets/items/iron_pickaxe.png",
-  "Неколлинеарный меч": "/assets/items/custom/small/iteration_shard.png",
+  "Железная кирка": "/assets/items/iron_pickaxe.png",
+  "Неколлинеарный меч": "/assets/items/custom/models_preview/nekolinearniy_mech_gui.png",
   "неколлинеарный меч": "/assets/items/custom/small/iteration_shard.png",
   "Неколлинеарный_меч": "/assets/items/custom/small/iteration_shard.png",
   "неколлинеарный_меч": "/assets/items/custom/small/iteration_shard.png",
@@ -3282,7 +3283,11 @@ export const customItemAssets: Record<string, string> = {
   "Честная монетка": "/assets/items/custom/small/truth_coin.png",
   "честная монетка": "/assets/items/custom/small/truth_coin.png",
   "Честная_монетка": "/assets/items/custom/small/truth_coin.png",
-  "честная_монетка": "/assets/items/custom/small/truth_coin.png"
+  "честная_монетка": "/assets/items/custom/small/truth_coin.png",
+  "Амулет призыва": "/assets/items/custom/small/dragon_summoner.png",
+  "амулет призыва": "/assets/items/custom/small/dragon_summoner.png",
+  "Амулет_призыва": "/assets/items/custom/small/dragon_summoner.png",
+  "амулет_призыва": "/assets/items/custom/small/dragon_summoner.png"
 };
 export const customRuItemNames: Record<string, string> = {
   "shade_helmet": "Броня отвода глаз",
@@ -4402,7 +4407,8 @@ export const customRuItemNames: Record<string, string> = {
   "Честная_монетка": "Честная монетка",
   "честная_монетка": "Честная монетка",
   "truth_coin": "Честная монетка",
-  "truth coin": "Честная монетка"
+  "truth coin": "Честная монетка",
+  "dragon summoner": "Амулет призыва"
 };
 export const localItemRoutes: Record<string, string> = {
   "MiH": "/gods/items/1_infinitum/MiH",

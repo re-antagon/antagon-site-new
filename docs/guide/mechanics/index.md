@@ -22,7 +22,7 @@ description: "Обзор механик и фишек сервера Re:Antagon.
 | [Блокираторы Богов (Атеизм)](/gods/atheism) | Устройства и блокираторы, ослабляющие влияние Богов вокруг |
 | [Постижение (Infinitum)](/gods/1_infinitum) | [Заклинания Постижения](/guide/mechanics/infinitum-spells) и [Автоматоны](/guide/mechanics/automatons) |
 | [Расширение (Fungus)](/gods/3_fungus) | Механика [Второй желудок](/guide/mechanics/second_stomach) |
-| [Космос (Cosm)](/gods/6_cosm) | Звездный дракон и [Звездная броня](/guide/mechanics/star_armor) |
+| [Космос (Cosm)](/gods/6_cosm) | [Звездный дракон](/guide/mechanics/star_dragon) и [Звездная броня](/guide/mechanics/star_armor) |
 | [Искажение (Distorta)](/gods/7_distorta) | [Заклинания](/guide/mechanics/distortion-spells), [Некромантия](/guide/mechanics/necromancy), [Нежить](/guide/mechanics/turn_undead) и [Проклятые мечи](/guide/mechanics/cursed_golden_swords) |
 
 
