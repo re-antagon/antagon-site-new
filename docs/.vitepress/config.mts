@@ -247,6 +247,45 @@ function getWikiSidebar(options: SidebarOptions = {}) {
 }
 
 // https://vitepress.dev/reference/site-config
+const headingRegex = /<h(\d*).*?>(.*?<a.*? href="#.*?".*?>.*?<\/a>)<\/h\1>/gi;
+const headingContentRegex = /(.*)<a.*? href="#(.*?)".*?>.*?<\/a>/i;
+
+function* splitPageIntoSections(html: string): Generator<{ anchor: string; titles: string[]; text: string }> {
+  const result = html.split(headingRegex);
+  result.shift();
+  let parentTitles: string[] = [];
+  for (let i = 0; i < result.length; i += 3) {
+    const level = parseInt(result[i]) - 1;
+    const heading = result[i + 1];
+    const headingResult = headingContentRegex.exec(heading);
+    const title = (headingResult?.[1] ?? '').replace(/<[^>]*>/g, '').trim();
+    const anchor = headingResult?.[2] ?? '';
+    const content = result[i + 2];
+    if (!title || !content) continue;
+    let titles = parentTitles.slice(0, level);
+    titles[level] = title;
+    titles = titles.filter(Boolean);
+    yield { anchor, titles, text: content.replace(/<[^>]*>/g, '') };
+    if (level === 0) {
+      parentTitles = [title];
+    } else {
+      parentTitles[level] = title;
+    }
+  }
+}
+
+function getPageTitleFromFrontmatter(file: string): string | undefined {
+  try {
+    const src = fs.readFileSync(file, 'utf-8');
+    const fm = src.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (!fm) return undefined;
+    const title = fm[1].match(/^title:\s*["']?(.+?)["']?\s*$/m);
+    return title?.[1];
+  } catch {
+    return undefined;
+  }
+}
+
 export default defineConfig({
   lang: 'ru-RU',
   title: "Re:Antagon",
@@ -472,6 +511,19 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        miniSearch: {
+          // В vitepress 2.0.0-alpha.15 поле title документа поиска — это заголовок
+          // секции (titles.at(-1)), а название страницы в индекс не попадает.
+          // Этот хук добавляет название страницы (frontmatter title) в начало
+          // хлебных крошек каждого результата поиска.
+          _splitIntoSections(file: string, html: string) {
+            const pageTitle = getPageTitleFromFrontmatter(file);
+            return [...splitPageIntoSections(html)].map(section => ({
+              ...section,
+              titles: pageTitle ? [pageTitle, ...section.titles] : section.titles
+            }));
+          }
+        },
         locales: {
           root: {
             translations: {
