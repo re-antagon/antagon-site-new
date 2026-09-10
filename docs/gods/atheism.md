@@ -31,7 +31,7 @@ description: "Послесловие для атеистов на сервере
 
 Все блокираторы крафтятся **в любой форме** (без учета расположения ингредиентов):
 
-- **Базовый**: 1 ![Кристалл Энда](/assets/items/end_crystal.png) кристалл Энда + 3 ![Громоотвод](/assets/items/lightning_rod.png) громоотвода
+- **Базовый**: 1 ![Кристалл Энда](/assets/items/end_crystal.png) кристалл Энда + 2 ![Громоотвод](/assets/items/lightning_rod.png) громоотвода
 <CraftingRecipe
   input1="end_crystal"
   input2="lightning_rod"
