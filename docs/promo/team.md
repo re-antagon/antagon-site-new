@@ -69,7 +69,7 @@ const builders = [
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/741388029154820208/96cd3ccb3bc4cba3cf0fd1d3a5dde873.webp?size=1024',
+    avatar: 'https://cdn.discordapp.com/avatars/741388029154820208/5215808461408bb3aad90b979e2988b3.webp?size=1024',
     name: 'qwillwood',
     title: 'Билдер, Модератор',
     links: [
