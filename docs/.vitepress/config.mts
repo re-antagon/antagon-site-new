@@ -6,23 +6,28 @@ interface SidebarOptions {
   mechanicsSection?: 'none' | 'gods' | 'physics' | 'transport' | 'utilities';
   god?: '1_infinitum' | '2_mater' | '3_fungus' | '4_finis' | '5_bellum' | '6_cosm' | '7_distorta' | '8_ignos';
   godItems?: boolean;
+  catalog?: 'general' | 'mobs';
 }
 
-function getGodItemsSidebar(godFolder: string) {
-  const dirPath = path.resolve(__dirname, '../gods/items/' + godFolder);
+function getFolderSidebar(folder: string) {
+  const dirPath = path.resolve(__dirname, '..' + folder);
   if (!fs.existsSync(dirPath)) return [];
   const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.md') && f !== 'index.md');
   return files.map(file => {
     const name = file.replace(/\.md$/, '');
     return {
       text: name,
-      link: '/gods/items/' + godFolder + '/' + name.replace(/ /g, '%20')
+      link: folder + '/' + name.replace(/ /g, '%20')
     };
   });
 }
 
+function getGodItemsSidebar(godFolder: string) {
+  return getFolderSidebar('/gods/items/' + godFolder);
+}
+
 function getWikiSidebar(options: SidebarOptions = {}) {
-  const { mechanicsSection = 'none', god, godItems = false } = options;
+  const { mechanicsSection = 'none', god, godItems = false, catalog } = options;
 
   return [
     {
@@ -171,6 +176,18 @@ function getWikiSidebar(options: SidebarOptions = {}) {
         },
         { text: 'Блокираторы Богов (Атеизм)', link: '/gods/atheism' },
         { text: 'Обзор кастомных предметов', link: '/gods/items/' },
+        {
+          text: 'Общие предметы',
+          link: '/gods/items/general/',
+          collapsed: catalog !== 'general',
+          items: getFolderSidebar('/gods/items/general')
+        },
+        {
+          text: 'Мобы',
+          link: '/gods/mobs/',
+          collapsed: catalog !== 'mobs',
+          items: getFolderSidebar('/gods/mobs')
+        },
         { text: 'Уникальные артефакты', link: '/gods/items/unique_items' }
       ]
     },
@@ -490,6 +507,8 @@ export default defineConfig({
       '/gods/purgatory': getWikiSidebar({ mechanicsSection: 'transport' }),
       '/gods/atheism': getWikiSidebar({ mechanicsSection: 'gods' }),
       '/gods/items/unique_items': getWikiSidebar(),
+      '/gods/items/general/': getWikiSidebar({ catalog: 'general' }),
+      '/gods/mobs/': getWikiSidebar({ catalog: 'mobs' }),
       '/gods/items/': getWikiSidebar(),
       '/gods/': getWikiSidebar({ mechanicsSection: 'gods' }),
       '/promo/': [
