@@ -42,7 +42,7 @@ const moderators = [
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/1525487098487115959/1931434463fb02310846a7da866b68e7.webp?size=1024',
+    avatar: 'https://cdn.discordapp.com/avatars/1525487098487115959/ca964f298f60a0e186c072444ef7f521.webp?size=1024',
     name: 'samikoppersi',
     title: 'Моделлер, Модератор',
     links: [
