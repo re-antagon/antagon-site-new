@@ -107,7 +107,7 @@ const other = [
     ]
   },
   {
-    avatar: 'https://cdn.discordapp.com/avatars/782549536701677568/6136f3ae2c2a56d6d1ae8fedfb5d72e2.webp?size=1024',
+    avatar: 'https://cdn.discordapp.com/avatars/782549536701677568/e3705145ebf3005f7632b1c7fd00ee53.webp?size=1024',
     name: 'utophii',
     title: 'Технический администратор',
     links: [
