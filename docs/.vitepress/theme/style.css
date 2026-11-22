@@ -145,6 +145,7 @@
   display: block !important;
   width: 128px !important;
   height: 128px !important;
+  object-fit: contain;
   margin: 0 auto 16px auto !important;
 }
 
