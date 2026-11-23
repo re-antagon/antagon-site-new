@@ -10,7 +10,7 @@ description: "Переработка песчаника в песок на ка�
 
 Просто выбросьте блок песчаника поверх камнереза. Камнерез автоматически перемолет его и выронит песок.
 
-<video controls width="640" src="/assets/videos/stonecutter_cut.mp4"></video>
+<VideoPlayer src="/assets/videos/stonecutter_cut.mp4" width="640" />
 
 ---
 

@@ -334,6 +334,7 @@
   background-color: var(--vp-c-bg-soft);
   transition: border-color 0.2s, background-color 0.2s, transform 0.2s;
   margin: 12px 0;
+  cursor: pointer;
 }
 
 .dark .mechanic-card {
@@ -394,16 +395,25 @@
 .mechanic-card-title {
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--vp-c-brand-1) !important;
-  text-decoration: underline !important;
-  text-underline-offset: 3px;
+  color: var(--vp-c-text-1) !important;
+  text-decoration: none !important;
   line-height: 1.35;
-  transition: color 0.2s;
+  transition: opacity 0.2s;
   cursor: pointer;
 }
 
-.mechanic-card-title:hover {
-  color: var(--vp-c-brand-2) !important;
+.dark .mechanic-card-title {
+  color: #ffffff !important;
+}
+
+.mechanic-card-title:hover,
+.mechanic-card:hover .mechanic-card-title {
+  text-decoration: none !important;
+  opacity: 0.9;
+}
+
+.dark .mechanic-card:hover .mechanic-card-title {
+  color: #ffffff !important;
 }
 
 .mechanic-card-desc {
@@ -416,6 +426,8 @@
   color: var(--vp-c-brand-1);
   text-decoration: underline;
   text-underline-offset: 2px;
+  position: relative;
+  z-index: 2;
 }
 
 .mechanic-card-desc a:hover {
@@ -434,6 +446,207 @@
     width: 100%;
   }
 }
+
+/**
+ * Component: Video & Custom Video Player
+ * -------------------------------------------------------------------------- */
+
+video {
+  border-radius: 1em;
+  box-shadow: 0px 4px 8px 4px rgb(0 0 0 / 50%);
+}
+
+.antagon-player-wrapper {
+  position: relative;
+  border-radius: 1em;
+  box-shadow: 0px 4px 8px 4px rgb(0 0 0 / 50%);
+  overflow: hidden;
+  width: 100%;
+  background-color: #000;
+  margin: 1.5rem 0;
+  user-select: none;
+  line-height: 0;
+}
+
+.antagon-player-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.antagon-play-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(18, 18, 22, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--vp-c-brand-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s, background-color 0.2s;
+  z-index: 5;
+}
+
+.antagon-play-center:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(18, 18, 22, 0.85);
+  border-color: var(--vp-c-brand-1);
+}
+
+.icon-play-center {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+  margin-left: 3px;
+}
+
+.antagon-controls-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(10, 10, 12, 0.9) 0%, rgba(10, 10, 12, 0.5) 60%, transparent 100%);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.antagon-controls-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.antagon-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px 12px 14px;
+  gap: 12px;
+}
+
+.antagon-controls-left,
+.antagon-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.antagon-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+  transition: color 0.2s, background-color 0.2s;
+  line-height: 1;
+}
+
+.antagon-btn .icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.antagon-btn:hover {
+  color: var(--vp-c-brand-1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.antagon-btn-speed {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  font-family: inherit;
+  color: #ffffff;
+}
+
+.antagon-btn-speed:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  color: var(--vp-c-brand-1);
+}
+
+.antagon-btn-loop.is-active {
+  color: var(--vp-c-brand-1);
+  background-color: rgba(255, 194, 110, 0.16);
+}
+
+.antagon-time {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+/* Timeline across the entire bottom edge */
+.antagon-timeline-container {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: height 0.15s ease;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.antagon-timeline-container:hover {
+  height: 10px;
+}
+
+.antagon-timeline-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.antagon-timeline-progress {
+  height: 100%;
+  background: var(--vp-c-brand-1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.antagon-timeline-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.antagon-timeline-container:hover .antagon-timeline-thumb {
+  opacity: 1;
+}
+
 
 
 

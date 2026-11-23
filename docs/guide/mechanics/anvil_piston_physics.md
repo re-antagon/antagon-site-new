@@ -31,7 +31,7 @@ description: "Физика наковальни на сервере Re:Antagon. 
 
 ### Демонстрация
 
-<video controls width="640" src="/assets/videos/piston_pushes.mp4"></video>
+<VideoPlayer src="/assets/videos/piston_pushes.mp4" width="640" />
 
 
 ## Подпрыгивание на блоке слизи
@@ -53,7 +53,7 @@ description: "Физика наковальни на сервере Re:Antagon. 
 
 ### Демонстрация
 
-<video controls width="640" src="/assets/videos/jumping%20anvil.mp4"></video>
+<VideoPlayer src="/assets/videos/jumping%20anvil.mp4" width="640" />
 
 
 ## Связанные страницы

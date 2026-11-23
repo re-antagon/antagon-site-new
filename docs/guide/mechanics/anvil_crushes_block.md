@@ -11,7 +11,7 @@ description: "Изменение и разрушение блоков при п�
 
 Наглядное видео с процессом изменения и разрушения блоков под упавшей наковальней:
 
-<video controls width="640" src="/assets/videos/crushes_block.mp4"></video>
+<VideoPlayer src="/assets/videos/crushes_block.mp4" width="640" />
 
 
 ## Превращение камня и грунта

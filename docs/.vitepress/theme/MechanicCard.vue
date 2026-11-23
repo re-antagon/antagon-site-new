@@ -1,6 +1,6 @@
 <template>
-  <div class="mechanic-card">
-    <a :href="resolvedHref" class="mechanic-card-media" :aria-label="resolvedTitle">
+  <div class="mechanic-card" @click="handleCardClick">
+    <a :href="resolvedHref" class="mechanic-card-media" :aria-label="resolvedTitle" @click.stop>
       <div class="mechanic-card-image-box" :class="{ 'is-fallback': isFallback }">
         <img
           :src="currentImg"
@@ -13,7 +13,7 @@
       </div>
     </a>
     <div class="mechanic-card-content">
-      <a :href="resolvedHref" class="mechanic-card-title">
+      <a :href="resolvedHref" class="mechanic-card-title" @click.stop="handleTitleClick">
         {{ resolvedTitle }}
       </a>
       <div class="mechanic-card-desc">
@@ -25,6 +25,7 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+import { useRouter } from 'vitepress'
 
 const props = defineProps<{
   title?: string
@@ -38,6 +39,7 @@ const props = defineProps<{
   src?: string
 }>()
 
+const router = useRouter()
 const fallbackSrc = '/assets/mechanics/no-image.svg'
 
 const resolvedTitle = computed(() => props.title || props.name || '')
@@ -63,6 +65,36 @@ function onImgError() {
     currentImg.value = fallbackSrc
     isFallback.value = true
   }
+}
+
+function navigateToHref(e?: MouseEvent) {
+  if (!resolvedHref.value || resolvedHref.value === '#') return
+  if (e && (e.ctrlKey || e.metaKey || e.button === 1)) {
+    window.open(resolvedHref.value, '_blank')
+    return
+  }
+  if (router && typeof router.go === 'function') {
+    router.go(resolvedHref.value)
+  } else {
+    window.location.href = resolvedHref.value
+  }
+}
+
+function handleTitleClick(e: MouseEvent) {
+  if (e.ctrlKey || e.metaKey || e.button === 1) return
+  e.preventDefault()
+  navigateToHref(e)
+}
+
+function handleCardClick(e: MouseEvent) {
+  const target = e.target as HTMLElement | null
+  const link = target?.closest('a')
+  // If the user clicked on a specific link inside description, let that link work normally
+  if (link && !link.classList.contains('mechanic-card-media') && !link.classList.contains('mechanic-card-title')) {
+    return
+  }
+  // Otherwise navigate to the card's target
+  navigateToHref(e)
 }
 
 const parsedDescription = computed(() => {
