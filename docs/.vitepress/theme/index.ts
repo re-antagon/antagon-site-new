@@ -8,6 +8,7 @@ import StonecuttingRecipe from './StonecuttingRecipe.vue'
 import ItemCard from './ItemCard.vue'
 import ItemGrid from './ItemGrid.vue'
 import ItemFrontmatter from './ItemFrontmatter.vue'
+import MechanicCard from './MechanicCard.vue'
 import InventorySlot from './minecraft_inventory/InventorySlot.vue'
 import './style.css'
 
@@ -28,6 +29,7 @@ export default {
     app.component('ItemCard', ItemCard)
     app.component('ItemGrid', ItemGrid)
     app.component('ItemFrontmatter', ItemFrontmatter)
+    app.component('MechanicCard', MechanicCard)
   }
 } satisfies Theme
 
