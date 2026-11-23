@@ -104,3 +104,28 @@ const parsedDescription = computed(() => {
     .replace(/`([^`]+)`/g, '<code>$1</code>')
 })
 </script>
+
+<style scoped>
+.mechanic-card-image-box img.mechanic-card-image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.mechanic-card-image-box img.mechanic-card-image.is-fallback {
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+  opacity: 0.6 !important;
+  margin: auto !important;
+}
+</style>

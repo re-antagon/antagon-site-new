@@ -362,25 +362,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.mechanic-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.vp-doc .mechanic-card img.mechanic-card-image,
+.mechanic-card img.mechanic-card-image,
+.mechanic-card-image-box img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   transition: transform 0.25s ease;
 }
 
-.mechanic-card:hover .mechanic-card-image:not(.is-fallback) {
+.mechanic-card:hover img.mechanic-card-image:not(.is-fallback) {
   transform: scale(1.03);
 }
 
-.mechanic-card-image.is-fallback {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  opacity: 0.6;
+.vp-doc .mechanic-card img.mechanic-card-image.is-fallback,
+.mechanic-card img.mechanic-card-image.is-fallback,
+.mechanic-card-image-box img.is-fallback {
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+  opacity: 0.6 !important;
+  margin: auto !important;
+  transform: none !important;
 }
 
 .mechanic-card-content {
