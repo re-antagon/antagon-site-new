@@ -50,6 +50,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           link: '/gods/1_infinitum',
           collapsed: god !== '1_infinitum',
           items: [
+            { text: 'Мобы', link: '/gods/mobs/#infinitum' },
             { text: 'Благословения & Проклятия', link: '/gods/1_infinitum#проклятия' },
             { text: 'Особенности тела', link: '/gods/1_infinitum#особенности-тела' },
             { text: 'Заклинания Постижения', link: '/guide/mechanics/infinitum-spells' },
@@ -67,6 +68,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           link: '/gods/2_mater',
           collapsed: god !== '2_mater',
           items: [
+            { text: 'Мобы', link: '/gods/mobs/#mater' },
             { text: 'Благословения & Проклятия', link: '/gods/2_mater#проклятия' },
             { text: 'Особенности тела', link: '/gods/2_mater#особенности-тела' },
             {
@@ -98,6 +100,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           link: '/gods/4_finis',
           collapsed: god !== '4_finis',
           items: [
+            { text: 'Мобы', link: '/gods/mobs/#finis' },
             { text: 'Благословения & Проклятия', link: '/gods/4_finis#проклятия' },
             { text: 'Особенности тела', link: '/gods/4_finis#особенности-тела' },
             {
@@ -128,6 +131,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           link: '/gods/6_cosm',
           collapsed: god !== '6_cosm',
           items: [
+            { text: 'Мобы', link: '/gods/mobs/#cosm' },
             { text: 'Благословения & Проклятия', link: '/gods/6_cosm#проклятия' },
             { text: 'Особенности тела', link: '/gods/6_cosm#особенности-тела' },
             { text: 'Звёздная броня', link: '/guide/mechanics/star_armor' },
@@ -145,6 +149,7 @@ function getWikiSidebar(options: SidebarOptions = {}) {
           link: '/gods/7_distorta',
           collapsed: god !== '7_distorta',
           items: [
+            { text: 'Мобы', link: '/gods/mobs/#distorta' },
             { text: 'Благословения & Проклятия', link: '/gods/7_distorta#проклятия' },
             { text: 'Особенности тела', link: '/gods/7_distorta#особенности-тела' },
             { text: 'Заклинания Искажения', link: '/guide/mechanics/distortion-spells' },

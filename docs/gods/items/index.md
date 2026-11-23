@@ -15,11 +15,11 @@ keywords: "антагон предметы, антагон реборн пред
 Предметы сгруппированы по принадлежности к Богам и категориям сервера. Каждая плитка ведет на главную страницу соответствующей категории.
 
 <div class="faction-grid">
-  <a class="faction-card" href="/gods/items/0%20General/">
+  <a class="faction-card" href="/gods/items/general/">
     <span class="meta"><span class="name">General</span><span class="type">Общие предметы</span></span>
   </a>
-  <a class="faction-card" href="/gods/items/00%20Later/">
-    <span class="meta"><span class="name">Later</span><span class="type">Прочие предметы и мобы</span></span>
+  <a class="faction-card" href="/gods/mobs/">
+    <span class="meta"><span class="name">Mobs</span><span class="type">Кастомные мобы</span></span>
   </a>
   <a class="faction-card" href="/gods/items/1_infinitum/">
     <span class="meta"><span class="name">Infinitum</span><span class="type">Предметы Бога Постижения</span></span>
@@ -55,5 +55,7 @@ keywords: "антагон предметы, антагон реборн пред
 ## Быстрые ссылки
 
 - [Уникальные предметы](/gods/items/unique_items) - особые предметы сервера вне фракций.
+- [Общие предметы](/gods/items/general/) - предметы, не привязанные к Богам.
+- [Мобы](/gods/mobs/) - кастомные мобы сервера.
 - [Система богов](/gods/) - описание Богов, благословений и проклятий.
 

@@ -141,10 +141,15 @@
   image-rendering: pixelated;
 }
 
-.vp-doc > div:first-child > p:first-child > img[src^="/assets/items/"]:only-child {
+.vp-doc[class*="_gods_mobs_"] {
+  --article-preview-size: 192px;
+}
+
+.vp-doc > div:first-child > p:first-child > img[src^="/assets/items/"]:only-child,
+.vp-doc[class*="_gods_mobs_"] > div > p:first-of-type > img:only-child {
   display: block !important;
-  width: 128px !important;
-  height: 128px !important;
+  width: var(--article-preview-size, 128px) !important;
+  height: var(--article-preview-size, 128px) !important;
   object-fit: contain;
   margin: 0 auto 16px auto !important;
 }
