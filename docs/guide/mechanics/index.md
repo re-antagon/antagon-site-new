@@ -61,22 +61,25 @@ description: "Обзор механик и фишек сервера Re:Antagon.
     title="Падение наковальни на блоки"
     href="/guide/mechanics/anvil_crushes_block"
     description="Превращение и разрушение блоков под упавшей наковальней"
+    img="/assets/mechanics/anvil_crushes_blocks.jpg"
   />
   <MechanicCard
     title="Физика наковальни"
     href="/guide/mechanics/anvil_piston_physics"
     description="Запуск наковальни поршнями и отскок от блока слизи"
+    img="/assets/mechanics/anvil_physics.jpg"
   />
   <MechanicCard
     title="Ускоренное окисление меди"
     href="/guide/mechanics/copper_oxidation"
     description="Влияние воды и дождя на окисление меди"
-    img="/assets/mechanics/faster_copper_oxidation.png"
+    img="/assets/mechanics/faster_copper_oxidation.jpg"
   />
   <MechanicCard
     title="Пожары и добыча угля"
     href="/guide/mechanics/fire_adjustment"
     description="Выпадение угля из сгоревшей древесины и защита от лесных пожаров"
+    img="/assets/mechanics/fire_drops_coal.jpg"
   />
   <MechanicCard
     title="Паутина"
@@ -93,6 +96,7 @@ description: "Обзор механик и фишек сервера Re:Antagon.
     title="Ускорение вагонеток"
     href="/guide/mechanics/minecarts_acceleration"
     description="Формула ускорения вагонеток от специальных блоков под рельсами"
+    img="/assets/mechanics/minecart_speed.jpg"
   />
   <MechanicCard
     title="Измерение Чистилище"
@@ -119,6 +123,7 @@ description: "Обзор механик и фишек сервера Re:Antagon.
     title="Арбалет &quot;Тройной выстрел&quot;"
     href="/guide/mechanics/multishot_crossbow"
     description="Суммирование урона от 3 стрел в упор (до 2.7x урона)"
+    img="/assets/mechanics/crossbow_tripleshot.jpg"
   />
   <MechanicCard
     title="Кастомные пластинки"
@@ -134,26 +139,31 @@ description: "Обзор механик и фишек сервера Re:Antagon.
     title="Невидимые рамки"
     href="/guide/mechanics/invisible_frames"
     description="Создание невидимых предметных рамок с помощью ножниц"
+    img="/assets/mechanics/invisible_item_frames.jpg"
   />
   <MechanicCard
     title="Головы игроков при PVP"
     href="/guide/mechanics/player_heads"
     description="Выпадение головы побеждённого игрока в PVP"
+    img="/assets/mechanics/head_drop.jpg"
   />
   <MechanicCard
     title="Ношение баннеров"
     href="/guide/mechanics/banner_hats"
     description="Возможность надевать любые баннеры на голову"
+    img="/assets/mechanics/banner_on_head.jpg"
   />
   <MechanicCard
     title="Камнерез и песок"
     href="/guide/mechanics/stonecutter"
     description="Измельчение песчаника в песок выбросом на камнерез"
+    img="/assets/mechanics/stonecutter_process_blocks.jpg"
   />
   <MechanicCard
     title="Перевозка жителей"
     href="/guide/mechanics/villager_transport"
     description="Перемещение жителей верхом на ламах и верблюдах"
+    img="/assets/mechanics/villager_llama_transportation.jpg"
   />
   <MechanicCard
     title="Уникальные эффекты"
