@@ -137,3 +137,6 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Local visual-QA screenshots (scripts/visual-qa.mjs)
+.qa/

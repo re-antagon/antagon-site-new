@@ -1,0 +1,112 @@
+/**
+ * Re:Antagon — "noise gradient" redesign.
+ * Part 4/4: motion layer — shared keyframes, scroll reveal, reading progress,
+ * pointer spotlight. Everything here is decorative and must degrade safely.
+ */
+
+/* ==========================================================================
+   1. Shared keyframes
+   ========================================================================== */
+
+@keyframes ag-text-pan {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes ag-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   2. Scroll reveal
+   The `ag-reveal-ready` class is only added by decor.ts after the observer is
+   attached, so without JavaScript the article stays fully visible.
+   ========================================================================== */
+
+html.ag-reveal-ready .vp-doc > * {
+  opacity: 0;
+}
+
+html.ag-reveal-ready .vp-doc > .ag-revealed {
+  opacity: 1;
+  animation: ag-rise 0.5s var(--ag-ease) both;
+}
+
+/* ==========================================================================
+   3. Reading progress bar
+   ========================================================================== */
+
+#ag-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: calc(var(--vp-z-index-nav) + 2);
+  width: 100%;
+  height: 2px;
+  transform: scaleX(var(--ag-progress, 0));
+  transform-origin: 0 50%;
+  background-image: var(--ag-sheen);
+  opacity: 0.9;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ==========================================================================
+   4. Pointer spotlight on cards
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .ag-spot {
+  position: relative;
+  isolation: isolate;
+}
+
+html:has(.grainy-backdrop) .ag-spot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: radial-gradient(
+    240px circle at var(--ag-mx, 50%) var(--ag-my, 50%),
+    color-mix(in srgb, var(--ag-grad-2) 18%, transparent),
+    transparent 72%
+  );
+  opacity: 0;
+  transition: opacity 0.25s var(--ag-ease);
+  pointer-events: none;
+}
+
+html:has(.grainy-backdrop) .ag-spot:hover::after {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   5. Reduced motion: everything resolves to its final state
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html.ag-reveal-ready .vp-doc > * {
+    opacity: 1;
+    animation: none;
+  }
+
+  html:has(.grainy-backdrop) .ag-spot::after {
+    opacity: 0 !important;
+  }
+
+  #ag-scroll-progress {
+    display: none;
+  }
+}

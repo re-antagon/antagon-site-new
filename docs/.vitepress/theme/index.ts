@@ -11,15 +11,20 @@ import ItemFrontmatter from './ItemFrontmatter.vue'
 import MechanicCard from './MechanicCard.vue'
 import VideoPlayer from './VideoPlayer.vue'
 import InventorySlot from './minecraft_inventory/InventorySlot.vue'
+import Layout from './Layout.vue'
 import './style.css'
+import './styles/index.css'
+import { initDecor } from './decor'
 
 export default {
   extends: DefaultTheme,
+  Layout,
   enhanceApp({ app, router }) {
     if (typeof window !== 'undefined') {
       document.addEventListener('selectionchange', applySelectionColorsStyle)
       initMineTip()
       initSidebarAutoExpand(router)
+      initDecor(router)
     }
     app.component('CraftingRecipe', CraftingRecipe)
     app.component('FurnaceRecipe', FurnaceRecipe)

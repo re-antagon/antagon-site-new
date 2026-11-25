@@ -1,0 +1,577 @@
+/**
+ * Re:Antagon — "noise gradient" redesign.
+ * Part 2/4: article typography and in-content elements.
+ *
+ * Scope: `.vp-doc` only. Minecraft objects (inventory slots, crafting grids,
+ * item sprites under /assets/items/) are intentionally left untouched.
+ */
+
+/* ==========================================================================
+   1. Reading rhythm
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc {
+  font-size: 16px;
+  color: var(--vp-c-text-1);
+}
+
+html:has(.grainy-backdrop) .vp-doc p {
+  margin: 15px 0;
+  line-height: 1.75;
+}
+
+html:has(.grainy-backdrop) .vp-doc > :first-child {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   2. Headings
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc h1 {
+  margin: 0 0 22px;
+  font-size: clamp(1.85rem, 1.15rem + 1.9vw, 2.5rem);
+  line-height: 1.16;
+  letter-spacing: -0.026em;
+  font-weight: 800;
+  color: transparent;
+  background-image: linear-gradient(
+    100deg,
+    #ffe2b8 0%,
+    #ffbe74 24%,
+    #ff9d86 50%,
+    #c6a0ff 76%,
+    #93e9dd 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: ag-text-pan 22s ease-in-out infinite;
+}
+
+html:not(.dark):has(.grainy-backdrop) .vp-doc h1 {
+  background-image: linear-gradient(
+    100deg,
+    #7c3b00 0%,
+    #9e4700 24%,
+    #a83a2e 50%,
+    #63389f 76%,
+    #0c6660 100%
+  );
+}
+
+html:has(.grainy-backdrop) .vp-doc h1::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 16px;
+  border-radius: 3px;
+  background-image: var(--ag-sheen);
+}
+
+html:has(.grainy-backdrop) .vp-doc h1 code,
+html:has(.grainy-backdrop) .vp-doc h2 code,
+html:has(.grainy-backdrop) .vp-doc h3 code,
+html:has(.grainy-backdrop) .vp-doc h4 code {
+  padding: 1px 6px;
+  border: 1px solid var(--ag-hairline);
+  border-radius: 6px;
+  background-color: var(--ag-card);
+  color: var(--vp-c-text-1);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+html:has(.grainy-backdrop) .vp-doc h2 {
+  position: relative;
+  margin: 52px 0 18px;
+  padding-top: 24px;
+  border-top: 0;
+  font-size: 1.5rem;
+  line-height: 1.32;
+  letter-spacing: -0.018em;
+  font-weight: 700;
+}
+
+html:has(.grainy-backdrop) .vp-doc h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    90deg,
+    var(--ag-accent) 0%,
+    color-mix(in srgb, var(--ag-grad-4) 40%, transparent) 24%,
+    var(--ag-hairline) 58%,
+    transparent 100%
+  );
+}
+
+html:has(.grainy-backdrop) .vp-doc h3 {
+  position: relative;
+  margin: 34px 0 12px;
+  padding-left: 14px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  letter-spacing: -0.012em;
+  font-weight: 700;
+}
+
+html:has(.grainy-backdrop) .vp-doc h3::before {
+  content: '';
+  position: absolute;
+  top: 0.3em;
+  bottom: 0.3em;
+  left: 0;
+  width: 3px;
+  border-radius: 3px;
+  background-image: var(--ag-sheen);
+  opacity: 0.9;
+}
+
+html:has(.grainy-backdrop) .vp-doc h3 .header-anchor {
+  left: 14px;
+  margin-left: -2em;
+}
+
+html:has(.grainy-backdrop) .vp-doc h4 {
+  margin: 26px 0 8px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+html:has(.grainy-backdrop) .vp-doc h1,
+html:has(.grainy-backdrop) .vp-doc h2,
+html:has(.grainy-backdrop) .vp-doc h3,
+html:has(.grainy-backdrop) .vp-doc h4 {
+  scroll-margin-top: calc(var(--vp-nav-height) + 20px);
+}
+
+/* ==========================================================================
+   3. Heading anchors
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc .header-anchor {
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  text-decoration: none;
+  transform: translateX(-3px);
+  transition: color var(--ag-dur) var(--ag-ease),
+    opacity var(--ag-dur) var(--ag-ease), transform var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .vp-doc h1:hover .header-anchor,
+html:has(.grainy-backdrop) .vp-doc h2:hover .header-anchor,
+html:has(.grainy-backdrop) .vp-doc h3:hover .header-anchor,
+html:has(.grainy-backdrop) .vp-doc h4:hover .header-anchor,
+html:has(.grainy-backdrop) .vp-doc .header-anchor:focus {
+  transform: none;
+}
+
+/* ==========================================================================
+   4. Inline links inside prose
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc p a,
+html:has(.grainy-backdrop) .vp-doc li a,
+html:has(.grainy-backdrop) .vp-doc dd a,
+html:has(.grainy-backdrop) .vp-doc blockquote a,
+html:has(.grainy-backdrop) .vp-doc td a,
+html:has(.grainy-backdrop) .vp-doc th a {
+  padding-bottom: 1px;
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+  transition: color var(--ag-dur) var(--ag-ease),
+    background-size 0.28s var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .vp-doc p a:hover,
+html:has(.grainy-backdrop) .vp-doc li a:hover,
+html:has(.grainy-backdrop) .vp-doc dd a:hover,
+html:has(.grainy-backdrop) .vp-doc blockquote a:hover,
+html:has(.grainy-backdrop) .vp-doc td a:hover,
+html:has(.grainy-backdrop) .vp-doc th a:hover {
+  background-image: var(--ag-sheen);
+  background-size: 100% 2px;
+}
+
+/* ==========================================================================
+   5. Inline emphasis
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc strong {
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+html:has(.grainy-backdrop) .vp-doc mark {
+  padding: 0 3px;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, var(--ag-grad-2) 28%, transparent);
+  color: var(--vp-c-text-1);
+}
+
+/* ==========================================================================
+   6. Lists
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc li + li {
+  margin-top: 6px;
+}
+
+html:has(.grainy-backdrop) .vp-doc li::marker {
+  color: var(--vp-c-brand-1);
+}
+
+html:has(.grainy-backdrop) .vp-doc li > p {
+  margin: 6px 0;
+}
+
+/* ==========================================================================
+   7. Blockquote
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc blockquote {
+  position: relative;
+  margin: 22px 0;
+  padding: 4px 0 4px 18px;
+  border-left: 0;
+  color: var(--vp-c-text-2);
+}
+
+html:has(.grainy-backdrop) .vp-doc blockquote::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 0;
+  width: 3px;
+  border-radius: 3px;
+  background-image: linear-gradient(180deg, var(--ag-accent), transparent);
+}
+
+/* ==========================================================================
+   8. Tables
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 22px 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--ag-grad-2) 55%, transparent) transparent;
+  border: 1px solid var(--ag-hairline);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--ag-r-md);
+  background-color: color-mix(in srgb, var(--ag-card) 70%, transparent);
+  font-size: 14.5px;
+}
+
+html:has(.grainy-backdrop) .vp-doc table::-webkit-scrollbar {
+  height: 8px;
+}
+
+html:has(.grainy-backdrop) .vp-doc table::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html:has(.grainy-backdrop) .vp-doc table::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+  background-color: color-mix(in srgb, var(--ag-grad-2) 55%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc tr {
+  border-top: 0;
+  background-color: transparent;
+  transition: background-color 0.2s var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .vp-doc tr:nth-child(2n) {
+  background-color: color-mix(in srgb, var(--vp-c-bg-soft) 40%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc th,
+html:has(.grainy-backdrop) .vp-doc td {
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid var(--ag-hairline);
+  vertical-align: top;
+}
+
+html:has(.grainy-backdrop) .vp-doc th + th,
+html:has(.grainy-backdrop) .vp-doc td + td {
+  border-left: 1px solid var(--ag-hairline);
+}
+
+html:has(.grainy-backdrop) .vp-doc th {
+  background-color: color-mix(in srgb, var(--vp-c-bg-soft) 62%, transparent);
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  white-space: normal;
+  overflow-wrap: normal;
+  hyphens: auto;
+}
+
+html:has(.grainy-backdrop) .vp-doc td {
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+html:has(.grainy-backdrop) .vp-doc tr:last-child th,
+html:has(.grainy-backdrop) .vp-doc tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+html:has(.grainy-backdrop) .vp-doc tbody tr:hover {
+  background-color: color-mix(in srgb, var(--ag-grad-2) 7%, transparent);
+}
+
+/* ==========================================================================
+   9. Custom blocks (::: tip / ::: warning / ...)
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc .custom-block {
+  position: relative;
+  margin: 20px 0;
+  padding: 15px 18px 12px 20px;
+  overflow: hidden;
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-md);
+  color: var(--vp-c-text-1);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background-image: linear-gradient(180deg, var(--ag-grad-2), var(--ag-grad-4));
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.tip,
+html:has(.grainy-backdrop) .vp-doc .custom-block.success {
+  background-color: color-mix(in srgb, var(--ag-grad-2) 9%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.info {
+  background-color: color-mix(in srgb, var(--ag-grad-5) 8%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.info::before {
+  background-image: linear-gradient(180deg, var(--ag-grad-5), var(--ag-grad-2));
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.note,
+html:has(.grainy-backdrop) .vp-doc .custom-block.important {
+  background-color: color-mix(in srgb, var(--ag-grad-4) 9%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.note::before,
+html:has(.grainy-backdrop) .vp-doc .custom-block.important::before {
+  background-image: linear-gradient(180deg, var(--ag-grad-4), var(--ag-grad-3));
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.warning {
+  background-color: color-mix(in srgb, var(--vp-c-warning-1) 12%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.warning::before {
+  background-image: linear-gradient(180deg, var(--ag-grad-2), var(--ag-grad-3));
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.danger,
+html:has(.grainy-backdrop) .vp-doc .custom-block.caution {
+  background-color: color-mix(in srgb, var(--vp-c-danger-1) 12%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.danger::before,
+html:has(.grainy-backdrop) .vp-doc .custom-block.caution::before {
+  background-image: linear-gradient(180deg, var(--vp-c-danger-1), var(--ag-grad-3));
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.details {
+  background-color: color-mix(in srgb, var(--vp-c-default-soft) 70%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block .custom-block-title {
+  margin-bottom: 4px;
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+  letter-spacing: 0.005em;
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand-1);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.warning .custom-block-title {
+  color: var(--vp-c-warning-1);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block.danger .custom-block-title,
+html:has(.grainy-backdrop) .vp-doc .custom-block.caution .custom-block-title {
+  color: var(--vp-c-danger-1);
+}
+
+html:has(.grainy-backdrop) .vp-doc .custom-block p {
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   10. Code
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc :not(pre) > code {
+  padding: 2px 6px;
+  border: 1px solid var(--ag-hairline);
+  border-radius: 6px;
+  background-color: color-mix(in srgb, var(--ag-card) 80%, transparent);
+  color: var(--vp-c-brand-1);
+  font-size: 0.86em;
+}
+
+html:has(.grainy-backdrop) .vp-doc div[class*='language-'] {
+  margin: 20px 0;
+  overflow: hidden;
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-md);
+  box-shadow: var(--ag-shadow-card);
+}
+
+html:has(.grainy-backdrop) .vp-doc div[class*='language-'] > span.lang {
+  top: 9px;
+  right: 12px;
+  color: var(--vp-c-text-3);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+html:has(.grainy-backdrop) .vp-doc div[class*='language-'] > button.copy {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-sm);
+}
+
+/* ==========================================================================
+   11. Rules, media, disclosures, badges
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc hr {
+  height: 1px;
+  margin: 28px 0;
+  border: 0;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--ag-hairline-strong) 18%,
+    var(--ag-hairline-strong) 82%,
+    transparent 100%
+  );
+}
+
+html:has(.grainy-backdrop) .vp-doc p > img:not([src^='/assets/items/']),
+html:has(.grainy-backdrop) .vp-doc figure > img {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-md);
+  box-shadow: var(--ag-shadow-card);
+}
+
+html:has(.grainy-backdrop) .vp-doc details {
+  margin: 20px 0;
+  padding: 12px 16px;
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-md);
+  background-color: color-mix(in srgb, var(--ag-card) 60%, transparent);
+}
+
+html:has(.grainy-backdrop) .vp-doc summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+html:has(.grainy-backdrop) .vp-doc .VPBadge {
+  padding: 1px 9px;
+  border: 1px solid var(--ag-hairline);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   12. Small screens
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  html:has(.grainy-backdrop) .vp-doc h2 {
+    margin-top: 40px;
+  }
+
+  html:has(.grainy-backdrop) .vp-doc table {
+    font-size: 13.5px;
+  }
+
+  html:has(.grainy-backdrop) .vp-doc th,
+  html:has(.grainy-backdrop) .vp-doc td {
+    padding: 8px 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  html:has(.grainy-backdrop) .vp-doc th {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+  }
+
+  html:has(.grainy-backdrop) .vp-doc table {
+    box-shadow: inset -16px 0 12px -14px color-mix(in srgb, var(--vp-c-text-1) 55%, transparent),
+      inset 16px 0 12px -14px color-mix(in srgb, var(--vp-c-text-1) 55%, transparent);
+  }
+
+  html:has(.grainy-backdrop) .vp-doc table th:last-child::after {
+    content: '→';
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--vp-c-brand-1);
+    font-weight: 700;
+  }
+
+  html:has(.grainy-backdrop) .vp-doc table thead,
+  html:has(.grainy-backdrop) .vp-doc table tbody {
+    display: table;
+    min-width: 720px;
+  }
+
+  html:has(.grainy-backdrop) .vp-doc th,
+  html:has(.grainy-backdrop) .vp-doc td {
+    min-width: 72px;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+}

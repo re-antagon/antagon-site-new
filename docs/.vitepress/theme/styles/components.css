@@ -1,0 +1,410 @@
+/**
+ * Re:Antagon — "noise gradient" redesign.
+ * Part 3/4: content components (hero, cards, catalogues, search).
+ */
+
+/* ==========================================================================
+   1. Home hero
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPHome {
+  padding-bottom: 88px;
+}
+
+html:has(.grainy-backdrop) .VPHero {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    100deg,
+    #ffe2b8 0%,
+    #ffbe74 24%,
+    #ff9d86 50%,
+    #c6a0ff 76%,
+    #93e9dd 100%
+  );
+}
+
+html:not(.dark):has(.grainy-backdrop) .VPHero {
+  --vp-home-hero-name-background: linear-gradient(
+    100deg,
+    #7c3b00 0%,
+    #9e4700 24%,
+    #a83a2e 50%,
+    #63389f 76%,
+    #0c6660 100%
+  );
+}
+
+html:has(.grainy-backdrop) .VPHero .name.clip {
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  animation: ag-text-pan 20s ease-in-out infinite;
+}
+
+html:has(.grainy-backdrop) .VPHero .text {
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.022em;
+}
+
+html:has(.grainy-backdrop) .VPHero .tagline {
+  max-width: 34em;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+html:has(.grainy-backdrop) .VPHero .actions .VPButton {
+  height: 42px;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform var(--ag-dur) var(--ag-ease),
+    box-shadow var(--ag-dur) var(--ag-ease),
+    background-color var(--ag-dur) var(--ag-ease),
+    border-color var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPHero .actions .VPButton.brand {
+  color: #1a0f06;
+  background-image: linear-gradient(100deg, #ffb45c 0%, #ff8a72 55%, #b98bff 100%);
+  background-size: 160% 100%;
+  background-position: 0% 50%;
+  box-shadow: 0 10px 26px -12px rgba(255, 140, 90, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+html:has(.grainy-backdrop) .VPHero .actions .VPButton.brand:hover {
+  color: #1a0f06;
+  background-position: 100% 50%;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -12px rgba(255, 140, 90, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+html:has(.grainy-backdrop) .VPHero .actions .VPButton.alt {
+  border-color: var(--ag-hairline-strong);
+  background-color: var(--ag-card);
+  color: var(--vp-c-text-1);
+  box-shadow: none;
+}
+
+html:has(.grainy-backdrop) .VPHero .actions .VPButton.alt:hover {
+  border-color: var(--ag-hairline-strong);
+  background-color: var(--ag-card-strong);
+  color: var(--vp-c-text-1);
+  transform: translateY(-2px);
+  box-shadow: var(--ag-shadow-card);
+}
+
+/* ==========================================================================
+   2. Home feature cards (VPFeature)
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPHome .VPFeature {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-lg);
+  background-color: color-mix(in srgb, var(--ag-card) 92%, transparent);
+  box-shadow: var(--ag-shadow-card);
+  transition: transform var(--ag-dur) var(--ag-ease),
+    border-color var(--ag-dur) var(--ag-ease),
+    background-color var(--ag-dur) var(--ag-ease),
+    box-shadow var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPHome .VPFeature.link:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--ag-grad-2) 45%, var(--ag-hairline-strong));
+  background-color: color-mix(in srgb, var(--ag-card-strong) 92%, transparent);
+  box-shadow: 0 26px 60px -30px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 180, 92, 0.16);
+}
+
+html:has(.grainy-backdrop) .VPHome .VPFeature .icon {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-sm);
+  background-color: color-mix(in srgb, var(--ag-grad-2) 12%, transparent);
+  transition: transform var(--ag-dur) var(--ag-ease),
+    background-color var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPHome .VPFeature.link:hover .icon {
+  transform: scale(1.06) rotate(-2deg);
+  background-color: color-mix(in srgb, var(--ag-grad-2) 20%, transparent);
+}
+
+html:has(.grainy-backdrop) .VPHome .VPFeature .title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+html:has(.grainy-backdrop) .VPHome .VPFeature .link-text-value {
+  font-weight: 600;
+}
+
+html:has(.grainy-backdrop) .VPHome .VPFeature .link-text-icon {
+  transition: transform var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPHome .VPFeature.link:hover .link-text-icon {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   3. Markdown-authored feature cards (.feature-card in page HTML)
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc .feature-card {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-lg);
+  background-color: color-mix(in srgb, var(--ag-card) 90%, transparent);
+  box-shadow: var(--ag-shadow-card);
+  transition: transform var(--ag-dur) var(--ag-ease),
+    border-color var(--ag-dur) var(--ag-ease),
+    background-color var(--ag-dur) var(--ag-ease),
+    box-shadow var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .vp-doc .feature-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--ag-grad-2) 45%, var(--ag-hairline-strong));
+  background-color: color-mix(in srgb, var(--ag-card-strong) 90%, transparent);
+  box-shadow: 0 26px 60px -30px rgba(0, 0, 0, 0.55);
+}
+
+html:has(.grainy-backdrop) .vp-doc .feature-card-title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+html:has(.grainy-backdrop) .vp-doc .feature-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-sm);
+  background-color: color-mix(in srgb, var(--ag-grad-2) 12%, transparent);
+  font-size: 20px;
+}
+
+html:has(.grainy-backdrop) .vp-doc .feature-card-action {
+  gap: 6px;
+  font-weight: 600;
+  transition: gap var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .vp-doc .feature-card:hover .feature-card-action {
+  gap: 10px;
+}
+
+/* ==========================================================================
+   4. Item catalogue cards
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc .item-grid {
+  gap: 10px;
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-card {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-md);
+  background-color: color-mix(in srgb, var(--ag-card) 88%, transparent);
+  color: var(--vp-c-text-1);
+  transition: transform var(--ag-dur) var(--ag-ease),
+    border-color var(--ag-dur) var(--ag-ease),
+    background-color var(--ag-dur) var(--ag-ease),
+    box-shadow var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--ag-grad-2) 50%, var(--ag-hairline-strong));
+  background-color: color-mix(in srgb, var(--ag-card-strong) 90%, transparent);
+  box-shadow: var(--ag-shadow-card);
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-card .name {
+  font-weight: 600;
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-card .type {
+  color: var(--vp-c-text-2);
+  font-size: 0.78rem;
+}
+
+/* ==========================================================================
+   5. Faction cards
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc .faction-card {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-md);
+  background-color: color-mix(in srgb, var(--ag-card) 88%, transparent);
+  color: var(--vp-c-text-1);
+  transition: transform var(--ag-dur) var(--ag-ease),
+    border-color var(--ag-dur) var(--ag-ease),
+    background-color var(--ag-dur) var(--ag-ease),
+    box-shadow var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .vp-doc .faction-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--ag-grad-2) 50%, var(--ag-hairline-strong));
+  background-color: color-mix(in srgb, var(--ag-card-strong) 90%, transparent);
+  box-shadow: var(--ag-shadow-card);
+}
+
+/* ==========================================================================
+   6. Mechanic rows
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc .mechanic-card {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-lg);
+  background-color: color-mix(in srgb, var(--ag-card) 88%, transparent);
+  transition: transform var(--ag-dur) var(--ag-ease),
+    border-color var(--ag-dur) var(--ag-ease),
+    background-color var(--ag-dur) var(--ag-ease),
+    box-shadow var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .vp-doc .mechanic-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--ag-grad-2) 50%, var(--ag-hairline-strong));
+  background-color: color-mix(in srgb, var(--ag-card-strong) 90%, transparent);
+  box-shadow: var(--ag-shadow-card);
+}
+
+html:has(.grainy-backdrop) .vp-doc .mechanic-card-image-box {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-sm);
+  background-color: color-mix(in srgb, var(--vp-c-bg-alt) 65%, transparent);
+}
+
+/* Placeholder tile for mechanic cards that have no preview image.
+   The glyph stays, but the box reads as an intentional "no preview" tile. */
+html:has(.grainy-backdrop) .vp-doc .mechanic-card-image-box.is-fallback {
+  border-style: dashed;
+  border-color: var(--ag-hairline-strong);
+  background-color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--ag-accent) 16%, transparent) 0%,
+    transparent 42%,
+    color-mix(in srgb, var(--ag-grad-4) 12%, transparent) 100%
+  );
+}
+
+html:has(.grainy-backdrop) .vp-doc .mechanic-card:hover .mechanic-card-image-box.is-fallback {
+  border-color: color-mix(in srgb, var(--ag-grad-2) 45%, var(--ag-hairline-strong));
+}
+
+html:has(.grainy-backdrop) .vp-doc .mechanic-card-image-box.is-fallback img.mechanic-card-image.is-fallback {
+  opacity: 0.28 !important;
+  filter: grayscale(0.4) !important;
+}
+
+html:has(.grainy-backdrop) .vp-doc .mechanic-card-title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   7. Item frontmatter panel (scoped component, hence the extra specificity)
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc .item-frontmatter {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 22px;
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-lg);
+  background-color: color-mix(in srgb, var(--ag-card) 88%, transparent);
+  box-shadow: var(--ag-shadow-card);
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-frontmatter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    120% 140% at 0% 0%,
+    color-mix(in srgb, var(--ag-accent) 26%, transparent),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-frontmatter > * {
+  position: relative;
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-frontmatter-icon-wrap {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-md);
+  background-color: color-mix(in srgb, var(--vp-c-bg-alt) 55%, transparent);
+  box-shadow: inset 0 1px 0 var(--ag-highlight);
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-frontmatter-badge {
+  border-radius: 999px;
+  border-color: var(--ag-hairline-strong);
+}
+
+html:has(.grainy-backdrop) .vp-doc .item-frontmatter-title {
+  letter-spacing: -0.015em;
+}
+
+/* ==========================================================================
+   8. Local search
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPLocalSearchBox .shell {
+  border: 1px solid var(--ag-hairline-strong);
+  border-radius: var(--ag-r-lg);
+  background-color: var(--ag-panel);
+  box-shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.8);
+}
+
+html:has(.grainy-backdrop) .VPLocalSearchBox .search-bar {
+  border-bottom-color: var(--ag-hairline);
+}
+
+html:has(.grainy-backdrop) .VPLocalSearchBox .search-input {
+  color: var(--vp-c-text-1);
+}
+
+html:has(.grainy-backdrop) .VPLocalSearchBox .result {
+  border-color: var(--ag-hairline);
+  border-radius: var(--ag-r-sm);
+}
+
+html:has(.grainy-backdrop) .VPLocalSearchBox .result.selected {
+  border-color: color-mix(in srgb, var(--ag-grad-2) 55%, var(--ag-hairline-strong));
+  background-color: var(--ag-card);
+}
+
+/* ==========================================================================
+   9. Video player wrapper (chrome only — controls stay functional)
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .vp-doc .antagon-player-wrapper {
+  border: 1px solid var(--ag-hairline);
+  box-shadow: var(--ag-shadow-card);
+}
+
+/* ==========================================================================
+   10. Small screens
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  html:has(.grainy-backdrop) .VPHero .actions .VPButton {
+    height: 40px;
+    padding: 0 18px;
+  }
+
+  html:has(.grainy-backdrop) .VPHome {
+    padding-bottom: 56px;
+  }
+}

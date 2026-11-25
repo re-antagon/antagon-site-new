@@ -1,0 +1,497 @@
+/**
+ * Re:Antagon — "noise gradient" redesign.
+ * Part 1/4: design tokens + application shell (nav, sidebar, doc panel, outline).
+ * Imported after the legacy ./style.css, so these rules win on equal specificity.
+ */
+
+/* ==========================================================================
+   1. Tokens
+   ========================================================================== */
+
+:root {
+  /* Decorative gradient stops. Never used as body-text colour. */
+  --ag-grad-1: #ffd9a3;
+  --ag-grad-2: #ffb45c;
+  --ag-grad-3: #ff8a72;
+  --ag-grad-4: #b98bff;
+  --ag-grad-5: #6fe0d0;
+  --ag-sheen: linear-gradient(
+    100deg,
+    var(--ag-grad-1) 0%,
+    var(--ag-grad-2) 24%,
+    var(--ag-grad-3) 48%,
+    var(--ag-grad-4) 76%,
+    var(--ag-grad-5) 100%
+  );
+  --ag-sheen-soft: linear-gradient(
+    100deg,
+    rgba(255, 217, 163, 0.55) 0%,
+    rgba(255, 180, 92, 0.45) 30%,
+    rgba(185, 139, 255, 0.35) 70%,
+    rgba(111, 224, 208, 0.3) 100%
+  );
+
+  --ag-r-xl: 26px;
+  --ag-r-lg: 18px;
+  --ag-r-md: 14px;
+  --ag-r-sm: 10px;
+
+  --ag-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ag-dur: 0.36s;
+
+  /* Light theme surfaces (warm paper over the cream backdrop) */
+  --ag-panel: rgba(255, 253, 249, 0.91);
+  --ag-chrome: rgba(255, 251, 245, 0.76);
+  --ag-sidebar: rgba(255, 252, 247, 0.88);
+  --ag-card: rgba(255, 255, 255, 0.6);
+  --ag-card-strong: rgba(255, 255, 255, 0.85);
+  --ag-hairline: rgba(58, 33, 12, 0.1);
+  --ag-hairline-strong: rgba(58, 33, 12, 0.2);
+  --ag-highlight: rgba(255, 255, 255, 0.75);
+  --ag-shadow-panel: 0 28px 72px -34px rgba(84, 50, 18, 0.42),
+    0 2px 6px rgba(84, 50, 18, 0.05);
+  --ag-shadow-card: 0 14px 34px -22px rgba(84, 50, 18, 0.4);
+  --ag-accent: rgba(255, 150, 60, 0.5);
+}
+
+html.dark {
+  /* Dark theme surfaces (ink over the near-black backdrop) */
+  --ag-panel: rgba(19, 15, 23, 0.9);
+  --ag-chrome: rgba(13, 10, 16, 0.72);
+  --ag-sidebar: rgba(16, 13, 21, 0.86);
+  --ag-card: rgba(255, 255, 255, 0.05);
+  --ag-card-strong: rgba(255, 255, 255, 0.085);
+  --ag-hairline: rgba(255, 255, 255, 0.1);
+  --ag-hairline-strong: rgba(255, 255, 255, 0.18);
+  --ag-highlight: rgba(255, 255, 255, 0.07);
+  --ag-shadow-panel: 0 32px 84px -36px rgba(0, 0, 0, 0.88),
+    0 2px 10px rgba(0, 0, 0, 0.35);
+  --ag-shadow-card: 0 18px 40px -24px rgba(0, 0, 0, 0.8);
+  --ag-accent: rgba(255, 186, 108, 0.6);
+}
+
+/* Per-scene accent, mirrors theme/scenes.ts. Decorative only. */
+html[data-scene='1'] { --ag-accent: rgba(124, 78, 214, 0.5); }
+html[data-scene='2'] { --ag-accent: rgba(38, 150, 88, 0.45); }
+html[data-scene='3'] { --ag-accent: rgba(24, 150, 146, 0.45); }
+html[data-scene='4'] { --ag-accent: rgba(58, 108, 190, 0.45); }
+html[data-scene='5'] { --ag-accent: rgba(196, 58, 62, 0.45); }
+html[data-scene='6'] { --ag-accent: rgba(56, 96, 210, 0.45); }
+html[data-scene='8'] { --ag-accent: rgba(190, 62, 170, 0.45); }
+html[data-scene='9'] { --ag-accent: rgba(214, 96, 22, 0.45); }
+html[data-scene='10'] { --ag-accent: rgba(30, 140, 150, 0.45); }
+html.dark[data-scene='1'] { --ag-accent: rgba(168, 122, 255, 0.62); }
+html.dark[data-scene='2'] { --ag-accent: rgba(94, 224, 148, 0.55); }
+html.dark[data-scene='3'] { --ag-accent: rgba(92, 226, 214, 0.55); }
+html.dark[data-scene='4'] { --ag-accent: rgba(126, 176, 255, 0.55); }
+html.dark[data-scene='5'] { --ag-accent: rgba(255, 116, 116, 0.6); }
+html.dark[data-scene='6'] { --ag-accent: rgba(118, 168, 255, 0.6); }
+html.dark[data-scene='8'] { --ag-accent: rgba(255, 130, 232, 0.55); }
+html.dark[data-scene='9'] { --ag-accent: rgba(255, 152, 72, 0.6); }
+html.dark[data-scene='10'] { --ag-accent: rgba(120, 232, 224, 0.5); }
+
+/* ==========================================================================
+   2. Page canvas
+   ========================================================================== */
+
+html:has(.grainy-backdrop) {
+  --vp-nav-bg-color: transparent;
+  --vp-sidebar-bg-color: transparent;
+  --vp-local-nav-bg-color: transparent;
+  background-color: #0b090e;
+  scrollbar-color: rgba(255, 180, 92, 0.45) transparent;
+}
+
+html:not(.dark):has(.grainy-backdrop) {
+  background-color: #f4ebdf;
+}
+
+html:has(.grainy-backdrop) body {
+  background-color: transparent;
+}
+
+html:has(.grainy-backdrop) .VPContent {
+  position: relative;
+  z-index: 1;
+}
+
+html:has(.grainy-backdrop) ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html:has(.grainy-backdrop) ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html:has(.grainy-backdrop) ::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+  background-color: rgba(200, 150, 110, 0.45);
+}
+
+html.dark:has(.grainy-backdrop) ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 200, 140, 0.28);
+}
+
+/* ==========================================================================
+   3. Top navigation bar
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPNavBar,
+html:has(.grainy-backdrop) .VPNavBar:not(.home),
+html:has(.grainy-backdrop) .VPNavBar.screen-open,
+html:has(.grainy-backdrop) .VPNavBar.has-sidebar .content-body,
+html:has(.grainy-backdrop) .VPNavBar:not(.has-sidebar):not(.home.top) {
+  background-color: transparent;
+}
+
+html:has(.grainy-backdrop) .VPNavBar {
+  background-color: var(--ag-chrome);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  backdrop-filter: blur(16px) saturate(1.2);
+}
+
+html:has(.grainy-backdrop) .VPNavBar.home.top {
+  background-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html:has(.grainy-backdrop) .VPNavBar .divider,
+html:has(.grainy-backdrop) .VPNavBar .divider-line,
+html:has(.grainy-backdrop) .VPNavBar:not(.home) .divider-line,
+html:has(.grainy-backdrop) .VPNavBar:not(.home.top) .divider-line {
+  background-color: transparent;
+}
+
+html:has(.grainy-backdrop) .VPNavBar .divider-line {
+  height: 1px;
+  background-image: var(--ag-sheen);
+  background-size: 320% 100%;
+  opacity: 0.55;
+  animation: ag-sheen-pan 16s linear infinite;
+}
+
+html:has(.grainy-backdrop) .VPNavBar.home.top .divider-line {
+  opacity: 0;
+  animation: none;
+}
+
+html:has(.grainy-backdrop) .VPNavBarTitle .title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+html:has(.grainy-backdrop) .VPNavBarTitle .title:hover {
+  color: var(--vp-c-brand-1);
+}
+
+html:has(.grainy-backdrop) .VPNavBarMenuLink .text {
+  position: relative;
+}
+
+html:has(.grainy-backdrop) .VPNavBarMenuLink .text::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-image: var(--ag-sheen);
+  background-size: 300% 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPNavBarMenuLink:hover .text::after,
+html:has(.grainy-backdrop) .VPNavBarMenuLink.active .text::after {
+  transform: scaleX(1);
+}
+
+html:has(.grainy-backdrop) .DocSearch-Button {
+  border: 1px solid var(--ag-hairline);
+  border-radius: 999px;
+  background-color: var(--ag-card);
+  transition: background-color var(--ag-dur) var(--ag-ease),
+    border-color var(--ag-dur) var(--ag-ease), box-shadow var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .DocSearch-Button:hover {
+  border-color: var(--ag-hairline-strong);
+  background-color: var(--ag-card-strong);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ag-grad-2) 12%, transparent);
+}
+
+/* ==========================================================================
+   4. Sidebar
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPSidebar {
+  background-color: var(--ag-sidebar);
+  -webkit-backdrop-filter: blur(18px) saturate(1.08);
+  backdrop-filter: blur(18px) saturate(1.08);
+  border-right: 1px solid var(--ag-hairline);
+  box-shadow: none;
+}
+
+html:has(.grainy-backdrop) .VPSidebar .curtain {
+  background-color: transparent;
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem.level-0 > .item > .text,
+html:has(.grainy-backdrop) .VPSidebarItem.level-0 > .item > .link > .text {
+  color: var(--vp-c-text-3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem.level-0 {
+  padding-bottom: 14px;
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem.level-1 .items,
+html:has(.grainy-backdrop) .VPSidebarItem.level-2 .items,
+html:has(.grainy-backdrop) .VPSidebarItem.level-3 .items,
+html:has(.grainy-backdrop) .VPSidebarItem.level-4 .items,
+html:has(.grainy-backdrop) .VPSidebarItem.level-5 .items {
+  border-left-color: var(--ag-hairline);
+}
+
+/* Row pill: painted with a pseudo-element so layout never shifts. */
+html:has(.grainy-backdrop) .VPSidebarItem:not(.level-0) > .item > .link {
+  position: relative;
+  border-radius: var(--ag-r-sm);
+  transition: color var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem:not(.level-0) > .item > .link::before {
+  content: '';
+  position: absolute;
+  inset: -1px -10px;
+  z-index: -1;
+  border-radius: var(--ag-r-sm);
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: background-color var(--ag-dur) var(--ag-ease),
+    box-shadow var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem:not(.level-0) > .item > .link:hover::before {
+  background-color: var(--ag-card);
+  box-shadow: inset 0 0 0 1px var(--ag-hairline);
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem:not(.level-0).is-active > .item > .link::before {
+  background-color: var(--ag-card-strong);
+  box-shadow: inset 0 0 0 1px var(--ag-hairline-strong);
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem.is-active > .item > .indicator {
+  width: 2px;
+  border-radius: 2px;
+  background-image: var(--ag-sheen);
+  background-size: 100% 300%;
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem .caret {
+  transition: color var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPSidebarItem .caret-icon {
+  transition: transform 0.3s var(--ag-ease);
+}
+
+/* ==========================================================================
+   5. Local nav (mobile) + nav screen
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPLocalNav {
+  background-color: var(--ag-chrome);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  backdrop-filter: blur(14px) saturate(1.1);
+  border-bottom: 1px solid var(--ag-hairline);
+}
+
+html:has(.grainy-backdrop) .VPLocalNavOutlineDropdown button {
+  border: 1px solid var(--ag-hairline);
+  border-radius: 999px;
+  background-color: var(--ag-card);
+}
+
+html:has(.grainy-backdrop) .VPNavScreen {
+  background-color: var(--ag-panel);
+}
+
+/* ==========================================================================
+   6. Article panel (.content-container is the glass card around the reading column)
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPDoc .content-container {
+  position: relative;
+  max-width: 752px;
+  padding: 34px 38px 46px;
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-xl);
+  background-color: var(--ag-panel);
+  box-shadow: var(--ag-shadow-panel), inset 0 1px 0 var(--ag-highlight);
+}
+
+html:has(.grainy-backdrop) .VPDoc.has-aside .content-container {
+  max-width: 752px;
+}
+
+/* Soft light-catch along the top edge of the panel. */
+html:has(.grainy-backdrop) .VPDoc .content-container::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: 12%;
+  left: 12%;
+  height: 1px;
+  border-radius: 1px;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--ag-accent) 35%,
+    color-mix(in srgb, var(--ag-grad-4) 45%, transparent) 65%,
+    transparent 100%
+  );
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  html:has(.grainy-backdrop) .VPDoc .content-container {
+    padding: 22px 18px 32px;
+    border-radius: var(--ag-r-lg);
+  }
+}
+
+/* ==========================================================================
+   7. Outline (right column) — refined, intentionally not a card
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPDoc .aside-container {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+}
+
+html:has(.grainy-backdrop) .VPDoc .aside-curtain {
+  display: none;
+}
+
+html:has(.grainy-backdrop) .VPDocAsideOutline .content {
+  border-left-color: var(--ag-hairline);
+  padding: 10px 12px 12px 16px;
+  border-radius: var(--ag-r-md);
+  background-color: color-mix(in srgb, var(--ag-panel) 62%, transparent);
+  box-shadow: inset 0 0 0 1px var(--ag-hairline);
+}
+
+html:has(.grainy-backdrop) .VPDocAsideOutline .outline-title {
+  color: var(--vp-c-text-1);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+html:has(.grainy-backdrop) .VPDocAsideOutline .outline-marker {
+  background-image: var(--ag-sheen);
+  background-size: 100% 300%;
+  box-shadow: 0 0 12px var(--ag-accent);
+}
+
+html:has(.grainy-backdrop) .VPDocAsideOutline .outline-link {
+  color: color-mix(in srgb, var(--vp-c-text-1) 82%, var(--vp-c-text-2));
+}
+
+html:has(.grainy-backdrop) .VPDocAsideOutline .outline-link:hover,
+html:has(.grainy-backdrop) .VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+}
+
+/* ==========================================================================
+   8. Doc footer: pager
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPDocFooter .prev-next {
+  border-top-color: var(--ag-hairline);
+}
+
+html:has(.grainy-backdrop) .VPDocFooter .pager-link {
+  border: 1px solid var(--ag-hairline);
+  border-radius: var(--ag-r-md);
+  background-color: var(--ag-card);
+  transition: border-color var(--ag-dur) var(--ag-ease),
+    background-color var(--ag-dur) var(--ag-ease),
+    box-shadow var(--ag-dur) var(--ag-ease), transform var(--ag-dur) var(--ag-ease);
+}
+
+html:has(.grainy-backdrop) .VPDocFooter .pager-link:hover {
+  border-color: color-mix(in srgb, var(--ag-grad-2) 55%, var(--ag-hairline-strong));
+  background-color: var(--ag-card-strong);
+  box-shadow: var(--ag-shadow-card);
+  transform: translateY(-2px);
+}
+
+html:has(.grainy-backdrop) .VPDocFooter .edit-link-button {
+  border-radius: var(--ag-r-sm);
+  transition: color var(--ag-dur) var(--ag-ease);
+}
+
+/* ==========================================================================
+   9. Footer
+   ========================================================================== */
+
+html:has(.grainy-backdrop) .VPFooter {
+  position: relative;
+  background-color: var(--ag-chrome);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  backdrop-filter: blur(16px) saturate(1.1);
+  border-top: 1px solid var(--ag-hairline);
+}
+
+html:has(.grainy-backdrop) .VPFooter::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background-image: var(--ag-sheen);
+  background-size: 320% 100%;
+  opacity: 0.4;
+  animation: ag-sheen-pan 20s linear infinite;
+}
+
+/* ==========================================================================
+   10. Focus visibility
+   ========================================================================== */
+
+html:has(.grainy-backdrop) a:focus-visible,
+html:has(.grainy-backdrop) button:focus-visible,
+html:has(.grainy-backdrop) [tabindex]:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--ag-grad-2) 70%, transparent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   11. Shared keyframes (motion.css adds the rest)
+   ========================================================================== */
+
+@keyframes ag-sheen-pan {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 320% 50%;
+  }
+}

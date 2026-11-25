@@ -668,6 +668,83 @@ video {
   opacity: 1;
 }
 
+/**
+ * Home page: grainy atmospheric backdrop
+ * The backdrop is rendered only for `layout: home` by theme/Layout.vue.
+ * It sits at z-index 0, so the home content is lifted above it.
+ * -------------------------------------------------------------------------- */
 
+html:has(.grainy-backdrop) {
+  background-color: #0b090e;
+}
 
+html:not(.dark):has(.grainy-backdrop) {
+  background-color: #f4ebdf;
+}
+
+html:has(.grainy-backdrop) body {
+  background-color: transparent;
+}
+
+/* Slightly darker secondary text on the light backdrop keeps AA contrast */
+html:not(.dark):has(.grainy-backdrop) .VPHome {
+  --vp-c-text-2: #59595f;
+}
+
+html:has(.grainy-backdrop) .VPContent {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glassy nav on the home page once the user scrolls */
+html:has(.grainy-backdrop) .VPNavBar .content-body {
+  background-color: transparent;
+}
+
+html:has(.grainy-backdrop) .VPNavBar.home:not(.top) {
+  background-color: color-mix(in srgb, var(--vp-c-bg) 62%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  backdrop-filter: blur(14px) saturate(1.15);
+  border-bottom: 1px solid color-mix(in srgb, var(--vp-c-divider) 60%, transparent);
+}
+
+html.dark:has(.grainy-backdrop) .VPNavBar.home:not(.top) {
+  background-color: rgba(13, 10, 16, 0.62);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Translucent home feature cards */
+html:has(.grainy-backdrop) .VPHome .VPFeature {
+  background-color: color-mix(in srgb, var(--vp-c-bg-soft) 55%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-divider) 55%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  backdrop-filter: blur(18px) saturate(1.15);
+  box-shadow: 0 12px 32px rgba(34, 22, 12, 0.10);
+  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html:has(.grainy-backdrop) .VPHome .VPFeature:hover {
+  transform: translateY(-3px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 18px 44px rgba(34, 22, 12, 0.16);
+}
+
+html.dark:has(.grainy-backdrop) .VPHome .VPFeature {
+  background-color: rgba(30, 25, 34, 0.55);
+  border-color: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+html.dark:has(.grainy-backdrop) .VPHome .VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+}
+
+/* Glassy footer on the home page */
+html:has(.grainy-backdrop) .VPFooter {
+  background-color: color-mix(in srgb, var(--vp-c-bg) 55%, transparent);
+  border-top-color: color-mix(in srgb, var(--vp-c-divider) 60%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  backdrop-filter: blur(16px) saturate(1.1);
+}
 
