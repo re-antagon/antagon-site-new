@@ -7,7 +7,7 @@ description: "Кастомные мобы сервера Re:Antagon - здоро
 **Кастомные мобы** сервера Re:Antagon - существа, которых нет в ванильном Minecraft. Одни охотятся стаями в тёплых биомах, другие прячутся под землёй под видом игроков, а третьих можно призвать себе на защиту.
 
 ::: info Сводка
-В каталоге **28 существ**. По богам сгруппированы мобы, для которых известен покровитель или предмет призыва. Остальные собраны в разделе [общих мобов](#общие-мобы).
+В каталоге **26 существ**. По богам сгруппированы мобы, для которых известен покровитель или предмет призыва. Остальные собраны в разделе [общих мобов](#общие-мобы).
 :::
 
 ## Постижение {#infinitum}
@@ -70,8 +70,6 @@ description: "Кастомные мобы сервера Re:Antagon - здоро
   <ItemCard title="Гул леса" type="Босс · корни и растительная связь" img="/assets/mobs/thumbnails/em_dyerftum5.png" href="/gods/mobs/Гул%20леса" />
   <ItemCard title="Жизнепламень Силвы" type="Босс · цветы и споры" img="/assets/mobs/thumbnails/5_forest_hum.png" href="/gods/mobs/Жизнепламень%20Силвы" />
   <ItemCard title="Эо" type="Босс · четыре обличия" img="/assets/mobs/thumbnails/astral_archon.png" href="/gods/mobs/Эо" />
-  <ItemCard title="Малахор" type="Босс" img="/assets/mobs/thumbnails/boreal_druid.png" href="/gods/mobs/Малахор" />
-  <ItemCard title="Каррион" type="Босс" img="/assets/mobs/thumbnails/parasitic_abomination.png" href="/gods/mobs/Каррион" />
 </ItemGrid>
 
 ### Мобы острова Жизни

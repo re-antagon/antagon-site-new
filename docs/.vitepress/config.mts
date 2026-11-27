@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 import fs from 'fs';
 import path from 'path';
+import unlistedPages from './unlisted-pages.json';
 
 interface SidebarOptions {
   mechanicsSection?: 'none' | 'gods' | 'physics' | 'transport' | 'utilities';
@@ -12,7 +13,9 @@ interface SidebarOptions {
 function getFolderSidebar(folder: string) {
   const dirPath = path.resolve(__dirname, '..' + folder);
   if (!fs.existsSync(dirPath)) return [];
-  const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.md') && f !== 'index.md');
+  const files = fs.readdirSync(dirPath).filter(file =>
+    file.endsWith('.md') && file !== 'index.md' && !unlistedPages.includes(folder + '/' + file.slice(0, -3))
+  );
   return files.map(file => {
     const name = file.replace(/\.md$/, '');
     return {
@@ -327,7 +330,6 @@ export default defineConfig({
     ['meta', { property: 'twitter:title', content: 'Re:Antagon - Minecraft Server Wiki' }],
     ['meta', { property: 'twitter:description', content: 'Антагон - это ванильный майнкрафт сервер для 26.1+ версий майнкрафта. На сервере добавлены кастомные предметы, мобы.' }],
     ['meta', { property: 'twitter:image', content: 'https://wiki.antagon.su/logo.png' }],
-    ['meta', { name: 'robots', content: 'index, follow' }],
     ['meta', { name: 'author', content: 'Re:Antagon Team' }],
     ['meta', { name: 'keywords', content: 'minecraft, server, antagon, re:antagon, antagon:re, antagon reborn, антагон, антагон реборн, реантагон, антагон вики, вики, wiki, предметы, боги, фишки, гайд, 26.1+' }],
     ['meta', { name: 'yandex-verification', content: '4364860f960a5a06' }],
@@ -394,6 +396,7 @@ export default defineConfig({
     const rawPath = pageData.relativePath.replace(/\.md$/, '').replace(/(^|\/)index$/, '');
     const canonicalUrl = `https://wiki.antagon.su/${rawPath ? rawPath : ''}`;
     return [
+      ['meta', { name: 'robots', content: unlistedPages.includes('/' + rawPath) ? 'noindex, follow' : 'index, follow' }],
       ['link', { rel: 'canonical', href: canonicalUrl }],
       ['meta', { property: 'og:url', content: canonicalUrl }]
     ];

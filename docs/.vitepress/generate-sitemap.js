@@ -1,14 +1,11 @@
 const { generateSitemap } = require('sitemap-ts');
+const unlistedPages = require('./unlisted-pages.json');
 
 const SITEMAP_CONFIG = {
   hostname: 'https://wiki.antagon.su/',
   outDir: 'docs/.vitepress/dist',
   extensions: ['html'],
-  exclude: [
-    // '/admin',
-    // '/private',
-    // '/temp'
-  ],
+  exclude: unlistedPages,
   generateRobotsTxt: true,
   robots: [
     {
